@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>class</key>
+		<string>OneViewController</string>
+		<key>title</key>
+		<string>列表</string>
+		<key>image</key>
+		<string>tabbar_home</string>
+		<key>selectedImage</key>
+		<string>tabbar_home_selected</string>
+	</dict>
+	<dict>
+		<key>class</key>
+		<string>TwoViewController</string>
+		<key>title</key>
+		<string>动画</string>
+		<key>image</key>
+		<string>tabbar_reward</string>
+		<key>selectedImage</key>
+		<string>tabbar_reward_selected</string>
+	</dict>
+	<dict>
+		<key>class</key>
+		<string>ThreeViewController</string>
+		<key>title</key>
+		<string>消息</string>
+		<key>image</key>
+		<string>tabbar_message_center</string>
+		<key>selectedImage</key>
+		<string>tabbar_message_center_selected</string>
+	</dict>
+	<dict>
+		<key>class</key>
+		<string>FourViewController</string>
+		<key>title</key>
+		<string>我的</string>
+		<key>image</key>
+		<string>tabbar_profile</string>
+		<key>selectedImage</key>
+		<string>tabbar_profile_selected</string>
+	</dict>
+</array>
+</plist>

@@ -1,0 +1,121 @@
+//
+//  GenericProject_PrefixHeader.pch
+//  GenericProject
+//
+//  Created by 漠然丶情到深处 on 2018/5/11.
+//  Copyright © 2018年 漠然丶情到深处. All rights reserved.
+//
+
+#ifndef GenericProject_PrefixHeader_pch
+#define GenericProject_PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+/**
+ * 基础类
+ */
+#import <AVKit/AVKit.h>
+#import "AppDelegate.h"
+#import <WebKit/WebKit.h>
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <objc/runtime.h>
+#import <AVFoundation/AVFoundation.h>
+#import <CoreTelephony/CTCarrier.h>
+#import <CoreTelephony/CTTelephonyNetworkInfo.h>     //运营商
+#import "sys/utsname.h"                              //手机型号
+#import <SystemConfiguration/CaptiveNetwork.h>
+#import <CoreTelephony/CTTelephonyNetworkInfo.h>
+#import <CoreTelephony/CTCellularData.h>
+#import <SystemConfiguration/SystemConfiguration.h>
+#import <netdb.h>
+#import <sys/socket.h>
+#import <netinet/in.h>
+#import <TABKit/TABKit.h>
+
+/**
+ * 宏定义类
+ */
+#import "AppConfig.h"
+#import "IpConfig.h"
+#import "ProjectConfig.h"
+#import "LSTreeConfig.h"
+
+
+/**
+ * 封装类
+ */
+#import "LSBaseNavigationView.h"                     //自定义导航栏
+#import "AlertController.h"                          //UIAlertController封装
+#import "UIActionSheet_UIAlertController.h"          //直角alertView（仿微信选择头像）
+#import "LSIDCardTextField.h"                        //身份证键盘
+#import "NetworkRequest.h"                           //网络请求
+#import "RadiusImageView.h"                          //UIImageView圆角
+#import "UpAndDownView.h"                            //跑马灯（上下）
+#import "MarqueeView.h"                              //跑马灯（左右）
+#import "SearchBarView.h"                            //自定义搜索框
+#import "TextInputIntercepter.h"                     //UITextField拦截器
+#import "NetworkAccessibity.h"                       //网络状态判断
+#import "OttoFPSButton.h"                            //FPS实时监测
+#import "LSButton.h"                                 //UIButton的图片和文字排列方式
+#import "LSShadowView.h"                             //UIView圆角与阴影
+#import "AuthID.h"                                   //面容/指纹登录
+
+
+/**
+ * 第三方库
+ */
+#import <IQKeyboardManager/IQKeyboardManager.h>
+#import <SDWebImage/UIButton+WebCache.h>
+#import "UIImageView+WebCache.h"
+#import "Masonry.h"
+#import "AFNetworking.h"
+#import "MJRefresh.h"
+#import "MJRefreshHeader.h"
+#import "MJRefreshFooter.h"
+#import "UIScrollView+EmptyDataSet.h"
+#import <YYKit.h>
+#import "SVProgressHUD.h"
+#import "MBProgressHUD.h"
+#import "TABAnimated.h"
+#import "BabyBluetooth.h"                            //蓝牙库
+#import "WXApi.h"
+#import "TZImagePickerController.h"
+#import <ReactiveObjC.h>
+#import "XHLaunchAd.h"
+
+
+/**
+ * 扩展类
+ */
+#import "UIImage+LSImage.h"                          //利用颜色生成图片
+#import "UIView+Extension.h"
+#import "NSObject+ViewController.h"                  //获取UIViewController，UIView中使用
+#import "UILabel+LSLabelAdaptive.h"                  //UILabel自适应宽高
+#import "NSString+RegularExpression.h"
+#import "UIView+LSViewBorderLine.h"                  //UIView添加边框
+#import "NSString+Extension.h"                       //计算字符串的CGSize
+#import "CAAnimation+Animation.h"
+#import "UIColor+LSColor.h"                          //色值转换
+#import "EquipmentInformation.h"
+#import "AmountOfCalculation.h"                      //金额小数点计算
+#import "UIViewController+BackToViewController.h"    //指定返回页面
+#import "UIView+LSViewGradient.h"                    //UIView颜色渐变
+#import "UIButton+LSButtonGradient.h"                //UIButton颜色渐变
+#import "UIImage+LSImageGradient.h"                  //UIImage颜色渐变
+#import "NSArray+ErrorHandle.h"                      //不可变数组越界处理
+#import "NSMutableArray+ErrorHandle.h"               //可变数组越界处理
+#import "UITextView+LSClassification.h"              //UITextView扩展
+
+/**
+ * 第三方封装
+ */
+
+//#ifdef __OBJC__
+//#import "XDSReaderHeader.h"
+//#import "SDAutoLayout.h"
+//#endif
+
+
+#endif /* GenericProject_PrefixHeader_pch */

@@ -1,0 +1,111 @@
+[
+  {
+    "name": "乌当区",
+    "devId": null,
+    "currentId": "1",
+    "dtos": [
+      {
+        "id": "c87f870883d3",
+        "name": "贵州都邦感光科技开发有限公司",
+        "devId": "1000016",
+        "currentId": "1_2_1",
+        "parentId": "1"
+      }
+    ]
+  },
+  {
+    "name": "白云区",
+    "devId": null,
+    "currentId": "2",
+    "dtos": [
+      {
+        "name": "贵州铝城铝业原材料研究发展有限公司",
+        "devId": "1000006",
+        "currentId": "2_2_1",
+        "parentId": "2"
+      },
+      {
+        "name": "贵州申申环保科技有限公司",
+        "devId": "1000289",
+        "currentId": "2_2_2",
+        "parentId": "2"
+      }
+    ]
+  },
+  {
+    "name": "经开区（管委会）",
+    "devId": null,
+    "currentId": "3",
+    "dtos": [
+      {
+        "name": "贵阳物资回收有限公司（生活垃圾）",
+        "devId": "1000198",
+        "currentId": "3_2_1",
+        "parentId": "3"
+      },
+      {
+        "name": "贵阳物资回收有限公司",
+        "devId": "1000014",
+        "currentId": "3_2_2",
+        "parentId": "3"
+      }
+    ]
+  },
+  {
+    "name": "修文县",
+    "devId": null,
+    "currentId": "4",
+    "dtos": [
+      {
+        "name": "贵阳市城投环境资产投资管理有限公司",
+        "devId": "1000010",
+        "currentId": "4_2_1",
+        "parentId": "4"
+      },
+      {
+        "name": "贵州绿缘鑫奥再生资源有限公司",
+        "devId": "1000264",
+        "currentId": "4_2_2",
+        "parentId": "4"
+      },
+      {
+        "name": "贵州华信环保科技有限公司",
+        "devId": "1000011",
+        "currentId": "4_2_3",
+        "parentId": "4"
+      },
+      {
+        "name": "贵州万创环保有限公司",
+        "devId": "1000385",
+        "currentId": "4_2_4",
+        "parentId": "4"
+      }
+    ]
+  },
+  {
+    "name": "息烽县",
+    "devId": null,
+    "currentId": "5",
+    "dtos": [
+      {
+        "name": "贵州天时佳利能源开发有限责任公司",
+        "devId": "1000018",
+        "currentId": "5_2_1",
+        "parentId": "5"
+      }
+    ]
+  },
+  {
+    "name": "开阳县",
+    "devId": null,
+    "currentId": "6",
+    "dtos": [
+      {
+        "name": "贵州快联华恒石化有限公司",
+        "devId": "1000019",
+        "currentId": "6_2_1",
+        "parentId": "6"
+      }
+    ]
+  }
+]

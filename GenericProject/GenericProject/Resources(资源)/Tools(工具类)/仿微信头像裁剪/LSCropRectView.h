@@ -1,0 +1,31 @@
+//
+//  LSCropRectView.h
+//  GenericProject
+//
+//  Created by 漠然丶情到深处 on 2019/12/10.
+//  Copyright © 2019 漠然丶情到深处. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+NS_ASSUME_NONNULL_BEGIN
+
+@class LSCropRectView;
+
+@protocol LSDCropRectViewDelegate <NSObject>
+
+- (void)lsOptionalCropRectViewDidBeginEditing:(LSCropRectView *)cropRectView;
+- (void)lsOptionalCropRectViewEditingChanged:(LSCropRectView *)cropRectView;
+- (void)lsOptionalCropRectViewDidEndEditing:(LSCropRectView *)cropRectView;
+
+@end
+
+@interface LSCropRectView : UIView
+
+@property(nonatomic,weak)id<LSDCropRectViewDelegate> delegate;
+@property(nonatomic,assign)BOOL showsGridMajor;
+@property(nonatomic,assign)BOOL showsGridMinor;
+
+@end
+
+NS_ASSUME_NONNULL_END

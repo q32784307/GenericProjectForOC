@@ -1,0 +1,119 @@
+PODS:
+  - AFNetworking (4.0.1):
+    - AFNetworking/NSURLSession (= 4.0.1)
+    - AFNetworking/Reachability (= 4.0.1)
+    - AFNetworking/Security (= 4.0.1)
+    - AFNetworking/Serialization (= 4.0.1)
+    - AFNetworking/UIKit (= 4.0.1)
+  - AFNetworking/NSURLSession (4.0.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
+  - AFNetworking/UIKit (4.0.1):
+    - AFNetworking/NSURLSession
+  - BabyBluetooth (0.7.0)
+  - DZNEmptyDataSet (1.8.1)
+  - FLAnimatedImage (1.0.12)
+  - GPUImage (0.1.7)
+  - HybridPageKit (1.4)
+  - HybridPageKit/HybridPageKitTests (1.4)
+  - IQKeyboardManager (6.5.5)
+  - Masonry (1.1.0)
+  - MBProgressHUD (1.2.0)
+  - MJExtension (3.2.1)
+  - MJRefresh (3.4.3)
+  - ReactiveObjC (3.1.1)
+  - SDCycleScrollView (1.80):
+    - SDWebImage (>= 5.0.0)
+  - SDWebImage (5.7.4):
+    - SDWebImage/Core (= 5.7.4)
+  - SDWebImage/Core (5.7.4)
+  - SVProgressHUD (2.2.5)
+  - TABAnimated (2.2.6):
+    - TABAnimated/Core (= 2.2.6)
+    - TABAnimated/Reveal (= 2.2.6)
+  - TABAnimated/Core (2.2.6)
+  - TABAnimated/Reveal (2.2.6):
+    - TABAnimated/Core
+  - TZImagePickerController (3.3.1)
+  - WechatOpenSDK (1.8.7.1)
+  - XHLaunchAd (3.9.12):
+    - FLAnimatedImage (~> 1.0.12)
+  - YYKit (1.0.9):
+    - YYKit/no-arc (= 1.0.9)
+  - YYKit/no-arc (1.0.9)
+
+DEPENDENCIES:
+  - AFNetworking
+  - BabyBluetooth
+  - DZNEmptyDataSet
+  - FLAnimatedImage
+  - GPUImage
+  - HybridPageKit
+  - HybridPageKit/HybridPageKitTests
+  - IQKeyboardManager
+  - Masonry
+  - MBProgressHUD
+  - MJExtension
+  - MJRefresh
+  - ReactiveObjC
+  - SDCycleScrollView
+  - SDWebImage
+  - SVProgressHUD
+  - TABAnimated
+  - TZImagePickerController
+  - WechatOpenSDK
+  - XHLaunchAd
+  - YYKit
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - AFNetworking
+    - BabyBluetooth
+    - DZNEmptyDataSet
+    - FLAnimatedImage
+    - GPUImage
+    - HybridPageKit
+    - IQKeyboardManager
+    - Masonry
+    - MBProgressHUD
+    - MJExtension
+    - MJRefresh
+    - ReactiveObjC
+    - SDCycleScrollView
+    - SDWebImage
+    - SVProgressHUD
+    - TABAnimated
+    - TZImagePickerController
+    - WechatOpenSDK
+    - XHLaunchAd
+    - YYKit
+
+SPEC CHECKSUMS:
+  AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
+  BabyBluetooth: d50758aecf24d4a0ab9271d69f0f116d6bee51c9
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
+  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
+  GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
+  HybridPageKit: f02b606ebf9afd42b57ac2e829edb9f77f0db942
+  IQKeyboardManager: 3a8b9e603f8b0eeaf5f096a1f2b2cfcf121992ef
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  MJExtension: 635f2c663dcb1bf76fa4b715b2570a5710aec545
+  MJRefresh: 53e3e3219f204425ee6d3e62e8733d3295944cd6
+  ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
+  SDCycleScrollView: b3c9a5ed840c771c4938978174c7c9d9feefeb96
+  SDWebImage: 48b88379b798fd1e4298f95bb25d2cdabbf4deb3
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  TABAnimated: 29f7b2be33c55213bb70eba13e9a5780cf8c83c9
+  TZImagePickerController: 99f03b64145a8c92c55b9b1b931410967d9be4cb
+  WechatOpenSDK: 6a4d1436c15b3b5fe2a0bd383f3046010186da44
+  XHLaunchAd: 6320f9c68732667323072fc3a5f104e40fbe9cfe
+  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
+
+PODFILE CHECKSUM: b4e06957dbeb6a8838bd5e63bb3c8ad93b09dbac
+
+COCOAPODS: 1.9.1
