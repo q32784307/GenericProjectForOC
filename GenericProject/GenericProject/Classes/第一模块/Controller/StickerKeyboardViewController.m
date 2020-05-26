@@ -7,12 +7,12 @@
 //
 
 #import "StickerKeyboardViewController.h"
-#import "PPStickerInputView.h"
-#import "PPUtil.h"
+#import "EmojiKeyboardOneViewController.h"
+#import "EmojiKeyboardTwoViewController.h"
 
-@interface StickerKeyboardViewController ()<PPStickerInputViewDelegate>
+@interface StickerKeyboardViewController ()
 
-@property (nonatomic, strong) PPStickerInputView *inputView;
+@property(nonatomic,copy)NSArray *titleArray;
 
 @end
 
@@ -21,16 +21,57 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    _inputView = [[PPStickerInputView alloc] init];
-    _inputView.delegate = self;
-    CGFloat height = [self.inputView heightThatFits];
-    CGFloat minY = CGRectGetHeight(self.view.bounds) - height - PP_SAFEAREAINSETS(self.view).bottom;
-    self.inputView.frame = CGRectMake(0, minY, CGRectGetWidth(self.view.bounds), height);
-    [self.view addSubview:self.inputView];
+    [self analysis];
+    [self createSubViews];
 }
 
-- (void)stickerInputViewDidClickSendButton:(PPStickerInputView *)inputView {
-    NSLog(@"%@",inputView.plainText);
+- (void)analysis {
+    self.titleArray = @[@"表情键盘1（不支持gif）",@"表情键盘2（支持gif）"];
+}
+
+- (void)createSubViews {
+    self.mainTableView.frame = CGRectMake(0, NAVIGATION_BAR_HEIGHT, ScreenWidth, ScreenHeight - NAVIGATION_BAR_HEIGHT - TAB_BAR_HEIGHT);
+    [self.view addSubview:self.mainTableView];
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.titleArray.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString * cellId = @"TableViewCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
+        cell.textLabel.font = [UIFont systemFontOfSize:SYRealValue(30 / 2)];
+    }
+    
+    cell.textLabel.text = _titleArray[indexPath.row];
+
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row == 0) {
+        EmojiKeyboardOneViewController *EmojiKeyboardOneVC = [[EmojiKeyboardOneViewController alloc]init];
+        [self.navigationController pushViewController:EmojiKeyboardOneVC animated:YES];
+    }
+    if (indexPath.row == 1) {
+        EmojiKeyboardTwoViewController *EmojiKeyboardTwoVC = [[EmojiKeyboardTwoViewController alloc]init];
+        [self.navigationController pushViewController:EmojiKeyboardTwoVC animated:YES];
+    }
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return SYRealValue(100 / 2);
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 25;
 }
 
 /*

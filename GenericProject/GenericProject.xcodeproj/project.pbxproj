@@ -271,6 +271,34 @@
 		D066D08723C6D5600058D732 /* CaseOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D066D08623C6D5600058D732 /* CaseOneViewController.m */; };
 		D066D08B23C6DA100058D732 /* JSBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = D066D08923C6DA100058D732 /* JSBadgeView.m */; };
 		D066D08E23C6DD4F0058D732 /* CaseTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D066D08D23C6DD4F0058D732 /* CaseTwoViewController.m */; };
+		D06E5ACF247CC07900ECE98D /* EmojiKeyboardOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D06E5ACE247CC07900ECE98D /* EmojiKeyboardOneViewController.m */; };
+		D06E5AD2247CC0CF00ECE98D /* EmojiKeyboardTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D06E5AD1247CC0CF00ECE98D /* EmojiKeyboardTwoViewController.m */; };
+		D06E5AEF247CC10500ECE98D /* YBEmojiGifImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D06E5AD5247CC10500ECE98D /* YBEmojiGifImageView.m */; };
+		D06E5AF0247CC10500ECE98D /* YBTextAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = D06E5AD6247CC10500ECE98D /* YBTextAttachment.m */; };
+		D06E5AF1247CC10500ECE98D /* YBEmojiTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = D06E5AD7247CC10500ECE98D /* YBEmojiTabbar.m */; };
+		D06E5AF2247CC10500ECE98D /* YBEmojiPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D06E5AD9247CC10500ECE98D /* YBEmojiPageView.m */; };
+		D06E5AF3247CC10500ECE98D /* YBEmojiTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = D06E5ADC247CC10500ECE98D /* YBEmojiTextView.m */; };
+		D06E5AF4247CC10500ECE98D /* YBEmojiGifImage.m in Sources */ = {isa = PBXBuildFile; fileRef = D06E5ADE247CC10500ECE98D /* YBEmojiGifImage.m */; };
+		D06E5AF5247CC10500ECE98D /* YBEmojiDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D06E5ADF247CC10500ECE98D /* YBEmojiDataManager.m */; };
+		D06E5AF6247CC10500ECE98D /* YBEmojiInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = D06E5AE1247CC10500ECE98D /* YBEmojiInputView.m */; };
+		D06E5AF7247CC10500ECE98D /* EmojiPackage.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D06E5AE2247CC10500ECE98D /* EmojiPackage.bundle */; };
+		D06E5AF8247CC10500ECE98D /* YBEmojiPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = D06E5AE6247CC10500ECE98D /* YBEmojiPreviewView.m */; };
+		D06E5AF9247CC10500ECE98D /* YBEmojiConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = D06E5AE8247CC10500ECE98D /* YBEmojiConfig.m */; };
+		D06E5AFA247CC10500ECE98D /* YBEmojiModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D06E5AE9247CC10500ECE98D /* YBEmojiModel.m */; };
+		D06E5AFB247CC10500ECE98D /* YBEmojiContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = D06E5AEB247CC10500ECE98D /* YBEmojiContentView.m */; };
+		D06E5AFC247CC10500ECE98D /* YBEmojiItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = D06E5AEE247CC10500ECE98D /* YBEmojiItemView.m */; };
+		D06E5B07247CC21C00ECE98D /* emoji-preview-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D06E5AFD247CC21A00ECE98D /* emoji-preview-bg@2x.png */; };
+		D06E5B08247CC21C00ECE98D /* btn_chat_input_keyborad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D06E5AFE247CC21A00ECE98D /* btn_chat_input_keyborad@3x.png */; };
+		D06E5B09247CC21C00ECE98D /* delete-emoji@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D06E5AFF247CC21A00ECE98D /* delete-emoji@2x.png */; };
+		D06E5B0A247CC21C00ECE98D /* delete-emoji.png in Resources */ = {isa = PBXBuildFile; fileRef = D06E5B00247CC21B00ECE98D /* delete-emoji.png */; };
+		D06E5B0B247CC21C00ECE98D /* btn_chat_input_emoji@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D06E5B01247CC21B00ECE98D /* btn_chat_input_emoji@3x.png */; };
+		D06E5B0C247CC21C00ECE98D /* delete-emoji@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D06E5B02247CC21B00ECE98D /* delete-emoji@3x.png */; };
+		D06E5B0D247CC21C00ECE98D /* emoji-preview-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = D06E5B03247CC21B00ECE98D /* emoji-preview-bg.png */; };
+		D06E5B0E247CC21C00ECE98D /* btn_chat_input_emoji@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D06E5B04247CC21C00ECE98D /* btn_chat_input_emoji@2x.png */; };
+		D06E5B0F247CC21C00ECE98D /* emoji-preview-bg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D06E5B05247CC21C00ECE98D /* emoji-preview-bg@3x.png */; };
+		D06E5B10247CC21C00ECE98D /* btn_chat_input_keyborad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D06E5B06247CC21C00ECE98D /* btn_chat_input_keyborad@2x.png */; };
+		D06E5B13247CC26400ECE98D /* EmojiKeyboardTwoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D06E5B12247CC26400ECE98D /* EmojiKeyboardTwoTableViewCell.m */; };
+		D06E5B16247CC49D00ECE98D /* InputBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D06E5B15247CC49D00ECE98D /* InputBar.m */; };
 		D07B8829238D1F4B00F951AC /* AlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = D07B8828238D1F4B00F951AC /* AlertController.m */; };
 		D07B882E238D209F00F951AC /* UIActionSheet_UIAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = D07B882D238D209F00F951AC /* UIActionSheet_UIAlertController.m */; };
 		D07B8832238D306100F951AC /* UITextField+LSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D07B8831238D306100F951AC /* UITextField+LSExtension.m */; };
@@ -908,6 +936,51 @@
 		D066D08A23C6DA100058D732 /* JSBadgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBadgeView.h; sourceTree = "<group>"; };
 		D066D08C23C6DD4F0058D732 /* CaseTwoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CaseTwoViewController.h; sourceTree = "<group>"; };
 		D066D08D23C6DD4F0058D732 /* CaseTwoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CaseTwoViewController.m; sourceTree = "<group>"; };
+		D06E5ACD247CC07900ECE98D /* EmojiKeyboardOneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmojiKeyboardOneViewController.h; sourceTree = "<group>"; };
+		D06E5ACE247CC07900ECE98D /* EmojiKeyboardOneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmojiKeyboardOneViewController.m; sourceTree = "<group>"; };
+		D06E5AD0247CC0CF00ECE98D /* EmojiKeyboardTwoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmojiKeyboardTwoViewController.h; sourceTree = "<group>"; };
+		D06E5AD1247CC0CF00ECE98D /* EmojiKeyboardTwoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmojiKeyboardTwoViewController.m; sourceTree = "<group>"; };
+		D06E5AD4247CC10500ECE98D /* YBEmojiInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBEmojiInputView.h; sourceTree = "<group>"; };
+		D06E5AD5247CC10500ECE98D /* YBEmojiGifImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBEmojiGifImageView.m; sourceTree = "<group>"; };
+		D06E5AD6247CC10500ECE98D /* YBTextAttachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBTextAttachment.m; sourceTree = "<group>"; };
+		D06E5AD7247CC10500ECE98D /* YBEmojiTabbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBEmojiTabbar.m; sourceTree = "<group>"; };
+		D06E5AD8247CC10500ECE98D /* YBEmojiModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBEmojiModel.h; sourceTree = "<group>"; };
+		D06E5AD9247CC10500ECE98D /* YBEmojiPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBEmojiPageView.m; sourceTree = "<group>"; };
+		D06E5ADA247CC10500ECE98D /* YBEmojiConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBEmojiConfig.h; sourceTree = "<group>"; };
+		D06E5ADB247CC10500ECE98D /* YBEmojiPreviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBEmojiPreviewView.h; sourceTree = "<group>"; };
+		D06E5ADC247CC10500ECE98D /* YBEmojiTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBEmojiTextView.m; sourceTree = "<group>"; };
+		D06E5ADD247CC10500ECE98D /* YBEmojiItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBEmojiItemView.h; sourceTree = "<group>"; };
+		D06E5ADE247CC10500ECE98D /* YBEmojiGifImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBEmojiGifImage.m; sourceTree = "<group>"; };
+		D06E5ADF247CC10500ECE98D /* YBEmojiDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBEmojiDataManager.m; sourceTree = "<group>"; };
+		D06E5AE0247CC10500ECE98D /* YBEmojiContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBEmojiContentView.h; sourceTree = "<group>"; };
+		D06E5AE1247CC10500ECE98D /* YBEmojiInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBEmojiInputView.m; sourceTree = "<group>"; };
+		D06E5AE2247CC10500ECE98D /* EmojiPackage.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = EmojiPackage.bundle; sourceTree = "<group>"; };
+		D06E5AE3247CC10500ECE98D /* YBTextAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBTextAttachment.h; sourceTree = "<group>"; };
+		D06E5AE4247CC10500ECE98D /* YBEmojiGifImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBEmojiGifImageView.h; sourceTree = "<group>"; };
+		D06E5AE5247CC10500ECE98D /* YBEmojiTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBEmojiTextView.h; sourceTree = "<group>"; };
+		D06E5AE6247CC10500ECE98D /* YBEmojiPreviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBEmojiPreviewView.m; sourceTree = "<group>"; };
+		D06E5AE7247CC10500ECE98D /* YBEmojiPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBEmojiPageView.h; sourceTree = "<group>"; };
+		D06E5AE8247CC10500ECE98D /* YBEmojiConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBEmojiConfig.m; sourceTree = "<group>"; };
+		D06E5AE9247CC10500ECE98D /* YBEmojiModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBEmojiModel.m; sourceTree = "<group>"; };
+		D06E5AEA247CC10500ECE98D /* YBEmojiTabbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBEmojiTabbar.h; sourceTree = "<group>"; };
+		D06E5AEB247CC10500ECE98D /* YBEmojiContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBEmojiContentView.m; sourceTree = "<group>"; };
+		D06E5AEC247CC10500ECE98D /* YBEmojiDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBEmojiDataManager.h; sourceTree = "<group>"; };
+		D06E5AED247CC10500ECE98D /* YBEmojiGifImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBEmojiGifImage.h; sourceTree = "<group>"; };
+		D06E5AEE247CC10500ECE98D /* YBEmojiItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBEmojiItemView.m; sourceTree = "<group>"; };
+		D06E5AFD247CC21A00ECE98D /* emoji-preview-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emoji-preview-bg@2x.png"; sourceTree = "<group>"; };
+		D06E5AFE247CC21A00ECE98D /* btn_chat_input_keyborad@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_chat_input_keyborad@3x.png"; sourceTree = "<group>"; };
+		D06E5AFF247CC21A00ECE98D /* delete-emoji@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "delete-emoji@2x.png"; sourceTree = "<group>"; };
+		D06E5B00247CC21B00ECE98D /* delete-emoji.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "delete-emoji.png"; sourceTree = "<group>"; };
+		D06E5B01247CC21B00ECE98D /* btn_chat_input_emoji@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_chat_input_emoji@3x.png"; sourceTree = "<group>"; };
+		D06E5B02247CC21B00ECE98D /* delete-emoji@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "delete-emoji@3x.png"; sourceTree = "<group>"; };
+		D06E5B03247CC21B00ECE98D /* emoji-preview-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emoji-preview-bg.png"; sourceTree = "<group>"; };
+		D06E5B04247CC21C00ECE98D /* btn_chat_input_emoji@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_chat_input_emoji@2x.png"; sourceTree = "<group>"; };
+		D06E5B05247CC21C00ECE98D /* emoji-preview-bg@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emoji-preview-bg@3x.png"; sourceTree = "<group>"; };
+		D06E5B06247CC21C00ECE98D /* btn_chat_input_keyborad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_chat_input_keyborad@2x.png"; sourceTree = "<group>"; };
+		D06E5B11247CC26400ECE98D /* EmojiKeyboardTwoTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmojiKeyboardTwoTableViewCell.h; sourceTree = "<group>"; };
+		D06E5B12247CC26400ECE98D /* EmojiKeyboardTwoTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmojiKeyboardTwoTableViewCell.m; sourceTree = "<group>"; };
+		D06E5B14247CC49D00ECE98D /* InputBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputBar.h; sourceTree = "<group>"; };
+		D06E5B15247CC49D00ECE98D /* InputBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputBar.m; sourceTree = "<group>"; };
 		D07B8828238D1F4B00F951AC /* AlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertController.m; sourceTree = "<group>"; };
 		D07B882A238D1FE300F951AC /* AlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertController.h; sourceTree = "<group>"; };
 		D07B882C238D209F00F951AC /* UIActionSheet_UIAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIActionSheet_UIAlertController.h; sourceTree = "<group>"; };
@@ -1388,6 +1461,10 @@
 				8211E5BE2266CF440051AD26 /* VerifyCodeViewController.m */,
 				82B610752276023100C57FE7 /* StickerKeyboardViewController.h */,
 				82B610762276023100C57FE7 /* StickerKeyboardViewController.m */,
+				D06E5ACD247CC07900ECE98D /* EmojiKeyboardOneViewController.h */,
+				D06E5ACE247CC07900ECE98D /* EmojiKeyboardOneViewController.m */,
+				D06E5AD0247CC0CF00ECE98D /* EmojiKeyboardTwoViewController.h */,
+				D06E5AD1247CC0CF00ECE98D /* EmojiKeyboardTwoViewController.m */,
 				D0D79AB7238BBC6F00B3ECC5 /* PictureLookViewController.h */,
 				D0D79AB8238BBC6F00B3ECC5 /* PictureLookViewController.m */,
 				D07B8836238D318700F951AC /* CardTextFieldViewController.h */,
@@ -1454,6 +1531,8 @@
 		8232D0A120BD4B2200D1DDBE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D06E5B14247CC49D00ECE98D /* InputBar.h */,
+				D06E5B15247CC49D00ECE98D /* InputBar.m */,
 				82F2FD03227311F000E2045B /* head.jpg */,
 				82F2FD04227311F000E2045B /* test.jpg */,
 				82F2FCFE2273096100E2045B /* AnimatedTableViewCell.h */,
@@ -1464,6 +1543,8 @@
 				D0E10ED7239A09250025AB6A /* CommonTreeDetailsTableViewCell.m */,
 				820BB6FF23E56CF9006608D2 /* LabelTagTableViewCell.h */,
 				820BB70023E56CF9006608D2 /* LabelTagTableViewCell.m */,
+				D06E5B11247CC26400ECE98D /* EmojiKeyboardTwoTableViewCell.h */,
+				D06E5B12247CC26400ECE98D /* EmojiKeyboardTwoTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1593,6 +1674,7 @@
 		8234E17A208A76FE0002DA97 /* Tools(工具类) */ = {
 			isa = PBXGroup;
 			children = (
+				D06E5AD3247CC10500ECE98D /* YBEmojiKeyboard */,
 				826D2437242250AC005D2309 /* NSTimer内存释放 */,
 				D083EF7C23C308FB008E0297 /* 分段选择控制器 */,
 				D08EB80323A2536600EAB828 /* 滑块验证码 */,
@@ -2594,6 +2676,50 @@
 			path = JSBadgeView;
 			sourceTree = "<group>";
 		};
+		D06E5AD3247CC10500ECE98D /* YBEmojiKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				D06E5B04247CC21C00ECE98D /* btn_chat_input_emoji@2x.png */,
+				D06E5B01247CC21B00ECE98D /* btn_chat_input_emoji@3x.png */,
+				D06E5B06247CC21C00ECE98D /* btn_chat_input_keyborad@2x.png */,
+				D06E5AFE247CC21A00ECE98D /* btn_chat_input_keyborad@3x.png */,
+				D06E5B00247CC21B00ECE98D /* delete-emoji.png */,
+				D06E5AFF247CC21A00ECE98D /* delete-emoji@2x.png */,
+				D06E5B02247CC21B00ECE98D /* delete-emoji@3x.png */,
+				D06E5B03247CC21B00ECE98D /* emoji-preview-bg.png */,
+				D06E5AFD247CC21A00ECE98D /* emoji-preview-bg@2x.png */,
+				D06E5B05247CC21C00ECE98D /* emoji-preview-bg@3x.png */,
+				D06E5AE2247CC10500ECE98D /* EmojiPackage.bundle */,
+				D06E5AED247CC10500ECE98D /* YBEmojiGifImage.h */,
+				D06E5ADE247CC10500ECE98D /* YBEmojiGifImage.m */,
+				D06E5AE4247CC10500ECE98D /* YBEmojiGifImageView.h */,
+				D06E5AD5247CC10500ECE98D /* YBEmojiGifImageView.m */,
+				D06E5AD8247CC10500ECE98D /* YBEmojiModel.h */,
+				D06E5AE9247CC10500ECE98D /* YBEmojiModel.m */,
+				D06E5AEC247CC10500ECE98D /* YBEmojiDataManager.h */,
+				D06E5ADF247CC10500ECE98D /* YBEmojiDataManager.m */,
+				D06E5AD4247CC10500ECE98D /* YBEmojiInputView.h */,
+				D06E5AE1247CC10500ECE98D /* YBEmojiInputView.m */,
+				D06E5AE0247CC10500ECE98D /* YBEmojiContentView.h */,
+				D06E5AEB247CC10500ECE98D /* YBEmojiContentView.m */,
+				D06E5AE7247CC10500ECE98D /* YBEmojiPageView.h */,
+				D06E5AD9247CC10500ECE98D /* YBEmojiPageView.m */,
+				D06E5ADB247CC10500ECE98D /* YBEmojiPreviewView.h */,
+				D06E5AE6247CC10500ECE98D /* YBEmojiPreviewView.m */,
+				D06E5ADD247CC10500ECE98D /* YBEmojiItemView.h */,
+				D06E5AEE247CC10500ECE98D /* YBEmojiItemView.m */,
+				D06E5AEA247CC10500ECE98D /* YBEmojiTabbar.h */,
+				D06E5AD7247CC10500ECE98D /* YBEmojiTabbar.m */,
+				D06E5ADA247CC10500ECE98D /* YBEmojiConfig.h */,
+				D06E5AE8247CC10500ECE98D /* YBEmojiConfig.m */,
+				D06E5AE5247CC10500ECE98D /* YBEmojiTextView.h */,
+				D06E5ADC247CC10500ECE98D /* YBEmojiTextView.m */,
+				D06E5AE3247CC10500ECE98D /* YBTextAttachment.h */,
+				D06E5AD6247CC10500ECE98D /* YBTextAttachment.m */,
+			);
+			path = YBEmojiKeyboard;
+			sourceTree = "<group>";
+		};
 		D07B882B238D209F00F951AC /* UIActionSheet和UIAlertController判断系统版本封装 */ = {
 			isa = PBXGroup;
 			children = (
@@ -3026,6 +3152,7 @@
 				D0CD2861239F6AAF0019A357 /* EditMenuCut@2x.png in Resources */,
 				D0CD2862239F6AAF0019A357 /* cancle@2x.png in Resources */,
 				D024DC4723A8B1F2001723AF /* LSPhotoBrowser20.jpg in Resources */,
+				D06E5B10247CC21C00ECE98D /* btn_chat_input_keyborad@2x.png in Resources */,
 				D0CD285A239F6AAF0019A357 /* EditTraditionalMosaicSelected@2x.png in Resources */,
 				8234E14E208A764A0002DA97 /* Assets.xcassets in Resources */,
 				8250DB3723FD40C300D690CD /* datanew.json in Resources */,
@@ -3046,6 +3173,7 @@
 				D024DC3D23A8B1F2001723AF /* LSPhotoBrowser7.jpg in Resources */,
 				82D32BB92252624B003ECAA3 /* btn_2large_normal.png in Resources */,
 				82D32BBC2252624B003ECAA3 /* player_back_btn.png in Resources */,
+				D06E5B0D247CC21C00ECE98D /* emoji-preview-bg.png in Resources */,
 				D066106F239FAB5100D18086 /* PhotoCropEditorBorder.png in Resources */,
 				82D32BB72252624B003ECAA3 /* btn_play_nomal.png in Resources */,
 				D024DC4D23A8B1F2001723AF /* LSPhotoBrowser3.jpg in Resources */,
@@ -3054,6 +3182,7 @@
 				D024DC4B23A8B1F2001723AF /* LSPhotoBrowser13.jpg in Resources */,
 				820BB70323E56E81006608D2 /* test_1.txt in Resources */,
 				D0CD284F239F6AAF0019A357 /* back@3x.png in Resources */,
+				D06E5B0C247CC21C00ECE98D /* delete-emoji@3x.png in Resources */,
 				D0CD2863239F6AAF0019A357 /* EditBrushMosaicSelected@2x.png in Resources */,
 				D0CD284D239F6AAF0019A357 /* edit@2x.png in Resources */,
 				D0CD2869239F6AAF0019A357 /* EditMenuStickerSelected@3x.png in Resources */,
@@ -3068,6 +3197,7 @@
 				D024DBE823A8AE99001723AF /* LSPhotoBrowser.bundle in Resources */,
 				8271D8452392AD160031A2D4 /* QRCodeLine@2x.png in Resources */,
 				D024DC1523A8B0F0001723AF /* gif1.gif in Resources */,
+				D06E5B0A247CC21C00ECE98D /* delete-emoji.png in Resources */,
 				82F2FD06227311F000E2045B /* test.jpg in Resources */,
 				D024DC1A23A8B0F0001723AF /* location_video.MP4 in Resources */,
 				D0CD2852239F6AAF0019A357 /* EditMenuGraffitiSelected@3x.png in Resources */,
@@ -3097,9 +3227,11 @@
 				D0CD2848239F6AAF0019A357 /* edit@3x.png in Resources */,
 				8204212720CE1CB00026F2FD /* 城市数据.txt in Resources */,
 				D024DC4923A8B1F2001723AF /* LSPhotoBrowser11.jpg in Resources */,
+				D06E5B0E247CC21C00ECE98D /* btn_chat_input_emoji@2x.png in Resources */,
 				D0CD2849239F6AAF0019A357 /* EditMenuTextColor@3x.png in Resources */,
 				D0CD285E239F6AAF0019A357 /* EditMenuTextSelected@2x.png in Resources */,
 				D08EB82223A2570100EAB828 /* 4.jpg in Resources */,
+				D06E5B09247CC21C00ECE98D /* delete-emoji@2x.png in Resources */,
 				D0CD286A239F6AAF0019A357 /* EditBrushMosaicSelected@3x.png in Resources */,
 				D0D5FDB523A24687000ED84D /* duigou@2x.png in Resources */,
 				82EC83FF20CFB5BF00E465CB /* movie.mp4 in Resources */,
@@ -3139,6 +3271,8 @@
 				82D32BB22252624B003ECAA3 /* bar_button_3.png in Resources */,
 				D0CD2873239F6AAF0019A357 /* EditMosaicBrush@2x.png in Resources */,
 				D0CD284E239F6AAF0019A357 /* EditBrushMosaic@3x.png in Resources */,
+				D06E5B08247CC21C00ECE98D /* btn_chat_input_keyborad@3x.png in Resources */,
+				D06E5B07247CC21C00ECE98D /* emoji-preview-bg@2x.png in Resources */,
 				D024DC4C23A8B1F2001723AF /* LSPhotoBrowser16.jpg in Resources */,
 				D0CD286C239F6AAF0019A357 /* cancle@3x.png in Resources */,
 				D0D5FDB423A24687000ED84D /* duigou@3x.png in Resources */,
@@ -3154,11 +3288,13 @@
 				D0D5FDB223A24687000ED84D /* tabbar_home_un@3x.png in Resources */,
 				D0CD2872239F6AAF0019A357 /* record_video_camera@3x.png in Resources */,
 				828BF87420AD679F00E4500E /* province_data.xml in Resources */,
+				D06E5AF7247CC10500ECE98D /* EmojiPackage.bundle in Resources */,
 				D0CD2870239F6AAF0019A357 /* EditMenuTextSelected@3x.png in Resources */,
 				82D32BB02252624B003ECAA3 /* bar_button_5@2x.png in Resources */,
 				8271D8442392AD160031A2D4 /* sound.caf in Resources */,
 				D0CD2846239F6AAF0019A357 /* EditBrushMosaic@2x.png in Resources */,
 				D08EB83623A2571B00EAB828 /* Bitmap@2x.jpg in Resources */,
+				D06E5B0B247CC21C00ECE98D /* btn_chat_input_emoji@3x.png in Resources */,
 				820BF4B920EB73C100DA1C57 /* volume-marquee@2x.png in Resources */,
 				82D32BAA2252624B003ECAA3 /* btn_play_highted.png in Resources */,
 				D0CD2854239F6AAF0019A357 /* EditMenuTextBackgroundColor@3x.png in Resources */,
@@ -3178,6 +3314,7 @@
 				D024DC4823A8B1F2001723AF /* LSPhotoBrowser19.jpg in Resources */,
 				D0CD2871239F6AAF0019A357 /* EditMenuMosaic@3x.png in Resources */,
 				82D32BB12252624B003ECAA3 /* bar_button_2.png in Resources */,
+				D06E5B0F247CC21C00ECE98D /* emoji-preview-bg@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3234,6 +3371,7 @@
 				D066D08B23C6DA100058D732 /* JSBadgeView.m in Sources */,
 				D066D06923C6CDDF0058D732 /* LSPageMenu.m in Sources */,
 				82BA139B2359AA3300EA7D01 /* LSModel.m in Sources */,
+				D06E5ACF247CC07900ECE98D /* EmojiKeyboardOneViewController.m in Sources */,
 				D0915273239E645C008D6CF9 /* LSBlurView.m in Sources */,
 				D0E10ED2239A08C60025AB6A /* CommonTreeDetailsViewController.m in Sources */,
 				D024DBD123A8A498001723AF /* LSPhotoBrowser.m in Sources */,
@@ -3249,9 +3387,11 @@
 				D066D08723C6D5600058D732 /* CaseOneViewController.m in Sources */,
 				82FDF4E823541E0200F295F5 /* LSBaseTableViewCell.m in Sources */,
 				82F122A22354143000BD0575 /* WXAuth.m in Sources */,
+				D06E5AF1247CC10500ECE98D /* YBEmojiTabbar.m in Sources */,
 				82FDF4FA23541EB900F295F5 /* LSBaseTabBarView.m in Sources */,
 				D024DBCB23A8A26C001723AF /* LSPhotoAVPlayerView.m in Sources */,
 				829980F922D8465C00544883 /* BalloonRefreshHeader.m in Sources */,
+				D06E5AEF247CC10500ECE98D /* YBEmojiGifImageView.m in Sources */,
 				82FDF50023541F2D00F295F5 /* JSHandler.m in Sources */,
 				D08EB80923A253B000EAB828 /* LSPuzzlePathMaker.m in Sources */,
 				8271B4232170830D00F63125 /* NSMutableArray+ErrorHandle.m in Sources */,
@@ -3299,6 +3439,7 @@
 				82BA1365235966ED00EA7D01 /* LSKeyboardHelperView.m in Sources */,
 				82F122A92354147A00BD0575 /* ClearCacheTool.m in Sources */,
 				82F122BD235416D100BD0575 /* JTDateHelper.m in Sources */,
+				D06E5AFB247CC10500ECE98D /* YBEmojiContentView.m in Sources */,
 				82F2FD1A227319B100E2045B /* AuthID.m in Sources */,
 				82F2FD0C227314F000E2045B /* ViewExampleViewController.m in Sources */,
 				82A9EDCE20E17779007F87E8 /* FourthViewController.m in Sources */,
@@ -3314,6 +3455,7 @@
 				D0E10EBF2399FEE80025AB6A /* LSTreeViewParam.m in Sources */,
 				D0CD2802239F4E270019A357 /* LSImageZoomView.m in Sources */,
 				82FDF4F123541E7000F295F5 /* Transition.m in Sources */,
+				D06E5AF0247CC10500ECE98D /* YBTextAttachment.m in Sources */,
 				82F312BA2265DF57000E5154 /* Game.m in Sources */,
 				824E4FA02441E116004AA9EE /* PPEmojiPreviewView.m in Sources */,
 				82F312B72265DE30000E5154 /* AnimatedViewController.m in Sources */,
@@ -3321,12 +3463,14 @@
 				824E4F952441E116004AA9EE /* UIScrollView+PPAddition.m in Sources */,
 				D0D5FD9D23A23853000ED84D /* UILabel+LSLabelAdaptive.m in Sources */,
 				82AC27122153457600E521B7 /* RootModel.m in Sources */,
+				D06E5AF9247CC10500ECE98D /* YBEmojiConfig.m in Sources */,
 				D0E10EBB2399FD700025AB6A /* LSTreeParam.m in Sources */,
 				D083EF7723C304A7008E0297 /* PageViewController.m in Sources */,
 				828BF88520AD833F00E4500E /* RadiusImageView.m in Sources */,
 				D0800E062397C14500B3383C /* CuttingHeadViewController.m in Sources */,
 				D0661065239FA7BC00D18086 /* LSCropView.m in Sources */,
 				D0661062239FA69800D18086 /* LSCropRectView.m in Sources */,
+				D06E5AF8247CC10500ECE98D /* YBEmojiPreviewView.m in Sources */,
 				D0CD27E7239F3D870019A357 /* LSImageView.m in Sources */,
 				824E4F922441E116004AA9EE /* PPQueuingScrollView.m in Sources */,
 				8207775D20BE9A820092C18E /* NSString+Extension.m in Sources */,
@@ -3374,6 +3518,7 @@
 				82A9EDC520E16AB5007F87E8 /* MarqueeView.m in Sources */,
 				824E4F972441E116004AA9EE /* PPTextBackedString.m in Sources */,
 				8271B420217082B700F63125 /* NSArray+ErrorHandle.m in Sources */,
+				D06E5AF4247CC10500ECE98D /* YBEmojiGifImage.m in Sources */,
 				D066D08423C6D4B90058D732 /* ParentViewController.m in Sources */,
 				828BF87B20AD74E500E4500E /* Reachability.m in Sources */,
 				82BA13782359957600EA7D01 /* LSPSWLineDotNormalView.m in Sources */,
@@ -3386,6 +3531,7 @@
 				82BA138D235999E900EA7D01 /* LSPSWRectEncryptTextFiledView.m in Sources */,
 				D07B884E238D3B5B00F951AC /* LSMultistageSuperScrollView.m in Sources */,
 				D024DBCE23A8A2B8001723AF /* LSPhotoAVPlayerActionBar.m in Sources */,
+				D06E5AF6247CC10500ECE98D /* YBEmojiInputView.m in Sources */,
 				D0FF2EB32399F178006D71E9 /* LSAvatarBrowser.m in Sources */,
 				82FDF4E423541DB400F295F5 /* LSBaseCollectionViewFlowLayout.m in Sources */,
 				82BA13812359965300EA7D01 /* LSPSWRectDotEncryptionView.m in Sources */,
@@ -3401,6 +3547,7 @@
 				D0E10EC8239A03520025AB6A /* LSTreeView.m in Sources */,
 				82BA1384235996DD00EA7D01 /* LSPSWLineNormalTextFiledView.m in Sources */,
 				D0CD27D5239F362F0019A357 /* LSEditVideoViewController.m in Sources */,
+				D06E5AF3247CC10500ECE98D /* YBEmojiTextView.m in Sources */,
 				82A9EDCB20E170C2007F87E8 /* MoreViewController.m in Sources */,
 				D0E10EB62399FD1F0025AB6A /* LSTreeTableManager.m in Sources */,
 				82BA13872359981300EA7D01 /* LSPSWLineEncryptTextFiledView.m in Sources */,
@@ -3421,14 +3568,19 @@
 				D07B885A238D3D9200F951AC /* AdaptiveHtmlCellViewController.m in Sources */,
 				824E4FA12441E116004AA9EE /* PPStickerPageView.m in Sources */,
 				8207776020BE9B000092C18E /* PushViewController.m in Sources */,
+				D06E5AF5247CC10500ECE98D /* YBEmojiDataManager.m in Sources */,
 				8211E5BF2266CF440051AD26 /* VerifyCodeViewController.m in Sources */,
 				828BF87820AD6ADE00E4500E /* NetworkRequest.m in Sources */,
+				D06E5AD2247CC0CF00ECE98D /* EmojiKeyboardTwoViewController.m in Sources */,
 				D07B8854238D3CF100F951AC /* HtmlTableViewCell.m in Sources */,
 				D07B8848238D3A3500F951AC /* LSMultistageScrollViewProxy.m in Sources */,
+				D06E5AFC247CC10500ECE98D /* YBEmojiItemView.m in Sources */,
+				D06E5B13247CC26400ECE98D /* EmojiKeyboardTwoTableViewCell.m in Sources */,
 				825B23D921115F9500C79183 /* NetworkAccessibity.m in Sources */,
 				D0CD280B239F67820019A357 /* LSGridView.m in Sources */,
 				D0CD27C9239F2F930019A357 /* LSShotViewController.m in Sources */,
 				D0CD27EA239F40030019A357 /* LSDrawView.m in Sources */,
+				D06E5B16247CC49D00ECE98D /* InputBar.m in Sources */,
 				D0537C182391314F0083071A /* UITextView+LSClassification.m in Sources */,
 				D024DBC423A8890C001723AF /* LSPhotoVideoCell.m in Sources */,
 				D024DC7523A8D2A8001723AF /* GraphicsProcessingViewController.m in Sources */,
@@ -3478,6 +3630,7 @@
 				82BA136B2359685F00EA7D01 /* LSCircleAnimatedView.m in Sources */,
 				D0E10EC2239A00E40025AB6A /* LSTreeBaseView.m in Sources */,
 				D024DC6E23A8C001001723AF /* IMTableViewCell.m in Sources */,
+				D06E5AFA247CC10500ECE98D /* YBEmojiModel.m in Sources */,
 				D024DC5623A8B348001723AF /* NineSquareModel.m in Sources */,
 				D024DBBE23A8885D001723AF /* LSPhotoBrowserNumView.m in Sources */,
 				82D32BA62252624B003ECAA3 /* ZQTouchControlView.m in Sources */,
@@ -3498,6 +3651,7 @@
 				D024DBE123A8AB31001723AF /* LSPhotoActionSheetView.m in Sources */,
 				824E4F9D2441E116004AA9EE /* PPEmoji.m in Sources */,
 				82E8891722D5E445007AC376 /* AddressView.m in Sources */,
+				D06E5AF2247CC10500ECE98D /* YBEmojiPageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
