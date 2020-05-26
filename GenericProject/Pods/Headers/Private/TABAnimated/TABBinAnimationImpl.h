@@ -1,0 +1,1 @@
+../../../TABAnimated/AnimatedDemo/AnimatedDemo/TABAnimated/Animation/Bin/TABBinAnimationImpl.h

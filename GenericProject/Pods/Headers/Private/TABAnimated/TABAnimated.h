@@ -1,1 +1,1 @@
-../../../TABAnimated/AnimatedDemo/AnimatedDemo/TABAnimated/Core/TABAnimated.h
+../../../TABAnimated/AnimatedDemo/AnimatedDemo/TABAnimated/TABAnimated.h

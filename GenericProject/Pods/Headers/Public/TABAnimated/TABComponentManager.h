@@ -1,1 +1,1 @@
-../../../TABAnimated/AnimatedDemo/AnimatedDemo/TABAnimated/Core/Manager/TABComponentManager.h
+../../../TABAnimated/AnimatedDemo/AnimatedDemo/TABAnimated/Chain/TABComponentManager.h

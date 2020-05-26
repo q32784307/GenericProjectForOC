@@ -1,1 +1,1 @@
-../../../TABAnimated/AnimatedDemo/AnimatedDemo/TABAnimated/Core/Model/TABCollectionAnimated.h
+../../../TABAnimated/AnimatedDemo/AnimatedDemo/TABAnimated/Control/Include/TABCollectionAnimated.h

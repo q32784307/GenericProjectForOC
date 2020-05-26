@@ -1,1 +1,0 @@
-../../../TABAnimated/AnimatedDemo/AnimatedDemo/TABAnimated/Core/Manager/NSArray+TABAnimated.h

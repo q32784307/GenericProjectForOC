@@ -6,7 +6,4 @@ ${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_1.png
 ${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_2.png
 ${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle
 ${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle
-${PODS_ROOT}/TABAnimated/AnimatedDemo/AnimatedDemo/TABAnimated/Reveal/Source/TabAnimatedLogo.png
-${PODS_ROOT}/TABAnimated/AnimatedDemo/AnimatedDemo/TABAnimated/Reveal/Source/tab_reveal_close.png
-${PODS_ROOT}/TABAnimated/AnimatedDemo/AnimatedDemo/TABAnimated/Reveal/Source/tab_reveal_close_bigger.png
 ${PODS_ROOT}/TZImagePickerController/TZImagePickerController/TZImagePickerController/TZImagePickerController.bundle
