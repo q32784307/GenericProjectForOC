@@ -7,7 +7,7 @@
 //
 
 #import "AnimatedTableViewCell.h"
-#import "UIView+TABAnimated.h"
+#import "TABAnimated.h"
 #import "Game.h"
 
 @interface AnimatedTableViewCell ()

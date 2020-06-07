@@ -29,6 +29,7 @@
 #import "VerifyAlertViewController.h"
 #import "PageViewController.h"
 #import "LabelTagViewController.h"
+#import "SignatureViewController.h"
 
 @interface OneViewController ()
 
@@ -99,7 +100,8 @@
                         @"TagView演示",
                         @"滑块验证码",
                         @"分段选择控制器",
-                        @"UILable添加点击事件"
+                        @"UILable添加点击事件",
+                        @"手势签名"
                         ];
 }
 
@@ -230,6 +232,13 @@
     if (indexPath.row == 22) {
         LabelTagViewController *LabelTagVC = [[LabelTagViewController alloc]init];
         [self.navigationController pushViewController:LabelTagVC animated:YES];
+    }
+    if (indexPath.row == 23) {
+        SignatureViewController *SignatureVC = [[SignatureViewController alloc]init];
+        [self.navigationController pushViewController:SignatureVC animated:YES];
+        SignatureVC.signResult = ^(UIImage *signImage) {
+//            self.signImageView.image = signImage;
+        };
     }
 }
 

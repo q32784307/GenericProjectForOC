@@ -7,10 +7,8 @@
  一个支持多选、选原图和视频的图片选择器，同时有预览功能，支持iOS6+。
  
  ## 重要提示1：提issue前，请先对照Demo、常见问题自查！Demo正常说明你可以升级下新版试试。          
-   
- ## 重要提示2：1.9.0版本后移除了"prefs:root="的调用，这个API已经被列为私有API，请大家尽快升级。
  
- ## 重要提示3：3.0.7版本适配了iPhoneXR、XS、XS Max，建议大家尽快更新            
+ ## 重要提示2：3.0.7版本适配了iPhoneXR、XS、XS Max，建议大家尽快更新            
  
      关于升级iOS10和Xcdoe8的提示:    
  在Xcode8环境下将项目运行在iOS10的设备/模拟器中，访问相册和相机需要额外配置info.plist文件。分别是Privacy - Photo Library Usage Description和Privacy - Camera Usage Description字段，详见Demo中info.plist中的设置。
@@ -125,7 +123,7 @@ A：不要去拿PHImageFileURLKey，没用的，只有通过Photos框架才能�
 
 ## 六. Release Notes 最近更新     
 
-3.3.1 适配iOS13，若干问题修复                 
+3.3.2 适配iOS13，若干问题修复                 
 3.2.1 新增裁剪用scaleAspectFillCrop属性，设置为YES后，照片尺寸小于裁剪框时会自动放大撑满                
 3.2.0 加入用NSOperationQueue控制获取原图并发数降低内存的示例          
 3.1.8 批量获取图片时加入队列控制，尝试优化大批量选择图片时CPU和内存占用过高的问题（仍然危险，maxImagesCount谨慎设置过大...）             
@@ -147,7 +145,6 @@ A：不要去拿PHImageFileURLKey，没用的，只有通过Photos框架才能�
 2.0.0.2 新增繁体语言，可设置首选语言，国际化支持更强大；优化一些细节     
 1.9.8  支持Carthage，优化一些细节    
 1.9.6  优化视频预览和gif预览页toolbar在iPhoneX上的样式      
-1.9.0  移除"prefs:root="的调用，这个API已经被列为私有API，请大家尽快升级     
 ...   
 1.8.4  加入横竖屏适配；支持视频/gif多选；支持视频和照片一起选    
 1.8.1  新增2个代理方法，支持由上层来决定相册/照片的显示与否     

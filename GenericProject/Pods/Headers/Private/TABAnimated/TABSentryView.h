@@ -1,1 +1,1 @@
-../../../TABAnimated/AnimatedDemo/AnimatedDemo/TABAnimated/Core/Manager/TABSentryView.h
+../../../TABAnimated/AnimatedDemo/AnimatedDemo/TABAnimated/DarkMode/TABSentryView.h

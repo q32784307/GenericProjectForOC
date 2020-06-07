@@ -104,9 +104,6 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_2.png"
   install_resource "${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle"
   install_resource "${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
-  install_resource "${PODS_ROOT}/TABAnimated/AnimatedDemo/AnimatedDemo/TABAnimated/Reveal/Source/TabAnimatedLogo.png"
-  install_resource "${PODS_ROOT}/TABAnimated/AnimatedDemo/AnimatedDemo/TABAnimated/Reveal/Source/tab_reveal_close.png"
-  install_resource "${PODS_ROOT}/TABAnimated/AnimatedDemo/AnimatedDemo/TABAnimated/Reveal/Source/tab_reveal_close_bigger.png"
   install_resource "${PODS_ROOT}/TZImagePickerController/TZImagePickerController/TZImagePickerController/TZImagePickerController.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
@@ -117,9 +114,6 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_2.png"
   install_resource "${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle"
   install_resource "${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
-  install_resource "${PODS_ROOT}/TABAnimated/AnimatedDemo/AnimatedDemo/TABAnimated/Reveal/Source/TabAnimatedLogo.png"
-  install_resource "${PODS_ROOT}/TABAnimated/AnimatedDemo/AnimatedDemo/TABAnimated/Reveal/Source/tab_reveal_close.png"
-  install_resource "${PODS_ROOT}/TABAnimated/AnimatedDemo/AnimatedDemo/TABAnimated/Reveal/Source/tab_reveal_close_bigger.png"
   install_resource "${PODS_ROOT}/TZImagePickerController/TZImagePickerController/TZImagePickerController/TZImagePickerController.bundle"
 fi
 
