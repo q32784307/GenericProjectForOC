@@ -195,6 +195,13 @@ static NSString * NSStringFromZYNetworkAccessibleState(NetworkAccessibleState st
         _mainTableView.estimatedSectionFooterHeight = 0;
         _mainTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         
+        // 获取系统左滑手势
+        for (UIGestureRecognizer *ges in _mainTableView.gestureRecognizers) {
+            if ([ges isKindOfClass:NSClassFromString(@"_UISwipeActionPanGestureRecognizer")]) {
+                [ges addTarget:self action:@selector(_swipeRecognizerDidRecognize:)];
+            }
+        }
+        
 //        [_mainTableView setupEmptyDataText:@"无数据" tapBlock:^{
 //            NSLog(@"没有数据");
 //            [self analysis];
@@ -213,6 +220,18 @@ static NSString * NSStringFromZYNetworkAccessibleState(NetworkAccessibleState st
         }
     }
     return _mainTableView;
+}
+
+//禁止tableView左滑删除时，按住左滑再向右滑动时有弹簧效果的问题
+- (void)_swipeRecognizerDidRecognize:(UISwipeGestureRecognizer *)swip {
+    CGPoint currentPoint = [swip locationInView:self.mainTableView];
+    for (UITableViewCell *cell in self.mainTableView.visibleCells) {
+        if (CGRectContainsPoint(cell.frame, currentPoint)) {
+            if (cell.frame.origin.x > 0) {
+                cell.frame = CGRectMake(0, cell.frame.origin.y,cell.bounds.size.width, cell.bounds.size.height);
+            }
+        }
+    }
 }
 
 //监听当前模式为深夜模式还是日间模式
