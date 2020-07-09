@@ -1,1 +1,1 @@
-../../../TABAnimated/AnimatedDemo/AnimatedDemo/TABAnimated/DarkMode/Include/TABAnimatedDarkModeManagerInterface.h
+../../../TABAnimated/TABAnimatedDemo/TABAnimated/Decorate/DarkMode/Include/TABAnimatedDarkModeManagerInterface.h

@@ -1,1 +1,1 @@
-../../../TABAnimated/AnimatedDemo/AnimatedDemo/TABAnimated/Chain/TABBaseComponent.h
+../../../TABAnimated/TABAnimatedDemo/TABAnimated/Decorate/Chain/TABBaseComponent.h

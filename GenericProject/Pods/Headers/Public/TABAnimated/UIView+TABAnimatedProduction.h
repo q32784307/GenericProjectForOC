@@ -1,1 +1,1 @@
-../../../TABAnimated/AnimatedDemo/AnimatedDemo/TABAnimated/Product/UIView+TABAnimatedProduction.h
+../../../TABAnimated/TABAnimatedDemo/TABAnimated/Product/UIView+TABAnimatedProduction.h

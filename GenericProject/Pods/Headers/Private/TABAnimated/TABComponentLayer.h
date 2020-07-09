@@ -1,1 +1,1 @@
-../../../TABAnimated/AnimatedDemo/AnimatedDemo/TABAnimated/Product/TABComponentLayer.h
+../../../TABAnimated/TABAnimatedDemo/TABAnimated/Product/TABComponentLayer.h

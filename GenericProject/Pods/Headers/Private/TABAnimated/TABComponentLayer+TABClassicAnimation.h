@@ -1,1 +1,1 @@
-../../../TABAnimated/AnimatedDemo/AnimatedDemo/TABAnimated/Animation/Classic/TABComponentLayer+TABClassicAnimation.h
+../../../TABAnimated/TABAnimatedDemo/TABAnimated/Decorate/Animation/Classic/TABComponentLayer+TABClassicAnimation.h

@@ -1,1 +1,1 @@
-../../../TABAnimated/AnimatedDemo/AnimatedDemo/TABAnimated/Control/Include/TABViewAnimatedDefines.h
+../../../TABAnimated/TABAnimatedDemo/TABAnimated/Control/Include/TABViewAnimatedDefines.h

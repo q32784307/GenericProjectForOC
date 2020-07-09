@@ -1,1 +1,1 @@
-../../../TABAnimated/AnimatedDemo/AnimatedDemo/TABAnimated/Util/TABWeakDelegateManager.h
+../../../TABAnimated/TABAnimatedDemo/TABAnimated/Util/TABWeakDelegateManager.h

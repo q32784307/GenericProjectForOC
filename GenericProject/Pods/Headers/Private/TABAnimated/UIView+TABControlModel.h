@@ -1,1 +1,1 @@
-../../../TABAnimated/AnimatedDemo/AnimatedDemo/TABAnimated/Control/Include/UIView+TABControlModel.h
+../../../TABAnimated/TABAnimatedDemo/TABAnimated/Control/Include/UIView+TABControlModel.h

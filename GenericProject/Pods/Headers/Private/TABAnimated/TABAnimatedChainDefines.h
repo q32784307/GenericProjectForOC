@@ -1,1 +1,1 @@
-../../../TABAnimated/AnimatedDemo/AnimatedDemo/TABAnimated/Chain/Include/TABAnimatedChainDefines.h
+../../../TABAnimated/TABAnimatedDemo/TABAnimated/Decorate/Chain/Include/TABAnimatedChainDefines.h

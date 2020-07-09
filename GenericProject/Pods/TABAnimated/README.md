@@ -41,22 +41,23 @@ TABAnimated是提供给iOS开发者自动生成骨架屏的一种解决方案。
 
 通过TABAnimated集成的骨架屏有什么优势？
 
--  是一种自动化方案，集成速度很快
+-  是一种自动化方案，集成速度非常快
 -  零耦合，易于将其动画逻辑封装到基础库，且移除方便
 -  配有缓存功能，压测切换控制器不卡顿
--  适用场景广，可以适用开发中99%的视图
--  自由度非常高，可以完全地自定制
+-  适用场景广，可以适用开发中99.99%的视图
+-  自由度非常高，可以完全地自定制，包括动画及其序列化
 -  自动切换暗黑模式骨架屏
+-  支持上拉加载更多
 
 ## 效果展示
 
-| 动态效果 | 卡片投影 | 呼吸灯  | 
+| 闪光动画 | 经典动画 | 下坠动画 | 
 | ------ | ------ | ------ | 
-| ![动态动画.gif](https://upload-images.jianshu.io/upload_images/5632003-56c9726a027ca5e2.gif?imageMogr2/auto-orient/strip) | ![卡片投影.gif](https://upload-images.jianshu.io/upload_images/5632003-fd01c795bb3f9e1a.gif?imageMogr2/auto-orient/strip) | ![呼吸灯.gif](https://upload-images.jianshu.io/upload_images/5632003-683062be0a23d5b8.gif?imageMogr2/auto-orient/strip) | 
+| ![闪光动画.gif](https://upload-images.jianshu.io/upload_images/5632003-8ebdc1e964fcfbb5.gif?imageMogr2/auto-orient/strip) | ![经典动画.gif](https://upload-images.jianshu.io/upload_images/5632003-8025a04102572ed4.gif?imageMogr2/auto-orient/strip) | ![下坠动画.gif](https://upload-images.jianshu.io/upload_images/5632003-5277740f43880cde.gif?imageMogr2/auto-orient/strip) | 
 
-| 闪光灯 | 分段视图 | 豆瓣效果 |
+| 呼吸动画 | 上拉加载 | 复杂场景 |
 | ------ | ------ | ------ | 
-| ![闪光灯改版.gif](https://upload-images.jianshu.io/upload_images/5632003-93ab2cf6950498ab.gif?imageMogr2/auto-orient/strip)| ![分段视图.gif](https://upload-images.jianshu.io/upload_images/5632003-4da2062be691cf0b.gif?imageMogr2/auto-orient/strip) | ![豆瓣.gif](https://upload-images.jianshu.io/upload_images/5632003-3ed9d6cc317891a3.gif?imageMogr2/auto-orient/strip) | 
+| ![呼吸动画.gif](https://upload-images.jianshu.io/upload_images/5632003-8edf170c90e18b4b.gif?imageMogr2/auto-orient/strip)| ![上拉加载.gif](https://upload-images.jianshu.io/upload_images/5632003-72265e19c84fe415.gif?imageMogr2/auto-orient/strip) | ![复杂场景.gif](https://upload-images.jianshu.io/upload_images/5632003-e5500766b4f66f14.gif?imageMogr2/auto-orient/strip) | 
 
 **暗黑模式：**
 
@@ -89,7 +90,7 @@ TABAnimated是提供给iOS开发者自动生成骨架屏的一种解决方案。
 - CocoaPods
 
 ```
-pod 'TABAnimated'
+pod 'TABAnimated', '2.4.2'
 ```
 
 - Carthage
@@ -209,21 +210,22 @@ manager.animationWithIndexs(1,5,7).down(5);
 **当然啦，在实际应用中，我们还有各式各样的视图，TABAnimated经历了很多产品的考验，统统都可以应对。
 但是光凭上面的知识肯定是不够的，以下是更详细说明文档。**
 
-- 你最好要（必须）阅读的文档：
+- 最好要阅读的文档：
 
 > + [缓存策略和线程处理](https://github.com/tigerAndBull/TABAnimated/blob/master/Documents/%E7%BC%93%E5%AD%98%E7%AD%96%E7%95%A5%E5%92%8C%E7%BA%BF%E7%A8%8B%E5%A4%84%E7%90%86.md)
+> + [架构设计和性能测试](https://github.com/tigerAndBull/TABAnimated/blob/master/Documents/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%92%8C%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95.md)
 
-- 你最可能用到的文档：
+- 集成最可能用到的文档：
 
 > + [预处理回调动画元素下标问题](https://github.com/tigerAndBull/TABAnimated/blob/master/Documents/%E5%8A%A8%E7%94%BB%E5%85%83%E7%B4%A0%E4%B8%8B%E6%A0%87%E9%97%AE%E9%A2%98.md)
 > + [问题答疑文档](https://github.com/tigerAndBull/TABAnimated/blob/master/Documents/%E9%97%AE%E9%A2%98%E7%AD%94%E7%96%91%E6%96%87%E6%A1%A3.md)
 > + [全局:局部属性、链式语法api](https://github.com/tigerAndBull/TABAnimated/blob/master/Documents/%E5%85%A8%E5%B1%80:%E5%B1%80%E9%83%A8%E5%B1%9E%E6%80%A7%E3%80%81%E9%93%BE%E5%BC%8F%E8%AF%AD%E6%B3%95api.md)
 
-- 你可能用到的辅助工具、技术和其他文档
+- 可能用到的其他技术文档
 
-> + [实时预览工具](https://github.com/tigerAndBull/TABAnimated/blob/master/Documents/%E5%AE%9E%E6%97%B6%E9%A2%84%E8%A7%88%E5%B7%A5%E5%85%B7.md)
 > + [豆瓣动画详解](https://github.com/tigerAndBull/TABAnimated/blob/master/Documents/%E8%B1%86%E7%93%A3%E5%8A%A8%E7%94%BB%E8%AF%A6%E8%A7%A3.md)
 > + [不再hook setDelegate和setDataSource](https://github.com/tigerAndBull/TABAnimated/blob/master/Documents/%E4%B8%8D%E5%86%8Dhook%20setDelegate%E5%92%8CsetDataSource.md)
+> + [上拉加载更多](https://github.com/tigerAndBull/TABAnimated/blob/master/Documents/%E4%B8%8A%E6%8B%89%E5%8A%A0%E8%BD%BD%E5%8A%9F%E8%83%BD.md)
 
 **如果你仍无法解决问题，可以尽快联系我，我相信TABAnimated是可以解决99%的需求的**
 
@@ -231,7 +233,7 @@ manager.animationWithIndexs(1,5,7).down(5);
 
 - 有问题一定要先看`demo`和文档哈，demo的示例分散在`UITableView`和`UICollectionView`两种类型视图上
 - demo也只是引导的作用，你可以自己设置出更精美的效果
-- 如有使用问题、优化建议、好的想法等，可以直接提issue，也可以加交流群即时反馈: 304543771
+- 如有使用问题、优化建议、好的想法等，可以关注公众号：tigerAndBull技术分享，扫码加群快速解决
 
 ## License
 
