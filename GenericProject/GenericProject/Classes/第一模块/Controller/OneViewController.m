@@ -30,6 +30,7 @@
 #import "PageViewController.h"
 #import "LabelTagViewController.h"
 #import "SignatureViewController.h"
+#import "UserResizableViewController.h"
 
 @interface OneViewController ()
 
@@ -101,7 +102,8 @@
                         @"滑块验证码",
                         @"分段选择控制器",
                         @"UILable添加点击事件",
-                        @"手势签名"
+                        @"手势签名",
+                        @"仿猿题库拖拽"
                         ];
 }
 
@@ -239,6 +241,10 @@
         SignatureVC.signResult = ^(UIImage *signImage) {
 //            self.signImageView.image = signImage;
         };
+    }
+    if (indexPath.row == 24) {
+        UserResizableViewController *UserResizableVC = [[UserResizableViewController alloc]init];
+        [self.navigationController pushViewController:UserResizableVC animated:YES];
     }
 }
 

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6ADF8231A590B496EAC5F737 /* libPods-GenericProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 217529640022A0F05F99BF56 /* libPods-GenericProject.a */; };
+		7956EF2B24D97A5F000F64DD /* LSUserResizableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7956EF2A24D97A5F000F64DD /* LSUserResizableView.m */; };
+		7956EF2E24D97AE2000F64DD /* UserResizableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7956EF2D24D97AE2000F64DD /* UserResizableViewController.m */; };
 		8204212720CE1CB00026F2FD /* 城市数据.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8204212620CE1CB00026F2FD /* 城市数据.txt */; };
 		8207775D20BE9A820092C18E /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8207775C20BE9A820092C18E /* NSString+Extension.m */; };
 		8207776020BE9B000092C18E /* PushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8207775F20BE9B000092C18E /* PushViewController.m */; };
@@ -478,6 +480,10 @@
 
 /* Begin PBXFileReference section */
 		217529640022A0F05F99BF56 /* libPods-GenericProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GenericProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7956EF2924D97A5F000F64DD /* LSUserResizableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSUserResizableView.h; sourceTree = "<group>"; };
+		7956EF2A24D97A5F000F64DD /* LSUserResizableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSUserResizableView.m; sourceTree = "<group>"; };
+		7956EF2C24D97AE2000F64DD /* UserResizableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserResizableViewController.h; sourceTree = "<group>"; };
+		7956EF2D24D97AE2000F64DD /* UserResizableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserResizableViewController.m; sourceTree = "<group>"; };
 		8204212620CE1CB00026F2FD /* 城市数据.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "城市数据.txt"; sourceTree = "<group>"; };
 		8207775B20BE9A820092C18E /* NSString+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
 		8207775C20BE9A820092C18E /* NSString+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
@@ -1284,6 +1290,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7956EF2824D97A4C000F64DD /* 仿猿题库拖拽View */ = {
+			isa = PBXGroup;
+			children = (
+				7956EF2924D97A5F000F64DD /* LSUserResizableView.h */,
+				7956EF2A24D97A5F000F64DD /* LSUserResizableView.m */,
+			);
+			path = "仿猿题库拖拽View";
+			sourceTree = "<group>";
+		};
 		82179B6C2101E9D7002F582C /* 搜索框 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1513,6 +1528,8 @@
 				820BB6FD23E5691C006608D2 /* LabelTagViewController.m */,
 				D03766D82480A336004D793C /* SignatureViewController.h */,
 				D03766D92480A336004D793C /* SignatureViewController.m */,
+				7956EF2C24D97AE2000F64DD /* UserResizableViewController.h */,
+				7956EF2D24D97AE2000F64DD /* UserResizableViewController.m */,
 				D083EF7823C3061B008E0297 /* 分段选择控制器 */,
 				D024DC7623A8D36A001723AF /* 图形处理 */,
 				D024DC7223A8C1C3001723AF /* 嵌套WKWebView */,
@@ -2325,6 +2342,7 @@
 		82F122AB235416AB00BD0575 /* ThirdParty(第三方) */ = {
 			isa = PBXGroup;
 			children = (
+				7956EF2824D97A4C000F64DD /* 仿猿题库拖拽View */,
 				82F122AC235416D100BD0575 /* 日历控件 */,
 			);
 			path = "ThirdParty(第三方)";
@@ -3555,6 +3573,7 @@
 				82BA13812359965300EA7D01 /* LSPSWRectDotEncryptionView.m in Sources */,
 				D07B882E238D209F00F951AC /* UIActionSheet_UIAlertController.m in Sources */,
 				82A9EDC820E16D33007F87E8 /* OtherViewController.m in Sources */,
+				7956EF2B24D97A5F000F64DD /* LSUserResizableView.m in Sources */,
 				D0D5FD8E23A23540000ED84D /* UIView+LSViewGradient.m in Sources */,
 				8232D0AA20BD4B4D00D1DDBE /* ThreeViewController.m in Sources */,
 				D066D06C23C6D3EE0058D732 /* FirstViewController.m in Sources */,
@@ -3654,6 +3673,7 @@
 				D024DBBE23A8885D001723AF /* LSPhotoBrowserNumView.m in Sources */,
 				82D32BA62252624B003ECAA3 /* ZQTouchControlView.m in Sources */,
 				82DA451D20E0D9480096EF26 /* AlertViewController.m in Sources */,
+				7956EF2E24D97AE2000F64DD /* UserResizableViewController.m in Sources */,
 				82728C8620BFEA340082C0DD /* CAAnimation+Animation.m in Sources */,
 				82D32BA72252624B003ECAA3 /* ZQProgressView.m in Sources */,
 				D0D5FDAD23A24543000ED84D /* TagViewDemoViewController.m in Sources */,
