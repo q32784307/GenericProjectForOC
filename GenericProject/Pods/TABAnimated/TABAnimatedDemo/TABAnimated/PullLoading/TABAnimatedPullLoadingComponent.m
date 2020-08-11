@@ -114,6 +114,8 @@ NSString *const TABAnimatedPullLoadingKeyPathPanState = @"state";
     [self.scrollView removeObserver:self forKeyPath:TABAnimatedPullLoadingKeyPathContentSize];
 }
 
+#pragma mark -
+
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
 
     if (!self.userInteractionEnabled) return;

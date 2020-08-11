@@ -10,6 +10,7 @@
 #import "TABAnimatedCacheManager.h"
 #import "TABAnimated.h"
 #import <objc/runtime.h>
+#import "UIScrollView+TABExtension.h"
 
 @interface TABFormAnimated()
 
@@ -53,10 +54,16 @@
         [self registerViewToReuse:controlView];
         [self exchangeDelegate:controlView];
         [self exchangeDataSource:controlView];
-    }else if (index == TABAnimatedIndexTag) {
-        [self reloadAnimation];
-    }else if (![self reloadAnimationWithIndex:index]) {
-        return NO;
+    }else {
+        
+        UIScrollView *scrollView = (UIScrollView *)controlView;
+        [scrollView tab_scrollToTop];
+        
+        if (index == TABAnimatedIndexTag) {
+            [self reloadAnimation];
+        }else if (![self reloadAnimationWithIndex:index]) {
+            return NO;
+        }
     }
     
     if (self.runIndexDict.count == 0) return NO;
@@ -96,10 +103,15 @@
     
     Method oldMethod = class_getInstanceMethod([delegate class], oldSel);
     
-    BOOL isVictory = class_addMethod([delegate class], newSel, class_getMethodImplementation([delegate class], oldSel), method_getTypeEncoding(oldMethod));
-    if (isVictory) {
+    #ifdef DEBUG
+        class_addMethod([delegate class], newSel, class_getMethodImplementation([delegate class], oldSel), method_getTypeEncoding(oldMethod));
         class_replaceMethod([delegate class], oldSel, class_getMethodImplementation(targetClass, newSel), method_getTypeEncoding(newMethod));
-    }
+    #else
+        BOOL isVictory = class_addMethod([delegate class], newSel, class_getMethodImplementation([delegate class], oldSel), method_getTypeEncoding(oldMethod));
+        if (isVictory) {
+            class_replaceMethod([delegate class], oldSel, class_getMethodImplementation(targetClass, newSel), method_getTypeEncoding(newMethod));
+        }
+    #endif
 }
 
 - (void)setRunningCount:(NSInteger)runningCount {
@@ -127,9 +139,7 @@
 #pragma mark -
 
 - (BOOL)getIndexIsRuning:(NSInteger)index {
-    if ([self getIndexWithIndex:index dict:self.runIndexDict] >= 0) {
-        return YES;
-    }
+    if ([self getIndexWithIndex:index dict:self.runIndexDict] >= 0) return YES;
     return NO;
 }
 
@@ -214,9 +224,7 @@
 - (BOOL)_reloadWithKey:(NSString *)key resultDict:(NSMutableDictionary *)resultDict {
     if (![[resultDict allKeys] containsObject:key]) return NO;
     NSInteger value = [[resultDict objectForKey:key] integerValue];
-    if (value >= 0) {
-        return NO;
-    }
+    if (value >= 0) return NO;
     value -= TABAnimatedIndexTag;
     [resultDict setValue:@(value) forKey:key];
     return YES;
@@ -229,9 +237,7 @@
 - (BOOL)_endWithKey:(NSString *)key resultDict:(NSMutableDictionary *)resultDict {
     if (![[resultDict allKeys] containsObject:key]) return NO;
     NSInteger value = [[resultDict objectForKey:key] integerValue];
-    if (value < 0) {
-        return NO;
-    }
+    if (value < 0) return NO;
     value += TABAnimatedIndexTag;
     [resultDict setValue:@(value) forKey:key];
     return YES;
@@ -254,12 +260,8 @@
 }
 
 - (BOOL)scrollEnabled {
-    if (!_scrollEnabled) {
-        return NO;
-    }
-    if (_scrollEnabled && ![TABAnimated sharedAnimated].scrollEnabled) {
-        return NO;
-    }
+    if (!_scrollEnabled) return NO;
+    if (_scrollEnabled && ![TABAnimated sharedAnimated].scrollEnabled) return NO;
     return YES;
 }
 
