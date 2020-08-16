@@ -4,6 +4,13 @@
 //
 //  github: https://github.com/tigerAndBull/TABAnimated
 //  jianshu: https://www.jianshu.com/p/6a0ca4995dff
+//  关注 tigerAndBull技术分享 公众号，加群快速沟通
+//
+//  集成问答文档：https://www.jianshu.com/p/34417897915a
+//  历史更新文档：https://www.jianshu.com/p/e3e9ea295e8a
+//  动画下标说明：https://www.jianshu.com/p/8c361ba5aa18
+//  豆瓣效果说明：https://www.jianshu.com/p/1a92158ce83a
+//  嵌套视图说明：https://www.jianshu.com/p/cf8e37195c11
 //
 //  Created by tigerAndBull on 2018/9/14.
 //  Copyright © 2018年 tigerAndBull. All rights reserved.
@@ -35,20 +42,20 @@
 /**
  * 全局动画类型，它决定了你是否需要在骨架层的基础之上，增加额外的动画。
  *
- * 除了`TABAnimationTypeOnlySkeleton`以外的值，都会添加额外的一种动画。
+ * 每一种类型都会添加额外的一种动画，`TABAnimationTypeOnlySkeleton` 包含了经典的伸缩动画
  *
- * 当你有一个指定的view不需要已经设置好的全局的动画类型时，
- * 你可以使用`TABViewSuperAnimationType`这个局部属性覆盖`TABAnimationType`的值。
+ * 当你有一个特定的view不需要此处全局的动画时，
+ * 你可以使用`TABViewSuperAnimationType`这个局部属性去覆盖`TABAnimationType`的值。
  */
 typedef NS_ENUM(NSInteger, TABAnimationType) {
     
-    // 骨架层
+    // 骨架层 + 经典伸缩动画
     TABAnimationTypeOnlySkeleton = 0,
     
     // 骨架层 + 呼吸灯动画
     TABAnimationTypeBinAnimation,
     
-    // 骨架层 + 闪光灯
+    // 骨架层 + 闪光灯动画
     TABAnimationTypeShimmer,
     
     // 骨架层 + 豆瓣下坠动画

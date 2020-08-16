@@ -31,6 +31,7 @@
 #import "LabelTagViewController.h"
 #import "SignatureViewController.h"
 #import "UserResizableViewController.h"
+#import "RadioViewController.h"
 
 @interface OneViewController ()
 
@@ -103,7 +104,8 @@
                         @"分段选择控制器",
                         @"UILable添加点击事件",
                         @"手势签名",
-                        @"仿猿题库拖拽"
+                        @"仿猿题库拖拽",
+                        @"仿Radio"
                         ];
 }
 
@@ -245,6 +247,10 @@
     if (indexPath.row == 24) {
         UserResizableViewController *UserResizableVC = [[UserResizableViewController alloc]init];
         [self.navigationController pushViewController:UserResizableVC animated:YES];
+    }
+    if (indexPath.row == 25) {
+        RadioViewController *RadioVC = [[RadioViewController alloc]init];
+        [self.navigationController pushViewController:RadioVC animated:YES];
     }
 }
 

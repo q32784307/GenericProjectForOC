@@ -14,12 +14,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TABAnimatedProductHelper : NSObject
 
-/**
- 填充数据, 并启动嵌套的view
- 
- @param view 上层view
- */
- + (void)fullDataAndStartNestAnimation:(UIView *)view isHidden:(BOOL)isHidden;
+/// 填充数据, 并启动嵌套的view
+/// @param view view
+/// @param isHidden 是否隐藏子view
+/// @param rootView 最初始view
+ + (void)fullDataAndStartNestAnimation:(UIView *)view isHidden:(BOOL)isHidden rootView:(UIView *)rootView;
 
 /**
  恢复数据
@@ -53,13 +52,6 @@ NS_ASSUME_NONNULL_BEGIN
 @param isLines 是否为多行layer
 */
 + (void)addTagWithComponentLayer:(TABComponentLayer *)layer isLines:(BOOL)isLines;
-
-/**
-获取去除后缀的类名
-
-@param targetClass 目标class
-*/
-+ (NSString *)getClassNameWithTargetClass:(Class)targetClass;
 
 /**
 获取指定情景下production的key
