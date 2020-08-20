@@ -8,6 +8,8 @@
 
 #import "PushViewController.h"
 #import "LSAvatarBrowser.h"
+#import "LSAttributedMaker.h"
+#import "NSString+LS_Attributed.h"
 
 @interface PushViewController ()<UpAndDownViewDelegate,MarqueeViewDelegate>
 {
@@ -100,6 +102,19 @@
     
     //图片点击放大
 //    [LSAvatarBrowser showImage:imageView];
+    
+    UITextView *textView = [UITextView new];
+    [self.view addSubview:textView];
+    textView.frame = CGRectMake(100, 100, 200, 100);
+    textView.backgroundColor = [UIColor orangeColor];
+    textView.attributedText = [@"富文本：" LS_Attributed:^(LSAttributedMaker *make) {
+        make.font([UIFont systemFontOfSize:12]).foregroundColor([UIColor blueColor]).obliqueness(0.5);
+        make.append(@"追加文字追加文字追加文字追加文字").font([UIFont systemFontOfSize:17]).foregroundColor([UIColor redColor]);
+        make.merge.backgroundColor([UIColor yellowColor]);
+        make.strikethroughStyle(1).strikethroughColor([UIColor whiteColor]).lineSpacing(15).textAlignment(NSTextAlignmentLeft);
+        make.underlineStyle(2).underlineColor([UIColor blueColor]);
+        make.insertImage([UIImage imageNamed:@"10.jpg"],CGRectMake(0, -5, 20, 20),10);
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

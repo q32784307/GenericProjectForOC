@@ -15,6 +15,8 @@
 		79595A0A24E24F1D008D4528 /* LSRadio.m in Sources */ = {isa = PBXBuildFile; fileRef = 79595A0924E24F1D008D4528 /* LSRadio.m */; };
 		79595A0E24E25023008D4528 /* unSelectRadio@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79595A0C24E25023008D4528 /* unSelectRadio@3x.png */; };
 		79595A0F24E25023008D4528 /* selectRadio@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79595A0D24E25023008D4528 /* selectRadio@3x.png */; };
+		79F316B324EE0BFA00266A15 /* LSAttributedMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F316B224EE0BFA00266A15 /* LSAttributedMaker.m */; };
+		79F316B624EE0D1500266A15 /* NSString+LS_Attributed.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F316B524EE0D1500266A15 /* NSString+LS_Attributed.m */; };
 		8204212720CE1CB00026F2FD /* 城市数据.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8204212620CE1CB00026F2FD /* 城市数据.txt */; };
 		8207775D20BE9A820092C18E /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8207775C20BE9A820092C18E /* NSString+Extension.m */; };
 		8207776020BE9B000092C18E /* PushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8207775F20BE9B000092C18E /* PushViewController.m */; };
@@ -497,6 +499,10 @@
 		79595A0924E24F1D008D4528 /* LSRadio.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSRadio.m; sourceTree = "<group>"; };
 		79595A0C24E25023008D4528 /* unSelectRadio@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "unSelectRadio@3x.png"; sourceTree = "<group>"; };
 		79595A0D24E25023008D4528 /* selectRadio@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "selectRadio@3x.png"; sourceTree = "<group>"; };
+		79F316B124EE0BFA00266A15 /* LSAttributedMaker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSAttributedMaker.h; sourceTree = "<group>"; };
+		79F316B224EE0BFA00266A15 /* LSAttributedMaker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSAttributedMaker.m; sourceTree = "<group>"; };
+		79F316B424EE0D1500266A15 /* NSString+LS_Attributed.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+LS_Attributed.h"; sourceTree = "<group>"; };
+		79F316B524EE0D1500266A15 /* NSString+LS_Attributed.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+LS_Attributed.m"; sourceTree = "<group>"; };
 		8204212620CE1CB00026F2FD /* 城市数据.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "城市数据.txt"; sourceTree = "<group>"; };
 		8207775B20BE9A820092C18E /* NSString+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
 		8207775C20BE9A820092C18E /* NSString+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
@@ -1333,6 +1339,17 @@
 			path = source;
 			sourceTree = "<group>";
 		};
+		79F316B024EE0BBC00266A15 /* 富文本 */ = {
+			isa = PBXGroup;
+			children = (
+				79F316B124EE0BFA00266A15 /* LSAttributedMaker.h */,
+				79F316B224EE0BFA00266A15 /* LSAttributedMaker.m */,
+				79F316B424EE0D1500266A15 /* NSString+LS_Attributed.h */,
+				79F316B524EE0D1500266A15 /* NSString+LS_Attributed.m */,
+			);
+			path = "富文本";
+			sourceTree = "<group>";
+		};
 		82179B6C2101E9D7002F582C /* 搜索框 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1735,6 +1752,7 @@
 		8234E17A208A76FE0002DA97 /* Tools(工具类) */ = {
 			isa = PBXGroup;
 			children = (
+				79F316B024EE0BBC00266A15 /* 富文本 */,
 				79595A0424E24EDC008D4528 /* 仿Radio */,
 				D03766D42480A161004D793C /* 手势签名 */,
 				D06E5AD3247CC10500ECE98D /* YBEmojiKeyboard */,
@@ -3542,6 +3560,7 @@
 				D06E5AF9247CC10500ECE98D /* YBEmojiConfig.m in Sources */,
 				D0E10EBB2399FD700025AB6A /* LSTreeParam.m in Sources */,
 				D083EF7723C304A7008E0297 /* PageViewController.m in Sources */,
+				79F316B324EE0BFA00266A15 /* LSAttributedMaker.m in Sources */,
 				828BF88520AD833F00E4500E /* RadiusImageView.m in Sources */,
 				D0800E062397C14500B3383C /* CuttingHeadViewController.m in Sources */,
 				D0661065239FA7BC00D18086 /* LSCropView.m in Sources */,
@@ -3731,6 +3750,7 @@
 				D024DBD723A8A7CB001723AF /* LSPhotoDownloadMgr.m in Sources */,
 				D024DBE123A8AB31001723AF /* LSPhotoActionSheetView.m in Sources */,
 				D03766D72480A17D004D793C /* LSSignatureView.m in Sources */,
+				79F316B624EE0D1500266A15 /* NSString+LS_Attributed.m in Sources */,
 				824E4F9D2441E116004AA9EE /* PPEmoji.m in Sources */,
 				82E8891722D5E445007AC376 /* AddressView.m in Sources */,
 				D06E5AF2247CC10500ECE98D /* YBEmojiPageView.m in Sources */,
@@ -3861,7 +3881,7 @@
 				CODE_SIGN_ENTITLEMENTS = GenericProject/GenericProject.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 76CCWEP8FC;
+				DEVELOPMENT_TEAM = LQ82QNRZMP;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/GenericProject",
@@ -3893,7 +3913,7 @@
 				CODE_SIGN_ENTITLEMENTS = GenericProject/GenericProject.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 76CCWEP8FC;
+				DEVELOPMENT_TEAM = LQ82QNRZMP;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/GenericProject",
