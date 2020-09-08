@@ -8,11 +8,13 @@
 
 #import "TagViewDemoViewController.h"
 #import "LSBaseTagView.h"
+#import "LSTagView.h"
 
 @interface TagViewDemoViewController ()
 
 @property (nonatomic, strong) NSArray *dataSource;
 @property (nonatomic, strong) LSBaseTagView *tagView;
+@property(nonatomic, strong)LSTagView *tagView1;
 
 @end
 
@@ -25,6 +27,17 @@
     self.mainTableView.frame = CGRectMake(0, HOME_INDICATOR_HEIGHT+ 60, self.view.frame.size.width, self.dataSource.count * 40);
     [self.view addSubview:self.mainTableView];
     [self.view addSubview:self.tagView];
+    
+    self.tagView1 = [[LSTagView alloc] init];
+    self.tagView1.backgroundColor = [[UIColor orangeColor] colorWithAlphaComponent:0.3];
+    [self.view addSubview:self.tagView1];
+    [self.tagView1 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.mainTableView.mas_bottom).offset(16);
+        make.left.right.mas_equalTo(0);
+    }];
+    
+    self.tagView1.tagsArray = @[@"林俊杰",@"张学友",@"刘德华",@"陶喆",@"王力宏",@"王菲",@"Taylor swift",@"周杰伦",@"owl city",@"汪苏泷",@"许嵩",@"李代沫",@"那英",@"羽泉",@"刀郎",@"田馥甄",@"庄心妍",@"林宥嘉",@"薛之谦",@"萧敬腾",@"王若琳"];
+    self.tagView1.defaultSelectTags = @[@"羽泉"];
 }
 
 - (void)showTagViewWith:(NSInteger )index{

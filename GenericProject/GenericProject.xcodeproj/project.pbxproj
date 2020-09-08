@@ -15,6 +15,11 @@
 		79595A0A24E24F1D008D4528 /* LSRadio.m in Sources */ = {isa = PBXBuildFile; fileRef = 79595A0924E24F1D008D4528 /* LSRadio.m */; };
 		79595A0E24E25023008D4528 /* unSelectRadio@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79595A0C24E25023008D4528 /* unSelectRadio@3x.png */; };
 		79595A0F24E25023008D4528 /* selectRadio@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79595A0D24E25023008D4528 /* selectRadio@3x.png */; };
+		7996DD8E25079BCE0054E4C9 /* LSBaseTagViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7996DD8725079BCE0054E4C9 /* LSBaseTagViewModel.m */; };
+		7996DD8F25079BCE0054E4C9 /* NSString+LSTagViewString.m in Sources */ = {isa = PBXBuildFile; fileRef = 7996DD8825079BCE0054E4C9 /* NSString+LSTagViewString.m */; };
+		7996DD9025079BCE0054E4C9 /* LSBaseTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7996DD8925079BCE0054E4C9 /* LSBaseTagView.m */; };
+		7996DD9125079BCE0054E4C9 /* LSCustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7996DD8B25079BCE0054E4C9 /* LSCustomButton.m */; };
+		7996DD9725079C1A0054E4C9 /* LSTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7996DD9625079C1A0054E4C9 /* LSTagView.m */; };
 		79F316B324EE0BFA00266A15 /* LSAttributedMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F316B224EE0BFA00266A15 /* LSAttributedMaker.m */; };
 		79F316B624EE0D1500266A15 /* NSString+LS_Attributed.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F316B524EE0D1500266A15 /* NSString+LS_Attributed.m */; };
 		8204212720CE1CB00026F2FD /* 城市数据.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8204212620CE1CB00026F2FD /* 城市数据.txt */; };
@@ -454,10 +459,6 @@
 		D0D5FD9723A23755000ED84D /* UIButton+LSButtonGradient.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D5FD9623A23755000ED84D /* UIButton+LSButtonGradient.m */; };
 		D0D5FD9A23A237DF000ED84D /* UIImage+LSImage.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D5FD9923A237DF000ED84D /* UIImage+LSImage.m */; };
 		D0D5FD9D23A23853000ED84D /* UILabel+LSLabelAdaptive.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D5FD9C23A23853000ED84D /* UILabel+LSLabelAdaptive.m */; };
-		D0D5FDA123A24223000ED84D /* LSCustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D5FDA023A24223000ED84D /* LSCustomButton.m */; };
-		D0D5FDA423A242FD000ED84D /* LSBaseTagViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D5FDA323A242FD000ED84D /* LSBaseTagViewModel.m */; };
-		D0D5FDA723A24338000ED84D /* LSBaseTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D5FDA623A24338000ED84D /* LSBaseTagView.m */; };
-		D0D5FDAA23A244E0000ED84D /* NSString+LSTagViewString.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D5FDA923A244E0000ED84D /* NSString+LSTagViewString.m */; };
 		D0D5FDAD23A24543000ED84D /* TagViewDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D5FDAC23A24543000ED84D /* TagViewDemoViewController.m */; };
 		D0D5FDB223A24687000ED84D /* tabbar_home_un@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0D5FDAE23A24684000ED84D /* tabbar_home_un@3x.png */; };
 		D0D5FDB323A24687000ED84D /* tabbar_home_un@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0D5FDAF23A24685000ED84D /* tabbar_home_un@2x.png */; };
@@ -499,6 +500,16 @@
 		79595A0924E24F1D008D4528 /* LSRadio.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSRadio.m; sourceTree = "<group>"; };
 		79595A0C24E25023008D4528 /* unSelectRadio@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "unSelectRadio@3x.png"; sourceTree = "<group>"; };
 		79595A0D24E25023008D4528 /* selectRadio@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "selectRadio@3x.png"; sourceTree = "<group>"; };
+		7996DD8625079BCE0054E4C9 /* LSCustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSCustomButton.h; sourceTree = "<group>"; };
+		7996DD8725079BCE0054E4C9 /* LSBaseTagViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSBaseTagViewModel.m; sourceTree = "<group>"; };
+		7996DD8825079BCE0054E4C9 /* NSString+LSTagViewString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+LSTagViewString.m"; sourceTree = "<group>"; };
+		7996DD8925079BCE0054E4C9 /* LSBaseTagView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSBaseTagView.m; sourceTree = "<group>"; };
+		7996DD8A25079BCE0054E4C9 /* LSBaseTagViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSBaseTagViewModel.h; sourceTree = "<group>"; };
+		7996DD8B25079BCE0054E4C9 /* LSCustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSCustomButton.m; sourceTree = "<group>"; };
+		7996DD8C25079BCE0054E4C9 /* NSString+LSTagViewString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+LSTagViewString.h"; sourceTree = "<group>"; };
+		7996DD8D25079BCE0054E4C9 /* LSBaseTagView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSBaseTagView.h; sourceTree = "<group>"; };
+		7996DD9525079C1A0054E4C9 /* LSTagView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSTagView.h; sourceTree = "<group>"; };
+		7996DD9625079C1A0054E4C9 /* LSTagView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSTagView.m; sourceTree = "<group>"; };
 		79F316B124EE0BFA00266A15 /* LSAttributedMaker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSAttributedMaker.h; sourceTree = "<group>"; };
 		79F316B224EE0BFA00266A15 /* LSAttributedMaker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSAttributedMaker.m; sourceTree = "<group>"; };
 		79F316B424EE0D1500266A15 /* NSString+LS_Attributed.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+LS_Attributed.h"; sourceTree = "<group>"; };
@@ -1222,14 +1233,6 @@
 		D0D5FD9923A237DF000ED84D /* UIImage+LSImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+LSImage.m"; sourceTree = "<group>"; };
 		D0D5FD9B23A23853000ED84D /* UILabel+LSLabelAdaptive.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+LSLabelAdaptive.h"; sourceTree = "<group>"; };
 		D0D5FD9C23A23853000ED84D /* UILabel+LSLabelAdaptive.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+LSLabelAdaptive.m"; sourceTree = "<group>"; };
-		D0D5FD9F23A24223000ED84D /* LSCustomButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSCustomButton.h; sourceTree = "<group>"; };
-		D0D5FDA023A24223000ED84D /* LSCustomButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSCustomButton.m; sourceTree = "<group>"; };
-		D0D5FDA223A242FD000ED84D /* LSBaseTagViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSBaseTagViewModel.h; sourceTree = "<group>"; };
-		D0D5FDA323A242FD000ED84D /* LSBaseTagViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSBaseTagViewModel.m; sourceTree = "<group>"; };
-		D0D5FDA523A24338000ED84D /* LSBaseTagView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSBaseTagView.h; sourceTree = "<group>"; };
-		D0D5FDA623A24338000ED84D /* LSBaseTagView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSBaseTagView.m; sourceTree = "<group>"; };
-		D0D5FDA823A244E0000ED84D /* NSString+LSTagViewString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+LSTagViewString.h"; sourceTree = "<group>"; };
-		D0D5FDA923A244E0000ED84D /* NSString+LSTagViewString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+LSTagViewString.m"; sourceTree = "<group>"; };
 		D0D5FDAB23A24543000ED84D /* TagViewDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TagViewDemoViewController.h; sourceTree = "<group>"; };
 		D0D5FDAC23A24543000ED84D /* TagViewDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TagViewDemoViewController.m; sourceTree = "<group>"; };
 		D0D5FDAE23A24684000ED84D /* tabbar_home_un@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_home_un@3x.png"; sourceTree = "<group>"; };
@@ -1337,6 +1340,30 @@
 				79595A0D24E25023008D4528 /* selectRadio@3x.png */,
 			);
 			path = source;
+			sourceTree = "<group>";
+		};
+		7996DD8425079BCE0054E4C9 /* 方案二 */ = {
+			isa = PBXGroup;
+			children = (
+				7996DD9525079C1A0054E4C9 /* LSTagView.h */,
+				7996DD9625079C1A0054E4C9 /* LSTagView.m */,
+			);
+			path = "方案二";
+			sourceTree = "<group>";
+		};
+		7996DD8525079BCE0054E4C9 /* 方案一 */ = {
+			isa = PBXGroup;
+			children = (
+				7996DD8625079BCE0054E4C9 /* LSCustomButton.h */,
+				7996DD8B25079BCE0054E4C9 /* LSCustomButton.m */,
+				7996DD8A25079BCE0054E4C9 /* LSBaseTagViewModel.h */,
+				7996DD8725079BCE0054E4C9 /* LSBaseTagViewModel.m */,
+				7996DD8D25079BCE0054E4C9 /* LSBaseTagView.h */,
+				7996DD8925079BCE0054E4C9 /* LSBaseTagView.m */,
+				7996DD8C25079BCE0054E4C9 /* NSString+LSTagViewString.h */,
+				7996DD8825079BCE0054E4C9 /* NSString+LSTagViewString.m */,
+			);
+			path = "方案一";
 			sourceTree = "<group>";
 		};
 		79F316B024EE0BBC00266A15 /* 富文本 */ = {
@@ -3111,14 +3138,8 @@
 		D0D5FD9E23A24212000ED84D /* TagView */ = {
 			isa = PBXGroup;
 			children = (
-				D0D5FD9F23A24223000ED84D /* LSCustomButton.h */,
-				D0D5FDA023A24223000ED84D /* LSCustomButton.m */,
-				D0D5FDA223A242FD000ED84D /* LSBaseTagViewModel.h */,
-				D0D5FDA323A242FD000ED84D /* LSBaseTagViewModel.m */,
-				D0D5FDA523A24338000ED84D /* LSBaseTagView.h */,
-				D0D5FDA623A24338000ED84D /* LSBaseTagView.m */,
-				D0D5FDA823A244E0000ED84D /* NSString+LSTagViewString.h */,
-				D0D5FDA923A244E0000ED84D /* NSString+LSTagViewString.m */,
+				7996DD8525079BCE0054E4C9 /* 方案一 */,
+				7996DD8425079BCE0054E4C9 /* 方案二 */,
 			);
 			path = TagView;
 			sourceTree = "<group>";
@@ -3467,6 +3488,7 @@
 				D06E5ACF247CC07900ECE98D /* EmojiKeyboardOneViewController.m in Sources */,
 				D0915273239E645C008D6CF9 /* LSBlurView.m in Sources */,
 				D0E10ED2239A08C60025AB6A /* CommonTreeDetailsViewController.m in Sources */,
+				7996DD9125079BCE0054E4C9 /* LSCustomButton.m in Sources */,
 				D024DBD123A8A498001723AF /* LSPhotoBrowser.m in Sources */,
 				82D32B0D22524FC8003ECAA3 /* VideoPlayViewController.m in Sources */,
 				820BB6FB23E5680A006608D2 /* UILabel+LSAttributeTextTapAction.m in Sources */,
@@ -3513,7 +3535,6 @@
 				D08EB80623A2538000EAB828 /* UIBezierPath+LSPuzzlePathMaker.m in Sources */,
 				82EC840A20CFB67B00E465CB /* StartMovieViewController.m in Sources */,
 				D0CD27F6239F46AC0019A357 /* LSEditTextView.m in Sources */,
-				D0D5FDA123A24223000ED84D /* LSCustomButton.m in Sources */,
 				D066D06F23C6D4110058D732 /* SecondViewController.m in Sources */,
 				82BA13682359676900EA7D01 /* LSBaseTextField.m in Sources */,
 				82179B6F2101E9FF002F582C /* UITextField+TextLeftOffset.m in Sources */,
@@ -3584,7 +3605,6 @@
 				D07B883F238D384200F951AC /* LSAdaptiveHTMLView.m in Sources */,
 				D07B8863238D3E3400F951AC /* AdaptiveLoadMoreHtmlCellViewController.m in Sources */,
 				D02F5977238BD56800C13008 /* LSGridViewFlowLayout.m in Sources */,
-				D0D5FDAA23A244E0000ED84D /* NSString+LSTagViewString.m in Sources */,
 				820BB70123E56CF9006608D2 /* LabelTagTableViewCell.m in Sources */,
 				82BA137E2359962900EA7D01 /* LSPSWRectDotNormalView.m in Sources */,
 				D024DC6B23A8BFE4001723AF /* IMModel.m in Sources */,
@@ -3623,6 +3643,7 @@
 				D0CD27FF239F4CBD0019A357 /* LSMosaicView.m in Sources */,
 				D0C05EA52398A4430085C62C /* MultilevelTreeViewController.m in Sources */,
 				82D32BC02252629E003ECAA3 /* UINavigationController+Rotation.m in Sources */,
+				7996DD9025079BCE0054E4C9 /* LSBaseTagView.m in Sources */,
 				82F122BE235416D100BD0575 /* ZYDayView.m in Sources */,
 				82BA138D235999E900EA7D01 /* LSPSWRectEncryptTextFiledView.m in Sources */,
 				D07B884E238D3B5B00F951AC /* LSMultistageSuperScrollView.m in Sources */,
@@ -3634,6 +3655,7 @@
 				D07B882E238D209F00F951AC /* UIActionSheet_UIAlertController.m in Sources */,
 				82A9EDC820E16D33007F87E8 /* OtherViewController.m in Sources */,
 				7956EF2B24D97A5F000F64DD /* LSUserResizableView.m in Sources */,
+				7996DD9725079C1A0054E4C9 /* LSTagView.m in Sources */,
 				D0D5FD8E23A23540000ED84D /* UIView+LSViewGradient.m in Sources */,
 				8232D0AA20BD4B4D00D1DDBE /* ThreeViewController.m in Sources */,
 				D066D06C23C6D3EE0058D732 /* FirstViewController.m in Sources */,
@@ -3657,6 +3679,7 @@
 				8234E146208A76490002DA97 /* AppDelegate.m in Sources */,
 				828533BC242257010056506A /* ToastView.m in Sources */,
 				D0C05EB82398B0400085C62C /* CityTreeViewController.m in Sources */,
+				7996DD8E25079BCE0054E4C9 /* LSBaseTagViewModel.m in Sources */,
 				824E4F9E2441E116004AA9EE /* PPSticker.m in Sources */,
 				82FDF4F223541E7000F295F5 /* LSBaseNavigationViewController.m in Sources */,
 				D0E10EB82399FD1F0025AB6A /* LSTreeItem.m in Sources */,
@@ -3703,7 +3726,6 @@
 				D024DC6223A8B6CB001723AF /* NineSquareLocController.m in Sources */,
 				D0CD27D2239F36170019A357 /* LSEditImageViewController.m in Sources */,
 				D0661068239FA8E300D18086 /* LSImageEditViewController.m in Sources */,
-				D0D5FDA423A242FD000ED84D /* LSBaseTagViewModel.m in Sources */,
 				8232D0A720BD4B4300D1DDBE /* TwoViewController.m in Sources */,
 				8271D84C2392AD660031A2D4 /* MerchantScanCodeViewController.m in Sources */,
 				824E4F9A2441E116004AA9EE /* UIButton+PPAddition.m in Sources */,
@@ -3727,6 +3749,7 @@
 				82F122AA2354147A00BD0575 /* LineDashView.m in Sources */,
 				D0CD27DE239F3AD20019A357 /* LSImage.m in Sources */,
 				82BA136B2359685F00EA7D01 /* LSCircleAnimatedView.m in Sources */,
+				7996DD8F25079BCE0054E4C9 /* NSString+LSTagViewString.m in Sources */,
 				D0E10EC2239A00E40025AB6A /* LSTreeBaseView.m in Sources */,
 				D024DC6E23A8C001001723AF /* IMTableViewCell.m in Sources */,
 				D06E5AFA247CC10500ECE98D /* YBEmojiModel.m in Sources */,
@@ -3743,7 +3766,6 @@
 				826D243A242250C2005D2309 /* LSNSTimerProxy.m in Sources */,
 				D066D07223C6D4220058D732 /* ThidViewController.m in Sources */,
 				826FC9E820DA07AD00803114 /* EquipmentInformation.m in Sources */,
-				D0D5FDA723A24338000ED84D /* LSBaseTagView.m in Sources */,
 				D0D5FD8823A233E6000ED84D /* UIColor+LSColor.m in Sources */,
 				825B23D22111572900C79183 /* NSString+TextInputStringType.m in Sources */,
 				D0CD27F0239F41320019A357 /* LSEditVideoClipping.m in Sources */,
