@@ -34,7 +34,7 @@
 }
 
 // 加工等待队列
-@property (nonatomic, strong) NSMutableArray <UIView *> *targetViewArray;
+@property (nonatomic, strong) NSPointerArray *weakTargetViewArray;
 
 // 正在生产的index，配合targetViewArray实现加工等待队列
 @property (nonatomic, assign) NSInteger productIndex;
@@ -66,18 +66,13 @@
             _darkModeManager = TABAnimatedDarkModeManagerImpl.new;
         }
         _animationManager = TABAnimationManagerImpl.new;
+        _weakTargetViewArray = [NSPointerArray weakObjectsPointerArray];
     }
     return self;
 }
 
 #pragma mark - TABAnimatedProductInterface
 
-// 根据className，取cell状态
-// 取完cell后
-// 1. 池子没有production 取母cell production 生成、加工、装饰 需要实时同步
-// 2. 池子有production 创建完状态，取子cell 需要等待同步 cell没有production，刚创建状态 取子cell，等待同步 绑定
-// 3. 池子有production 加工完状态\绑定完状态， 取子cell，copy一份
-// 4. 启动同步流程
 - (__kindof UIView *)productWithControlView:(UIView *)controlView
                                currentClass:(Class)currentClass
                                   indexPath:(nullable NSIndexPath *)indexPath
@@ -88,10 +83,10 @@
     }
     
     NSString *className = tab_NSStringFromClass(currentClass);
-    NSString *controlerClassName = controlView.tabAnimated.targetControllerClassName;
+    NSString *controllerClassName = controlView.tabAnimated.targetControllerClassName;
     UIView *view;
     
-    NSString *key = [TABAnimatedProductHelper getKeyWithControllerName:controlerClassName targetClass:currentClass];
+    NSString *key = [TABAnimatedProductHelper getKeyWithControllerName:controllerClassName targetClass:currentClass frame:controlView.frame];
     TABAnimatedProduction *production;
     
     if (!_controlView.tabAnimated.containNestAnimation) {
@@ -127,7 +122,7 @@
     }
     
     NSString *controlerClassName = controlView.tabAnimated.targetControllerClassName;
-    NSString *key = [TABAnimatedProductHelper getKeyWithControllerName:controlerClassName targetClass:currentClass];
+    NSString *key = [TABAnimatedProductHelper getKeyWithControllerName:controlerClassName targetClass:currentClass frame:controlView.frame];
     TABAnimatedProduction *production = [[TABAnimatedCacheManager shareManager] getProductionWithKey:key];
     if (production) {
         TABAnimatedProduction *newProduction = production.copy;
@@ -147,7 +142,7 @@
     if (_controlView == nil) [self setControlView:controlView];
     
     NSString *controlerClassName = controlView.tabAnimated.targetControllerClassName;
-    NSString *key = [TABAnimatedProductHelper getKeyWithControllerName:controlerClassName targetClass:currentClass];
+    NSString *key = [TABAnimatedProductHelper getKeyWithControllerName:controlerClassName targetClass:currentClass frame:controlView.frame];
     TABAnimatedProduction *production = [[TABAnimatedCacheManager shareManager] getProductionWithKey:key];
     if (production) {
         TABAnimatedProduction *newProduction = production.copy;
@@ -159,6 +154,7 @@
     production = [self.productionPool objectForKey:className];
     if (production == nil || _controlView.tabAnimated.containNestAnimation) {
         UIView *newView = currentClass.new;
+        newView.frame = CGRectMake(0, 0, TABAnimatedProductHelperScreenWidth, ((TABFormAnimated *)controlView.tabAnimated).pullLoadingComponent.viewHeight);
         [view addSubview:newView];
         [self _prepareProductWithView:newView currentClass:currentClass indexPath:indexPath origin:origin needSync:YES needReset:NO];
         return;
@@ -169,20 +165,29 @@
 
 // 同步
 - (void)syncProductions {
-    for (NSInteger i = 0; i < self.targetViewArray.count; i++) {
-        UIView *view = self.targetViewArray[i];
+    for (NSInteger i = 0; i < self.weakTargetViewArray.count; i++) {
+        UIView *view = [self.weakTargetViewArray pointerAtIndex:i];
+        if (!view) return;
         view.hidden = NO;
         [self _bindWithProduction:view.tabAnimatedProduction targetView:view];
         [self _syncProduction:view.tabAnimatedProduction];
     }
+    [self _recoveryProductStatus];
 }
 
 - (void)destory {
+    [self _recoveryProductStatus];
     [self.darkModeManager destroy];
-    [self.targetViewArray removeAllObjects];
 }
 
 #pragma mark - Private
+
+- (void)_recoveryProductStatus {
+    _weakTargetViewArray = [NSPointerArray weakObjectsPointerArray];
+    _productIndex = 0;
+    _targetTagIndex = 0;
+    _productFinished = NO;
+}
 
 - (void)_prepareProductWithView:(UIView *)view currentClass:(Class)currentClass indexPath:(nullable NSIndexPath *)indexPath origin:(TABAnimatedProductOrigin)origin needSync:(BOOL)needSync needReset:(BOOL)needReset {
     TABAnimatedProduction *production = view.tabAnimatedProduction;
@@ -228,11 +233,13 @@
         case TABAnimatedProductOriginTableViewCell: {
             view = [(UITableView *)controlView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
             ((UITableViewCell *)view).selectionStyle = UITableViewCellSelectionStyleNone;
+            view.backgroundColor = controlView.tabAnimated.animatedBackgroundColor;
         }
             break;
             
         case TABAnimatedProductOriginCollectionViewCell: {
             view = [(UICollectionView *)controlView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
+            view.backgroundColor = controlView.tabAnimated.animatedBackgroundColor;
         }
             break;
             
@@ -240,6 +247,7 @@
             view = [(UICollectionView *)controlView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader
                                                                        withReuseIdentifier:identifier
                                                                               forIndexPath:indexPath];
+            view.backgroundColor = controlView.tabAnimated.animatedBackgroundColor;
         }
             break;
             
@@ -247,6 +255,7 @@
             view = [(UICollectionView *)controlView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter
                                                                        withReuseIdentifier:identifier
                                                                               forIndexPath:indexPath];
+            view.backgroundColor = controlView.tabAnimated.animatedBackgroundColor;
         }
             break;
             
@@ -255,6 +264,7 @@
             if (view == nil) {
                 view = [[currentClass alloc] initWithReuseIdentifier:identifier];
             }
+            view.backgroundColor = controlView.tabAnimated.animatedBackgroundColor;
         }
             break;
             
@@ -307,34 +317,40 @@
 
 - (void)_productWithView:(UIView *)view needReset:(BOOL)needReset isCard:(BOOL)isCard {
 
-    [self.targetViewArray addObject:view];
+    [self.weakTargetViewArray addPointer:(__bridge void * _Nullable)(view)];
     [TABAnimatedProductHelper fullDataAndStartNestAnimation:view isHidden:!needReset rootView:view];
     view.hidden = YES;
     
+    __weak typeof(self) weakSelf = self;
     dispatch_async(dispatch_get_main_queue(), ^{
         
-        if (self.targetViewArray.count == 0) return;
-        if (self.productIndex > self.targetViewArray.count-1) return;
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        
+        if (strongSelf.weakTargetViewArray.allObjects.count == 0) return;
+        if (strongSelf.productIndex > strongSelf.weakTargetViewArray.allObjects.count-1) return;
         
         // 从等待队列中取出需要加工的view
-        self->_targetView = self.targetViewArray[self.productIndex];
-        self->_targetTagIndex = 0;
-        // 生产流水
-        [self _productWithTargetView:self->_targetView isCard:isCard];
+        strongSelf->_targetView = [strongSelf.weakTargetViewArray pointerAtIndex:strongSelf.productIndex];
+        if (!strongSelf->_targetView) return;
         
-        self.productIndex++;
+        strongSelf->_targetTagIndex = 0;
+        // 生产流水
+        [strongSelf _productWithTargetView:strongSelf->_targetView isCard:isCard];
         
         if (needReset) {
-            [TABAnimatedProductHelper resetData:self->_targetView];
+            [TABAnimatedProductHelper resetData:strongSelf->_targetView];
         }
+        strongSelf.productIndex++;
+        
     });
 }
 
 - (void)_productWithTargetView:(UIView *)targetView isCard:(BOOL)isCard {
     @autoreleasepool {
+        if (!_controlView) return;
         TABAnimatedProduction *production = targetView.tabAnimatedProduction;
         NSString *controlerClassName = _controlView.tabAnimated.targetControllerClassName;
-        production.fileName = [TABAnimatedProductHelper getKeyWithControllerName:controlerClassName targetClass:production.targetClass];
+        production.fileName = [TABAnimatedProductHelper getKeyWithControllerName:controlerClassName targetClass:production.targetClass frame:_controlView.frame];
         
         NSMutableArray <TABComponentLayer *> *layerArray = @[].mutableCopy;
         // 生产
@@ -374,22 +390,7 @@
         
         [self _recurseProductLayerWithView:subV array:array isCard:isCard];
         
-        if ([subV.superview isKindOfClass:[UITableViewCell class]] ||
-            [subV.superview isKindOfClass:[UICollectionViewCell class]] ||
-            [subV.superview isKindOfClass:[UITableViewHeaderFooterView class]]) {
-            // 此处排除cell中的contentView，不生成动画对象
-            if (i == 0) {
-                continue;
-            }
-        }
-        
-        // 移除UITableView/UICollectionView的滚动条
-        if ([view isKindOfClass:[UIScrollView class]]) {
-            if (((subV.frame.size.height < 3.) || (subV.frame.size.width < 3.)) &&
-                subV.alpha == 0.) {
-                continue;
-            }
-        }
+        if ([self _cannotBeCreated:subV superView:view]) continue;
         
         // 标记移除：会生成动画对象，但是会被设置为移除状态
         BOOL needRemove = [self _isNeedRemove:subV];
@@ -420,6 +421,8 @@
         if (lab.textAlignment == NSTextAlignmentCenter) {
             layer.origin = TABComponentLayerOriginCenterLabel;
             layer.contentsGravity = kCAGravityCenter;
+        }else {
+            layer.origin = TABComponentLayerOriginLabel;
         }
     }else {
         layer.numberOflines = 1;
@@ -466,13 +469,31 @@
 
 #pragma mark -
 
+- (BOOL)_cannotBeCreated:(UIView *)view superView:(UIView *)superView {
+    
+    if ([view isKindOfClass:[NSClassFromString(@"UITableViewCellContentView") class]] ||
+        [view isKindOfClass:[NSClassFromString(@"UICollectionViewCellContentView") class]]  ||
+        [view isKindOfClass:[NSClassFromString(@"_UITableViewHeaderFooterViewBackground") class]]) {
+        return YES;
+    }
+    
+    // 移除UITableView/UICollectionView的滚动条
+    if ([superView isKindOfClass:[UIScrollView class]]) {
+        if (((view.frame.size.height < 3.) || (view.frame.size.width < 3.)) &&
+            view.alpha == 0.) {
+            return YES;
+        }
+    }
+    
+    return NO;
+}
+
 - (BOOL)_isNeedRemove:(UIView *)view {
     
     BOOL needRemove = NO;
-    // 分割线需要标记移除
-    if ([view isKindOfClass:[NSClassFromString(@"_UITableViewCellSeparatorView") class]] ||
-        [view isKindOfClass:[NSClassFromString(@"_UITableViewHeaderFooterContentView") class]] ||
-        [view isKindOfClass:[NSClassFromString(@"_UITableViewHeaderFooterViewBackground") class]]) {
+    // 分割线标记移除
+    if ([view isKindOfClass:[NSClassFromString(@"_UITableViewCellSeparatorView") class]]  ||
+        [view isKindOfClass:[NSClassFromString(@"_UITableViewHeaderFooterContentView") class]] ) {
         needRemove = YES;
     }
     
@@ -527,7 +548,7 @@
 
 - (void)setProductIndex:(NSInteger)productIndex {
     _productIndex = productIndex;
-    if (productIndex >= self.targetViewArray.count) {
+    if (productIndex >= self.weakTargetViewArray.allObjects.count) {
         self.productFinished = YES;
     }
 }
@@ -546,13 +567,6 @@
         [_darkModeManager setControlView:controlView];
         [_darkModeManager addDarkModelSentryView];
     }
-}
-
-- (NSMutableArray *)targetViewArray {
-    if (!_targetViewArray) {
-        _targetViewArray = @[].mutableCopy;
-    }
-    return _targetViewArray;
 }
 
 - (NSMutableDictionary *)productionPool {

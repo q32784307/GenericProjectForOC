@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6ADF8231A590B496EAC5F737 /* libPods-GenericProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 217529640022A0F05F99BF56 /* libPods-GenericProject.a */; };
+		793168722519A67600EF1A69 /* LSButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 793168712519A67600EF1A69 /* LSButton.m */; };
 		7956EF2B24D97A5F000F64DD /* LSUserResizableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7956EF2A24D97A5F000F64DD /* LSUserResizableView.m */; };
 		7956EF2E24D97AE2000F64DD /* UserResizableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7956EF2D24D97AE2000F64DD /* UserResizableViewController.m */; };
 		79595A0324E24E8E008D4528 /* RadioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79595A0224E24E8E008D4528 /* RadioViewController.m */; };
@@ -129,7 +130,6 @@
 		82BA139023599AD500EA7D01 /* LSPSWRectAnimateTextFieldView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82BA138F23599AD500EA7D01 /* LSPSWRectAnimateTextFieldView.m */; };
 		82BA139323599BDE00EA7D01 /* LSPSWTextFieldContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 82BA139223599BDE00EA7D01 /* LSPSWTextFieldContext.m */; };
 		82BA139B2359AA3300EA7D01 /* LSModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 82BA139A2359AA3300EA7D01 /* LSModel.m */; };
-		82BA139F2359C35700EA7D01 /* LSButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 82BA139E2359C35700EA7D01 /* LSButton.m */; };
 		82C1791A20F5E73400DE82E3 /* AmountOfCalculation.m in Sources */ = {isa = PBXBuildFile; fileRef = 82C1791920F5E73400DE82E3 /* AmountOfCalculation.m */; };
 		82C2F72022C1B2DC003774DD /* LSSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82C2F71F22C1B2DC003774DD /* LSSegmentView.m */; };
 		82C2F72322C1B454003774DD /* UIView+LSBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 82C2F72222C1B454003774DD /* UIView+LSBadge.m */; };
@@ -488,6 +488,8 @@
 
 /* Begin PBXFileReference section */
 		217529640022A0F05F99BF56 /* libPods-GenericProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GenericProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		793168702519A67600EF1A69 /* LSButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSButton.h; sourceTree = "<group>"; };
+		793168712519A67600EF1A69 /* LSButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSButton.m; sourceTree = "<group>"; };
 		7956EF2924D97A5F000F64DD /* LSUserResizableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSUserResizableView.h; sourceTree = "<group>"; };
 		7956EF2A24D97A5F000F64DD /* LSUserResizableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSUserResizableView.m; sourceTree = "<group>"; };
 		7956EF2C24D97AE2000F64DD /* UserResizableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserResizableViewController.h; sourceTree = "<group>"; };
@@ -717,8 +719,6 @@
 		82BA139223599BDE00EA7D01 /* LSPSWTextFieldContext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSPSWTextFieldContext.m; sourceTree = "<group>"; };
 		82BA13992359AA3300EA7D01 /* LSModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSModel.h; sourceTree = "<group>"; };
 		82BA139A2359AA3300EA7D01 /* LSModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSModel.m; sourceTree = "<group>"; };
-		82BA139D2359C35700EA7D01 /* LSButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSButton.h; sourceTree = "<group>"; };
-		82BA139E2359C35700EA7D01 /* LSButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSButton.m; sourceTree = "<group>"; };
 		82C1791820F5E73400DE82E3 /* AmountOfCalculation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AmountOfCalculation.h; sourceTree = "<group>"; };
 		82C1791920F5E73400DE82E3 /* AmountOfCalculation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AmountOfCalculation.m; sourceTree = "<group>"; };
 		82C2F71E22C1B2DC003774DD /* LSSegmentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSSegmentView.h; sourceTree = "<group>"; };
@@ -1312,6 +1312,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7931686F2519A67600EF1A69 /* UIButton图片与文字排列 */ = {
+			isa = PBXGroup;
+			children = (
+				793168702519A67600EF1A69 /* LSButton.h */,
+				793168712519A67600EF1A69 /* LSButton.m */,
+			);
+			path = "UIButton图片与文字排列";
+			sourceTree = "<group>";
+		};
 		7956EF2824D97A4C000F64DD /* 仿猿题库拖拽View */ = {
 			isa = PBXGroup;
 			children = (
@@ -1779,6 +1788,7 @@
 		8234E17A208A76FE0002DA97 /* Tools(工具类) */ = {
 			isa = PBXGroup;
 			children = (
+				7931686F2519A67600EF1A69 /* UIButton图片与文字排列 */,
 				79F316B024EE0BBC00266A15 /* 富文本 */,
 				79595A0424E24EDC008D4528 /* 仿Radio */,
 				D03766D42480A161004D793C /* 手势签名 */,
@@ -1799,7 +1809,6 @@
 				D07B882F238D2FBE00F951AC /* 身份证键盘 */,
 				D02F5971238BD1E100C13008 /* 图片浏览器二次封装 */,
 				D0BDC81C238697F500AEFC3F /* 脱敏 */,
-				82BA139C2359C34400EA7D01 /* UIButton图片与文字排列 */,
 				82BA13582359599600EA7D01 /* 添加水印 */,
 				82DC2D2923585F1000407613 /* 自定义密码输入框 */,
 				82F122A32354147A00BD0575 /* 清除缓存 */,
@@ -2090,15 +2099,6 @@
 				82BA139A2359AA3300EA7D01 /* LSModel.m */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		82BA139C2359C34400EA7D01 /* UIButton图片与文字排列 */ = {
-			isa = PBXGroup;
-			children = (
-				82BA139D2359C35700EA7D01 /* LSButton.h */,
-				82BA139E2359C35700EA7D01 /* LSButton.m */,
-			);
-			path = "UIButton图片与文字排列";
 			sourceTree = "<group>";
 		};
 		82C2F71D22C1B2BA003774DD /* 分段控制器(子控制器) */ = {
@@ -3527,6 +3527,7 @@
 				D024DC6823A8B804001723AF /* ScrollViewLocController.m in Sources */,
 				D07B8838238D318700F951AC /* CardTextFieldViewController.m in Sources */,
 				828533BE242257010056506A /* UIAlertView_UIAlertController_Disappear.m in Sources */,
+				793168722519A67600EF1A69 /* LSButton.m in Sources */,
 				D0E10EB22399FD1F0025AB6A /* LSTreeTableViewController.m in Sources */,
 				D04CB1C2239913E7009FB244 /* CityTreeLobbyViewController.m in Sources */,
 				82C2F72622C1B4B3003774DD /* LSSegmentViewController.m in Sources */,
@@ -3628,7 +3629,6 @@
 				82BA137123596FBA00EA7D01 /* LSMaskView.m in Sources */,
 				82658D6920AEAB1000D97701 /* NSString+RegularExpression.m in Sources */,
 				8234E154208A764A0002DA97 /* main.m in Sources */,
-				82BA139F2359C35700EA7D01 /* LSButton.m in Sources */,
 				82E8891622D5E445007AC376 /* AddressModel.m in Sources */,
 				D0E10ED8239A09250025AB6A /* CommonTreeDetailsTableViewCell.m in Sources */,
 				82A9EDC520E16AB5007F87E8 /* MarqueeView.m in Sources */,

@@ -1,9 +1,9 @@
 //
 //  LSButton.h
-//  GenericProject
+//  RecruitmentJob
 //
-//  Created by 漠然丶情到深处 on 2019/10/18.
-//  Copyright © 2019 漠然丶情到深处. All rights reserved.
+//  Created by LS on 2019/10/18.
+//  Copyright © 2019 LS. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
