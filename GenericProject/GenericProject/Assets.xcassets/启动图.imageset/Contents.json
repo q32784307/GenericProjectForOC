@@ -36,7 +36,7 @@
       "subtype" : "736h"
     },
     {
-      "filename" : "750*1334.png",
+      "filename" : "750-1334.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "subtype" : "667h"
@@ -68,10 +68,31 @@
       "filename" : "1536-2048.png",
       "idiom" : "ipad",
       "scale" : "2x"
+    },
+    {
+      "filename" : "1080-2340.png",
+      "idiom" : "iphone",
+      "scale" : "3x",
+      "subtype" : "iPhone 12 mini"
+    },
+    {
+      "filename" : "1170-2532.png",
+      "idiom" : "iphone",
+      "scale" : "3x",
+      "subtype" : "iPhone 12\/iPhone 12 Pro"
+    },
+    {
+      "filename" : "1284-2778.png",
+      "idiom" : "iphone",
+      "scale" : "3x",
+      "subtype" : "iPhone 12 Pro Max"
     }
   ],
   "info" : {
     "author" : "xcode",
     "version" : 1
+  },
+  "properties" : {
+    "localizable" : true
   }
 }

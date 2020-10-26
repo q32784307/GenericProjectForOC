@@ -83,6 +83,12 @@
 #define Is_iPhoneXs ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) && !IS_IPAD : NO)
 //判断iPhone Xs Max
 #define Is_iPhoneXs_Max ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2688), [[UIScreen mainScreen] currentMode].size) && !IS_IPAD : NO)
+//判断iPhone 12和iPhone 12 Pro
+#define Is_iPhone12 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1170, 2532), [[UIScreen mainScreen] currentMode].size) && !IS_IPAD : NO)
+//判断iPhone 12 mini
+#define Is_iPhone12_mini ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1080, 2340), [[UIScreen mainScreen] currentMode].size) && !IS_IPAD : NO)
+//判断iPhone 12 Pro Max
+#define Is_iPhone12_Pro_Max ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1284, 2778), [[UIScreen mainScreen] currentMode].size) && !IS_IPAD : NO)
 //判断iPad mini
 #define Is_iPad_Mine ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1536, 2048), [[UIScreen mainScreen] currentMode].size) && !IS_IPHONE : NO)
 //判断iPad
@@ -102,19 +108,19 @@ isLiuHaiPhone = [[UIApplication sharedApplication] delegate].window.safeAreaInse
 
 //状态栏高度
 #define STATUS_BAR_HEIGHT_For_iPad ((Is_iPad_Pro_10_5 == YES || Is_iPad_Pro_12_9 == YES) ? 24.0f : 20.0f)
-#define STATUS_BAR_HEIGHT_For_iPhone ((Is_iPhoneX == YES || Is_iPhoneXr == YES || Is_iPhoneXs == YES || Is_iPhoneXs_Max == YES) ? 44.0f : 20.0f)
+#define STATUS_BAR_HEIGHT_For_iPhone ((Is_iPhoneX == YES || Is_iPhoneXr == YES || Is_iPhoneXs == YES || Is_iPhoneXs_Max == YES || Is_iPhone12 || Is_iPhone12_mini || Is_iPhone12_Pro_Max) ? 44.0f : 20.0f)
 #define STATUS_BAR_HEIGHT (IS_IPHONE == YES ? STATUS_BAR_HEIGHT_For_iPhone : STATUS_BAR_HEIGHT_For_iPad)
 //状态栏+导航栏高度
 #define NAVIGATION_BAR_HEIGHT_For_iPad ((Is_iPad_Pro_10_5 == YES || Is_iPad_Pro_12_9 == YES) ? 74.0f : 70.0f)
-#define NAVIGATION_BAR_HEIGHT_For_iPhone ((Is_iPhoneX == YES || Is_iPhoneXr == YES || Is_iPhoneXs == YES || Is_iPhoneXs_Max == YES) ? 88.0f : 64.0f)
+#define NAVIGATION_BAR_HEIGHT_For_iPhone ((Is_iPhoneX == YES || Is_iPhoneXr == YES || Is_iPhoneXs == YES || Is_iPhoneXs_Max == YES || Is_iPhone12 || Is_iPhone12_mini || Is_iPhone12_Pro_Max) ? 88.0f : 64.0f)
 #define NAVIGATION_BAR_HEIGHT (IS_IPHONE == YES ? NAVIGATION_BAR_HEIGHT_For_iPhone : NAVIGATION_BAR_HEIGHT_For_iPad)
 //tabBar高度
 #define TAB_BAR_HEIGHT_For_iPad ((Is_iPad_Pro_10_5 == YES || Is_iPad_Pro_12_9 == YES) ? 65.0f : 50.0f)
-#define TAB_BAR_HEIGHT_For_iPhone ((Is_iPhoneX == YES || Is_iPhoneXr == YES || Is_iPhoneXs == YES || Is_iPhoneXs_Max == YES) ? 83.0f : 49.0f)
+#define TAB_BAR_HEIGHT_For_iPhone ((Is_iPhoneX == YES || Is_iPhoneXr == YES || Is_iPhoneXs == YES || Is_iPhoneXs_Max == YES || Is_iPhone12 || Is_iPhone12_mini || Is_iPhone12_Pro_Max) ? 83.0f : 49.0f)
 #define TAB_BAR_HEIGHT (IS_IPHONE == YES ? TAB_BAR_HEIGHT_For_iPhone : TAB_BAR_HEIGHT_For_iPad)
 //home indicator高度（底部安全曲区域）
 #define HOME_INDICATOR_HEIGHT_For_iPad ((Is_iPad_Pro_10_5 == YES || Is_iPad_Pro_12_9 == YES) ? 15.0f : 0.0f)
-#define HOME_INDICATOR_HEIGHT_For_iPhone ((Is_iPhoneX == YES || Is_iPhoneXr == YES || Is_iPhoneXs == YES || Is_iPhoneXs_Max == YES) ? 34.0f : 0.0f)
+#define HOME_INDICATOR_HEIGHT_For_iPhone ((Is_iPhoneX == YES || Is_iPhoneXr == YES || Is_iPhoneXs == YES || Is_iPhoneXs_Max == YES || Is_iPhone12 || Is_iPhone12_mini || Is_iPhone12_Pro_Max) ? 34.0f : 0.0f)
 #define HOME_INDICATOR_HEIGHT (IS_IPHONE == YES ? HOME_INDICATOR_HEIGHT_For_iPhone : HOME_INDICATOR_HEIGHT_For_iPad)
 /***********************************************************************************************************/
 
