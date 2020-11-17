@@ -16,6 +16,7 @@
 		79595A0A24E24F1D008D4528 /* LSRadio.m in Sources */ = {isa = PBXBuildFile; fileRef = 79595A0924E24F1D008D4528 /* LSRadio.m */; };
 		79595A0E24E25023008D4528 /* unSelectRadio@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79595A0C24E25023008D4528 /* unSelectRadio@3x.png */; };
 		79595A0F24E25023008D4528 /* selectRadio@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79595A0D24E25023008D4528 /* selectRadio@3x.png */; };
+		7960961F25635A3E00F9129B /* LSSpeechSynthesizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7960961E25635A3E00F9129B /* LSSpeechSynthesizer.m */; };
 		7996DD8E25079BCE0054E4C9 /* LSBaseTagViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7996DD8725079BCE0054E4C9 /* LSBaseTagViewModel.m */; };
 		7996DD8F25079BCE0054E4C9 /* NSString+LSTagViewString.m in Sources */ = {isa = PBXBuildFile; fileRef = 7996DD8825079BCE0054E4C9 /* NSString+LSTagViewString.m */; };
 		7996DD9025079BCE0054E4C9 /* LSBaseTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7996DD8925079BCE0054E4C9 /* LSBaseTagView.m */; };
@@ -502,6 +503,8 @@
 		79595A0924E24F1D008D4528 /* LSRadio.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSRadio.m; sourceTree = "<group>"; };
 		79595A0C24E25023008D4528 /* unSelectRadio@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "unSelectRadio@3x.png"; sourceTree = "<group>"; };
 		79595A0D24E25023008D4528 /* selectRadio@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "selectRadio@3x.png"; sourceTree = "<group>"; };
+		7960961D25635A3E00F9129B /* LSSpeechSynthesizer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSSpeechSynthesizer.h; sourceTree = "<group>"; };
+		7960961E25635A3E00F9129B /* LSSpeechSynthesizer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSSpeechSynthesizer.m; sourceTree = "<group>"; };
 		7996DD8625079BCE0054E4C9 /* LSCustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSCustomButton.h; sourceTree = "<group>"; };
 		7996DD8725079BCE0054E4C9 /* LSBaseTagViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSBaseTagViewModel.m; sourceTree = "<group>"; };
 		7996DD8825079BCE0054E4C9 /* NSString+LSTagViewString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+LSTagViewString.m"; sourceTree = "<group>"; };
@@ -1351,6 +1354,15 @@
 			path = source;
 			sourceTree = "<group>";
 		};
+		7960961C25635A2D00F9129B /* 语音播报 */ = {
+			isa = PBXGroup;
+			children = (
+				7960961D25635A3E00F9129B /* LSSpeechSynthesizer.h */,
+				7960961E25635A3E00F9129B /* LSSpeechSynthesizer.m */,
+			);
+			path = "语音播报";
+			sourceTree = "<group>";
+		};
 		7996DD8425079BCE0054E4C9 /* 方案二 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1788,6 +1800,7 @@
 		8234E17A208A76FE0002DA97 /* Tools(工具类) */ = {
 			isa = PBXGroup;
 			children = (
+				7960961C25635A2D00F9129B /* 语音播报 */,
 				7931686F2519A67600EF1A69 /* UIButton图片与文字排列 */,
 				79F316B024EE0BBC00266A15 /* 富文本 */,
 				79595A0424E24EDC008D4528 /* 仿Radio */,
@@ -3712,6 +3725,7 @@
 				824E4F932441E116004AA9EE /* NSAttributedString+PPAddition.m in Sources */,
 				82E8891422D5E445007AC376 /* AppUtils.m in Sources */,
 				8271D8462392AD160031A2D4 /* LSScanView.m in Sources */,
+				7960961F25635A3E00F9129B /* LSSpeechSynthesizer.m in Sources */,
 				D08EB80F23A255FB00EAB828 /* LSVerifyAlertView.m in Sources */,
 				8261E3E621240B7600D5DFD4 /* UIViewController+BackToViewController.m in Sources */,
 				D024DBAA23A884E7001723AF /* LSProgressHUD.m in Sources */,

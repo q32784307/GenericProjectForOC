@@ -8,6 +8,7 @@
 
 #import "FourViewController.h"
 #import "FourthViewController.h"
+#import "LSSpeechSynthesizer.h"
 
 @interface FourViewController ()
 
@@ -24,6 +25,12 @@
     pushButton.backgroundColor = [UIColor cyanColor];
     [pushButton addTarget:self action:@selector(pushAction) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:pushButton];
+    
+    
+    //语音播报
+    NSString *string = @"我有一只小鸭子，咿呀咿呀哟";
+    LSSpeechSynthesizer *speaker = [LSSpeechSynthesizer sharedSpeechSynthesizer];
+    [speaker speakString:string];
 }
 
 - (void)setNavigation {
