@@ -110,13 +110,13 @@ isLiuHaiPhone = [[UIApplication sharedApplication] delegate].window.safeAreaInse
 #define STATUS_BAR_HEIGHT_For_iPad ((Is_iPad_Pro_10_5 == YES || Is_iPad_Pro_12_9 == YES) ? 24.0f : 20.0f)
 #define STATUS_BAR_HEIGHT_For_iPhone1 ((Is_iPhoneX == YES || Is_iPhoneXr == YES || Is_iPhoneXs == YES || Is_iPhoneXs_Max == YES || Is_iPhone12 || Is_iPhone12_mini || Is_iPhone12_Pro_Max) ? 44.0f : 20.0f)
 #define STATUS_BAR_HEIGHT_For_iPhone2 ((Is_iPhoneX == YES || Is_iPhoneXr == YES || Is_iPhoneXs == YES || Is_iPhoneXs_Max == YES || Is_iPhone12 || Is_iPhone12_mini || Is_iPhone12_Pro_Max) ? 48.0f : 20.0f)
-#define STATUS_BAR_HEIGHT_For_iPhone (([[UIDevice currentDevice].systemVersion floatValue] == 14.0 ? STATUS_BAR_HEIGHT_For_iPhone1 : STATUS_BAR_HEIGHT_For_iPhone2)
+#define STATUS_BAR_HEIGHT_For_iPhone ([[UIDevice currentDevice].systemVersion floatValue] == 14.0 ? STATUS_BAR_HEIGHT_For_iPhone1 : STATUS_BAR_HEIGHT_For_iPhone2)
 #define STATUS_BAR_HEIGHT (IS_IPHONE == YES ? STATUS_BAR_HEIGHT_For_iPhone : STATUS_BAR_HEIGHT_For_iPad)
 //状态栏+导航栏高度
 #define NAVIGATION_BAR_HEIGHT_For_iPad ((Is_iPad_Pro_10_5 == YES || Is_iPad_Pro_12_9 == YES) ? 74.0f : 70.0f)
 #define NAVIGATION_BAR_HEIGHT_For_iPhone1 ((Is_iPhoneX == YES || Is_iPhoneXr == YES || Is_iPhoneXs == YES || Is_iPhoneXs_Max == YES || Is_iPhone12 || Is_iPhone12_mini || Is_iPhone12_Pro_Max) ? 88.0f : 64.0f)
 #define NAVIGATION_BAR_HEIGHT_For_iPhone2 ((Is_iPhoneX == YES || Is_iPhoneXr == YES || Is_iPhoneXs == YES || Is_iPhoneXs_Max == YES || Is_iPhone12 || Is_iPhone12_mini || Is_iPhone12_Pro_Max) ? 92.0f : 64.0f)
-#define NAVIGATION_BAR_HEIGHT_For_iPhone (([[UIDevice currentDevice].systemVersion floatValue] == 14.0 ? NAVIGATION_BAR_HEIGHT_For_iPhone1 : NAVIGATION_BAR_HEIGHT_For_iPhone2)
+#define NAVIGATION_BAR_HEIGHT_For_iPhone ([[UIDevice currentDevice].systemVersion floatValue] == 14.0 ? NAVIGATION_BAR_HEIGHT_For_iPhone1 : NAVIGATION_BAR_HEIGHT_For_iPhone2)
 #define NAVIGATION_BAR_HEIGHT (IS_IPHONE == YES ? NAVIGATION_BAR_HEIGHT_For_iPhone : NAVIGATION_BAR_HEIGHT_For_iPad)
 //tabBar高度
 #define TAB_BAR_HEIGHT_For_iPad ((Is_iPad_Pro_10_5 == YES || Is_iPad_Pro_12_9 == YES) ? 65.0f : 50.0f)
