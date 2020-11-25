@@ -90,7 +90,6 @@
     TABAnimatedProduction *production;
     
     if (!_controlView.tabAnimated.containNestAnimation) {
-        // 缓存
         production = [[TABAnimatedCacheManager shareManager] getProductionWithKey:key];
         if (production) {
             view = [self _reuseWithCurrentClass:currentClass indexPath:indexPath origin:origin className:className production:production];
@@ -98,7 +97,6 @@
         }
     }
 
-    // 生产
     production = [self.productionPool objectForKey:className];
     if (production == nil || _controlView.tabAnimated.containNestAnimation) {
         view = [self _createViewWithOrigin:origin controlView:controlView indexPath:indexPath className:className currentClass:currentClass isNeedProduct:YES];
@@ -106,7 +104,6 @@
         return view;
     }
     
-    // 复用
     view = [self _reuseWithCurrentClass:currentClass indexPath:indexPath origin:origin className:className production:production];
     return view;
 }
@@ -181,6 +178,8 @@
 }
 
 #pragma mark - Private
+
+// 生产/自生产 加工 缓存
 
 - (void)_recoveryProductStatus {
     _weakTargetViewArray = [NSPointerArray weakObjectsPointerArray];
@@ -433,7 +432,6 @@
         }
     }
     
-    // 坐标转换
     CGRect rect;
     if (isCard) {
         rect = view.frame;
@@ -464,7 +462,32 @@
         layer.cornerRadius = cornerRadius;
     }
     
+    if (layer.origin == TABComponentLayerOriginButton) {
+        [self _buttonLayerSyncProperties:(UIButton *)view layer:layer];
+    }
+    
     return layer;
+}
+
+- (void)_buttonLayerSyncProperties:(UIButton *)button layer:(TABComponentLayer *)layer {
+    if(button.currentBackgroundImage) layer.contents = (id)(button.currentBackgroundImage.CGImage);
+    if (layer.contents) {
+        layer.masksToBounds = YES;
+        layer.backgroundColor = UIColor.clearColor.CGColor;
+        return;
+    }
+    for (CALayer *subLayer in button.layer.sublayers) {
+        if ([subLayer isKindOfClass:[CAGradientLayer class]]) {
+            CAGradientLayer *gLayer = (CAGradientLayer *)subLayer;
+            layer.contents = gLayer.contents;
+            layer.colors = gLayer.colors;
+            layer.locations = gLayer.locations;
+            layer.startPoint = gLayer.startPoint;
+            layer.endPoint = gLayer.endPoint;
+            layer.backgroundColor = UIColor.clearColor.CGColor;
+            return;
+        }
+    }
 }
 
 #pragma mark -
@@ -472,7 +495,8 @@
 - (BOOL)_cannotBeCreated:(UIView *)view superView:(UIView *)superView {
     
     if ([view isKindOfClass:[NSClassFromString(@"UITableViewCellContentView") class]] ||
-        [view isKindOfClass:[NSClassFromString(@"UICollectionViewCellContentView") class]]  ||
+        [view isKindOfClass:[NSClassFromString(@"UICollectionViewCellContentView") class]] ||
+        [view isKindOfClass:[NSClassFromString(@"_UISystemBackgroundView") class]] ||
         [view isKindOfClass:[NSClassFromString(@"_UITableViewHeaderFooterViewBackground") class]]) {
         return YES;
     }
@@ -516,11 +540,14 @@
 - (void)_chainAdjustWithArray:(NSMutableArray <TABComponentLayer *> *)array
                   tabAnimated:(TABViewAnimated *)tabAnimated
                   targetClass:(Class)targetClass {
+
+    UIColor *animatedColor = [tabAnimated getCurrentAnimatedColorWithCollection:_controlView.traitCollection];
+    
     if (tabAnimated.adjustBlock) {
-        [self.chainManager chainAdjustWithArray:array adjustBlock:tabAnimated.adjustBlock];
+        [self.chainManager chainAdjustWithArray:array adjustBlock:tabAnimated.adjustBlock animatedColor:animatedColor];
     }
     if (tabAnimated.adjustWithClassBlock) {
-        [self.chainManager chainAdjustWithArray:array adjustWithClassBlock:tabAnimated.adjustWithClassBlock targetClass:targetClass];
+        [self.chainManager chainAdjustWithArray:array adjustWithClassBlock:tabAnimated.adjustWithClassBlock targetClass:targetClass animatedColor:animatedColor];
     }
 }
 
