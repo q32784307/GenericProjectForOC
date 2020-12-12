@@ -76,10 +76,26 @@
     vc.tabBarItem.title = title;
     
     if (@available(iOS 13.0, *)) {
+        //隐藏分割线
+        UITabBarAppearance *appearance = UITabBarAppearance.new;
+        NSMutableParagraphStyle *par = [[NSMutableParagraphStyle alloc]init];
+        par.alignment = NSTextAlignmentCenter;
         //未选中状态
-        [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor colorWithHexString:@"9B9B9B"], NSForegroundColorAttributeName,[UIFont systemFontOfSize:10.0f],NSFontAttributeName, nil] forState:UIControlStateNormal];
+        UITabBarItemStateAppearance *normal = appearance.stackedLayoutAppearance.normal;
+        if (normal) {
+            normal.titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor colorWithHexString:@"9B9B9B"],NSParagraphStyleAttributeName : par};
+        }
         //选中状态
-        [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:MainColor, NSForegroundColorAttributeName,[UIFont systemFontOfSize:10.0f],NSFontAttributeName, nil] forState:UIControlStateSelected];
+        UITabBarItemStateAppearance *selected = appearance.stackedLayoutAppearance.selected;
+        if (selected) {
+            selected.titleTextAttributes = @{NSForegroundColorAttributeName:MainColor,NSParagraphStyleAttributeName : par};
+        }
+        
+        appearance.backgroundImage = [UIImage imageWithColor:[UIColor clearColor]];
+        appearance.shadowImage = [UIImage imageWithColor:[UIColor clearColor]];
+        [appearance configureWithTransparentBackground];
+        
+        self.tabBar.standardAppearance = appearance;
     }else{
         //未选中状态
         NSMutableDictionary *textAttrs = [NSMutableDictionary dictionary];
@@ -92,6 +108,10 @@
         selectedTextAttrs[NSForegroundColorAttributeName] = MainColor;
         selectedTextAttrs[NSFontAttributeName] = [UIFont systemFontOfSize:10];
         [vc.tabBarItem setTitleTextAttributes:selectedTextAttrs forState:UIControlStateSelected];
+        
+        //隐藏分割线
+        UITabBar.appearance.backgroundImage = [UIImage new];
+        UITabBar.appearance.shadowImage = [UIImage new];
     }
     vc.tabBarItem.image = [[UIImage imageNamed:image] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     vc.tabBarItem.selectedImage = [[UIImage imageNamed:selectedImage] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];

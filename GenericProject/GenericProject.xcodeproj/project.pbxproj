@@ -112,7 +112,6 @@
 		82AC27122153457600E521B7 /* RootModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 82AC27112153457600E521B7 /* RootModel.m */; };
 		82B610772276023100C57FE7 /* StickerKeyboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B610762276023100C57FE7 /* StickerKeyboardViewController.m */; };
 		82B610BE22760DC500C57FE7 /* InnerStickersInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 82B610BD227603C400C57FE7 /* InnerStickersInfo.plist */; };
-		82B6B40125681CD400F840F2 /* LSDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B6B40025681CD400F840F2 /* LSDatePickerView.m */; };
 		82BA135B235959BC00EA7D01 /* UIView+LSWaterMark.m in Sources */ = {isa = PBXBuildFile; fileRef = 82BA135A235959BC00EA7D01 /* UIView+LSWaterMark.m */; };
 		82BA13622359669F00EA7D01 /* LSBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82BA13612359669F00EA7D01 /* LSBaseView.m */; };
 		82BA1365235966ED00EA7D01 /* LSKeyboardHelperView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82BA1364235966ED00EA7D01 /* LSKeyboardHelperView.m */; };
@@ -683,8 +682,6 @@
 		82B610752276023100C57FE7 /* StickerKeyboardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StickerKeyboardViewController.h; sourceTree = "<group>"; };
 		82B610762276023100C57FE7 /* StickerKeyboardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StickerKeyboardViewController.m; sourceTree = "<group>"; };
 		82B610BD227603C400C57FE7 /* InnerStickersInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = InnerStickersInfo.plist; sourceTree = "<group>"; };
-		82B6B3FF25681CD400F840F2 /* LSDatePickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSDatePickerView.h; sourceTree = "<group>"; };
-		82B6B40025681CD400F840F2 /* LSDatePickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSDatePickerView.m; sourceTree = "<group>"; };
 		82BA1359235959BC00EA7D01 /* UIView+LSWaterMark.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+LSWaterMark.h"; sourceTree = "<group>"; };
 		82BA135A235959BC00EA7D01 /* UIView+LSWaterMark.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+LSWaterMark.m"; sourceTree = "<group>"; };
 		82BA135F2359665700EA7D01 /* LSUIHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSUIHeader.h; sourceTree = "<group>"; };
@@ -2088,8 +2085,6 @@
 		82B6B3FE25681CB300F840F2 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				82B6B3FF25681CD400F840F2 /* LSDatePickerView.h */,
-				82B6B40025681CD400F840F2 /* LSDatePickerView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -3642,7 +3637,6 @@
 				824E4F992441E116004AA9EE /* PPSlideLineButton.m in Sources */,
 				D0CD27C6239F2EC70019A357 /* LSShotFocusView.m in Sources */,
 				82FDF5092354218300F295F5 /* UIScrollView+PeerRefresh.m in Sources */,
-				82B6B40125681CD400F840F2 /* LSDatePickerView.m in Sources */,
 				D0E10EB12399FD1F0025AB6A /* LSTreeTableViewSearchBar.m in Sources */,
 				82BA135B235959BC00EA7D01 /* UIView+LSWaterMark.m in Sources */,
 				82BA137123596FBA00EA7D01 /* LSMaskView.m in Sources */,

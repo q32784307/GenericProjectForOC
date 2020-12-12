@@ -7,7 +7,6 @@
 //
 
 #import "LSImagePickerCollectionViewCell.h"
-#import "UIView+Layout.h"
 
 @implementation LSImagePickerCollectionViewCell
 
@@ -47,9 +46,9 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     _imageView.frame = self.bounds;
-    _gifLable.frame = CGRectMake(self.tz_width - 25, self.tz_height - 14, 25, 14);
-    _deleteBtn.frame = CGRectMake(self.tz_width - 36, 0, 36, 36);
-    CGFloat width = self.tz_width / 3.0;
+    _gifLable.frame = CGRectMake(self.width - 25, self.height - 14, 25, 14);
+    _deleteBtn.frame = CGRectMake(self.width - 36, 0, 36, 36);
+    CGFloat width = self.width / 3.0;
     _videoImageView.frame = CGRectMake(width, width, width, width);
 }
 

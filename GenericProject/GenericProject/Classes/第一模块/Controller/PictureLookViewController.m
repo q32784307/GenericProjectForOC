@@ -10,7 +10,6 @@
 #import "LSGridViewFlowLayout.h"
 #import "LSImagePickerManage.h"
 #import "LSImagePickerCollectionViewCell.h"
-#import "UIView+Layout.h"
 
 @interface PictureLookViewController ()<UICollectionViewDataSource, UICollectionViewDelegate,LSImagePickerManageDelegate>
 
@@ -32,7 +31,7 @@
     self.imageViewSelectAssetsArray = [NSMutableArray array];
     
     self.layout = [[LSGridViewFlowLayout alloc] init];
-    self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 100, self.view.tz_width, self.view.tz_height - 300) collectionViewLayout:self.layout];
+    self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 100, self.view.width, self.view.height - 300) collectionViewLayout:self.layout];
     CGFloat rgb = 244 / 255.0;
     self.collectionView.alwaysBounceVertical = YES;
     self.collectionView.backgroundColor = [UIColor colorWithRed:rgb green:rgb blue:rgb alpha:1.0];
@@ -49,8 +48,7 @@
     return self.imageViewSelectPhotoArray.count + 1;
 }
 
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
-{
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     LSImagePickerCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"LSImagePickerCollectionViewCell" forIndexPath:indexPath];
     cell.videoImageView.hidden = YES;
     cell.gifLable.hidden = YES;
@@ -79,7 +77,6 @@
  @param sender sender
  */
 - (void)deleteBtnClik:(UIButton *)sender {
-    
     if ([self collectionView:self.collectionView numberOfItemsInSection:0] <= self.imageViewSelectPhotoArray.count) {
         [self.imageViewSelectPhotoArray removeObjectAtIndex:sender.tag];
         [self.imageViewSelectAssetsArray removeObjectAtIndex:sender.tag];
