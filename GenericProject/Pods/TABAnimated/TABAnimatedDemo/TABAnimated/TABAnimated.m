@@ -35,11 +35,12 @@
     if (self = [super init]) {
         _animationType = TABAnimationTypeOnlySkeleton;
         _animatedHeightCoefficient = 0.75;
-        _animatedColor = tab_kBackColor;
-        _darkAnimatedColor = tab_kDarkBackColor;
-        _animatedBackgroundColor = UIColor.whiteColor;
         _scrollEnabled = YES;
         
+        _animatedColor = tab_kBackColor;
+        _darkAnimatedColor = tab_kDarkBackColor;
+        
+        _animatedBackgroundColor = UIColor.whiteColor;
         if (@available(iOS 13.0, *)) {
             _darkAnimatedBackgroundColor = UIColor.secondarySystemBackgroundColor;
         }else {
@@ -131,7 +132,7 @@
     return _binAnimation;
 }
 
-#pragma mark -
+#pragma mark - Deprecated
 
 - (CGFloat)animatedDuration {
     return self.classicAnimation.duration;

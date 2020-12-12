@@ -129,9 +129,19 @@ static const CGFloat kTagLabelMinWidth = 15.f;
     return NO;
 }
 
+// 填充后
 + (void)bindView:(UIView *)view production:(TABAnimatedProduction *)production animatedHeight:(CGFloat)animatedHeight {
-    if (production.backgroundLayer.frame.size.height == 0. && view.layer.bounds.size.height > 0.) {
+    
+    // 防止不能覆盖底部视图
+    if (production.backgroundLayer.
+        frame.size.height == 0. && view.layer.bounds.size.height > 0.) {
         production.backgroundLayer.frame = view.layer.bounds;
+    }
+
+    if (!production.backgroundLayer.isCard &&
+        view.frame.size.width != 0 && production.backgroundLayer.frame.size.width != view.frame.size.width &&
+        view.frame.size.height != 0 && production.backgroundLayer.frame.size.height != view.frame.size.height) {
+        production.backgroundLayer.frame = CGRectMake(production.backgroundLayer.frame.origin.x, production.backgroundLayer.frame.origin.y, view.frame.size.width, view.frame.size.height);
     }
 
     view.layer.cornerRadius = production.backgroundLayer.cornerRadius;
@@ -145,6 +155,7 @@ static const CGFloat kTagLabelMinWidth = 15.f;
     view.tabAnimatedProduction = production;
 }
 
+// 填充前
 + (TABComponentLayer *)getBackgroundLayerWithView:(UIView *)view controlView:(UIView *)controlView {
     TABViewAnimated *tabAnimated = controlView.tabAnimated;
     

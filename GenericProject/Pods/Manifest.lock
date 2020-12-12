@@ -32,8 +32,8 @@ PODS:
     - SDWebImage/Core (= 5.10.0)
   - SDWebImage/Core (5.10.0)
   - SVProgressHUD (2.2.5)
-  - TABAnimated (2.4.9)
-  - TZImagePickerController (3.5.3)
+  - TABAnimated (2.5.0)
+  - TZImagePickerController (3.5.7)
   - WechatOpenSDK (1.8.7.1)
   - XHLaunchAd (3.9.12):
     - FLAnimatedImage (~> 1.0.12)
@@ -103,12 +103,12 @@ SPEC CHECKSUMS:
   SDCycleScrollView: a0d74c3384caa72bdfc81470bdbc8c14b3e1fbcf
   SDWebImage: 9169792e9eec3e45bba2a0c02f74bf8bd922d1ee
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
-  TABAnimated: 0281b60fd1b0d31eb83618a1b89f0cafe88c11b6
-  TZImagePickerController: 53d776cffd56bfd8130703ca0f5cd07715561cc2
+  TABAnimated: 15f1202d29f5f9d317eb67f88427276c3ec745bf
+  TZImagePickerController: aff4b62eacce0194d2494ee4f42934bcff577cec
   WechatOpenSDK: 6a4d1436c15b3b5fe2a0bd383f3046010186da44
   XHLaunchAd: 6320f9c68732667323072fc3a5f104e40fbe9cfe
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
 PODFILE CHECKSUM: afe1772195eeb01cd05e3a7d28bdde4b1998d637
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.10.0.beta.1
