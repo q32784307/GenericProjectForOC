@@ -30,6 +30,9 @@ typedef NS_ENUM(NSInteger, TABViewLoadAnimationStyle) {
     
     // 标记移除，不显示
     TABViewLoadAnimationRemove,
+    
+    // 标记穿透
+    TABViewLoadAnimationPenetrate,
 };
 
 typedef NS_ENUM(NSInteger, TABComponentLayerOrigin) {
@@ -128,6 +131,13 @@ typedef NS_ENUM(NSInteger, TABComponentLayerOrigin) {
 
 /// 是否基于卡片类型视图调整过
 @property (nonatomic, assign) BOOL isCard;
+
+/// 原始frame
+/// 非自创建：在调整回调之后，再经过计算得到
+/// 自创建：在调整回调之后的原始
+@property (nonatomic, assign) CGRect originFrame;
+
+#pragma mark -
 
 - (CGRect)resetFrameWithRect:(CGRect)rect animatedHeight:(CGFloat)animatedHeight;
 - (void)addLayer:(TABComponentLayer *)layer viewWidth:(CGFloat)viewWidth animatedHeight:(CGFloat)animatedHeight;

@@ -149,7 +149,7 @@
     obj.runMode = runMode;
     obj.cellClassArray = cellClassArray;
     obj.cellHeightArray = cellHeightArray;
-    obj.cellCountArray = animatedCountArray;
+    obj.cellCountArray = animatedCountArray ? animatedCountArray : @[].copy;
     if (cellClassArray.count > 0 && indexArray.count == 0) {
         NSMutableArray *newIndexArray = @[].mutableCopy;
         for (NSInteger i = 0; i < cellClassArray.count; i++) {
@@ -175,6 +175,8 @@
     if (self = [super init]) {
         _headerHeightArray = @[].mutableCopy;
         _footerHeightArray = @[].mutableCopy;
+        _showTableHeaderView = YES;
+        _showTableFooterView = YES;
     }
     return self;
 }
@@ -232,18 +234,32 @@
     
     if (self.showTableHeaderView) {
         if (tableView.tableHeaderView.tabAnimated == nil) {
-            tableView.tableHeaderView.tabAnimated = TABViewAnimated.new;
+            if (tableView.tabAnimated.tabHeadViewAnimated) {
+                tableView.tableHeaderView.tabAnimated = tableView.tabAnimated.tabHeadViewAnimated;
+            }else {
+                tableView.tableHeaderView.tabAnimated = TABViewAnimated.new;
+            }
         }
-        tableView.tableHeaderView.tabAnimated.superAnimationType = tableView.tabAnimated.superAnimationType;
+        TABViewSuperAnimationType superAnimationType = tableView.tableHeaderView.tabAnimated.superAnimationType;
+        if (superAnimationType == TABViewSuperAnimationTypeDefault) {
+            tableView.tableHeaderView.tabAnimated.superAnimationType = superAnimationType;
+        }
         tableView.tableHeaderView.tabAnimated.canLoadAgain = tableView.tabAnimated.canLoadAgain;
         [tableView.tableHeaderView tab_startAnimation];
     }
     
     if (self.showTableFooterView) {
         if (tableView.tableFooterView.tabAnimated == nil) {
-            tableView.tableFooterView.tabAnimated = TABViewAnimated.new;
+            if (tableView.tabAnimated.tabFooterViewAnimated) {
+                tableView.tableFooterView.tabAnimated = tableView.tabAnimated.tabFooterViewAnimated;
+            }else {
+                tableView.tableFooterView.tabAnimated = TABViewAnimated.new;
+            }
         }
-        tableView.tableFooterView.tabAnimated.superAnimationType = tableView.tabAnimated.superAnimationType;
+        TABViewSuperAnimationType superAnimationType = tableView.tableFooterView.tabAnimated.superAnimationType;
+        if (superAnimationType == TABViewSuperAnimationTypeDefault) {
+            tableView.tableFooterView.tabAnimated.superAnimationType = superAnimationType;
+        }
         tableView.tableFooterView.tabAnimated.canLoadAgain = tableView.tabAnimated.canLoadAgain;
         [tableView.tableFooterView tab_startAnimation];
     }
@@ -307,10 +323,11 @@
 
 #pragma mark - Private Methods
 
-- (void)exchangeDelegateMethods:(id<UITableViewDelegate>)delegate target:(id)target {
-    
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wundeclared-selector"
+
+- (void)exchangeDelegateMethods:(id<UITableViewDelegate>)delegate target:(id)target {
+    
     SEL oldClickDelegate = @selector(tableView:didSelectRowAtIndexPath:);
     SEL newClickDelegate = @selector(tab_tableView:didSelectRowAtIndexPath:);
     [self exchangeDelegateOldSel:oldClickDelegate
@@ -369,14 +386,11 @@
                           newSel:newFooterHeightDelegate
                           target:target
                         delegate:delegate];
-#pragma clang diagnostic pop
 }
 
 - (void)exchangeDataSourceMethods:(id<UITableViewDataSource>)dataSource
                            target:(id)target {
     
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wundeclared-selector"
     SEL oldSectionSelector = @selector(numberOfSectionsInTableView:);
     SEL newSectionSelector = @selector(tab_numberOfSectionsInTableView:);
     
@@ -388,7 +402,6 @@
     
     SEL old = @selector(tableView:willDisplayCell:forRowAtIndexPath:);
     SEL new = @selector(tab_tableView:willDisplayCell:forRowAtIndexPath:);
-#pragma clang diagnostic pop
     
     [self exchangeDelegateOldSel:oldSectionSelector
                           newSel:newSectionSelector
@@ -410,6 +423,8 @@
                           target:target
                         delegate:dataSource];
 }
+
+#pragma clang diagnostic pop
 
 #pragma mark - TABTableViewDataSource / Delegate
 

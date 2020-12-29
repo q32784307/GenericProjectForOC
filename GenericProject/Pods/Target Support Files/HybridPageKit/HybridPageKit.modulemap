@@ -1,0 +1,6 @@
+framework module HybridPageKit {
+  umbrella header "HybridPageKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

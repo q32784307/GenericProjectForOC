@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6ADF8231A590B496EAC5F737 /* libPods-GenericProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 217529640022A0F05F99BF56 /* libPods-GenericProject.a */; };
+		1AC35A69E1C6939D4B5F5422 /* Pods_GenericProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9575485E1B5681E6DB3E348F /* Pods_GenericProject.framework */; };
 		793168722519A67600EF1A69 /* LSButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 793168712519A67600EF1A69 /* LSButton.m */; };
 		7956EF2B24D97A5F000F64DD /* LSUserResizableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7956EF2A24D97A5F000F64DD /* LSUserResizableView.m */; };
 		7956EF2E24D97AE2000F64DD /* UserResizableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7956EF2D24D97AE2000F64DD /* UserResizableViewController.m */; };
@@ -488,7 +488,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		217529640022A0F05F99BF56 /* libPods-GenericProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GenericProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		793168702519A67600EF1A69 /* LSButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSButton.h; sourceTree = "<group>"; };
 		793168712519A67600EF1A69 /* LSButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSButton.m; sourceTree = "<group>"; };
 		7956EF2924D97A5F000F64DD /* LSUserResizableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSUserResizableView.h; sourceTree = "<group>"; };
@@ -855,6 +854,7 @@
 		82FDF5062354218300F295F5 /* UIScrollView+PeerRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+PeerRefresh.h"; sourceTree = "<group>"; };
 		82FDF5072354218300F295F5 /* LSBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSBaseViewController.h; sourceTree = "<group>"; };
 		82FDF5082354218300F295F5 /* UIScrollView+PeerEmpty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+PeerEmpty.h"; sourceTree = "<group>"; };
+		9575485E1B5681E6DB3E348F /* Pods_GenericProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GenericProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1E86C7576D90740C4DA1463 /* Pods-GenericProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GenericProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-GenericProject/Pods-GenericProject.release.xcconfig"; sourceTree = "<group>"; };
 		CEFFFA457483F8C1E09E83D7 /* Pods-GenericProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GenericProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GenericProject/Pods-GenericProject.debug.xcconfig"; sourceTree = "<group>"; };
 		D024DBA823A884E7001723AF /* LSProgressHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSProgressHUD.h; sourceTree = "<group>"; };
@@ -1288,8 +1288,8 @@
 			files = (
 				823254F3226DEBA100165D8D /* libxml2.tbd in Frameworks */,
 				823254F1226DEB8E00165D8D /* libz.tbd in Frameworks */,
-				6ADF8231A590B496EAC5F737 /* libPods-GenericProject.a in Frameworks */,
 				82F2FD0222730ABA00E2045B /* TABKit.framework in Frameworks */,
+				1AC35A69E1C6939D4B5F5422 /* Pods_GenericProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1310,7 +1310,7 @@
 			children = (
 				823254F2226DEBA100165D8D /* libxml2.tbd */,
 				823254F0226DEB8E00165D8D /* libz.tbd */,
-				217529640022A0F05F99BF56 /* libPods-GenericProject.a */,
+				9575485E1B5681E6DB3E348F /* Pods_GenericProject.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -3216,7 +3216,7 @@
 				8234E13D208A76490002DA97 /* Sources */,
 				8234E13E208A76490002DA97 /* Frameworks */,
 				8234E13F208A76490002DA97 /* Resources */,
-				1C4325EFF7B8F7BB476C9359 /* [CP] Copy Pods Resources */,
+				4FD03D4CEBCD68B327B7E1BE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -3448,21 +3448,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1C4325EFF7B8F7BB476C9359 /* [CP] Copy Pods Resources */ = {
+		4FD03D4CEBCD68B327B7E1BE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GenericProject/Pods-GenericProject-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-GenericProject/Pods-GenericProject-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GenericProject/Pods-GenericProject-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-GenericProject/Pods-GenericProject-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GenericProject/Pods-GenericProject-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GenericProject/Pods-GenericProject-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FBA0DCE45F6177D37C77E546 /* [CP] Check Pods Manifest.lock */ = {

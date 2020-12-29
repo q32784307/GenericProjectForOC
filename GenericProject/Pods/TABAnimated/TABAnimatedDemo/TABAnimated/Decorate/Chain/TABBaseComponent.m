@@ -379,6 +379,7 @@ struct TABBaseComonentOperation {
 
 - (void)result_cancelAlignCenter {
     _layer.origin = TABComponentLayerOriginLabel;
+    _layer.contentsGravity = kCAGravityResizeAspect;
 }
 
 #pragma mark - color
@@ -417,7 +418,27 @@ struct TABBaseComonentOperation {
     };
 }
 
-#pragma mark -
+#pragma mark - penetration
+
+- (TABBaseComponentVoidBlock)penetrate {
+    __weak typeof(self) weakSelf = self;
+    return ^TABBaseComponent *(void) {
+        if (weakSelf.layer.origin != TABComponentLayerOriginCreate) {
+            [weakSelf result_penetrate];
+        }else {
+#ifdef DEBUG
+            NSAssert(YES, @"The layer created by yourself can not penetrate.");
+#endif
+        }
+        return weakSelf;
+    };
+}
+
+- (void)result_penetrate {
+    _layer.loadStyle = TABViewLoadAnimationPenetrate;
+}
+
+#pragma mark - Auto layout
 
 - (TABBaseComponentCompareBlock)leftEqualTo {
     __weak typeof(self) weakSelf = self;

@@ -21,7 +21,12 @@
 
 #import "TABAnimatedPullLoadingComponent.h"
 
+#ifdef DEBUG
+static const NSTimeInterval kDelayReloadDataTime = 4;
+#else
 static const NSTimeInterval kDelayReloadDataTime = .4;
+#endif
+
 const int TABAnimatedIndexTag = -100000;
 
 @implementation UIView (TABControlAnimation)
@@ -84,8 +89,10 @@ const int TABAnimatedIndexTag = -100000;
     if ([tabAnimated isKindOfClass:[TABFormAnimated class]]) {
         TABFormAnimated *tabAnimated = (TABFormAnimated *)self.tabAnimated;
         UIScrollView *scrollView = (UIScrollView *)self;
-        tabAnimated.oldScrollEnabled = scrollView.scrollEnabled;
-        scrollView.scrollEnabled = tabAnimated.scrollEnabled;
+        if (!tabAnimated.scrollEnabled) {
+            tabAnimated.oldScrollEnabled = scrollView.scrollEnabled;
+            scrollView.scrollEnabled = tabAnimated.scrollEnabled;
+        }
         [tabAnimated startAnimationWithIndex:index isFirstLoad:isFirstLoad controlView:self];
     }else {
         tabAnimated.isAnimating = YES;
@@ -138,7 +145,9 @@ const int TABAnimatedIndexTag = -100000;
         TABFormAnimated *tabAnimated = (TABFormAnimated *)self.tabAnimated;
         
         UIScrollView *scrollView = (UIScrollView *)self;
-        scrollView.scrollEnabled = tabAnimated.oldScrollEnabled;
+        if (!tabAnimated.scrollEnabled) {
+            scrollView.scrollEnabled = tabAnimated.oldScrollEnabled;
+        }
         
         if ([self isKindOfClass:[UITableView class]]) {
             if (isNeedReset) {
@@ -149,10 +158,10 @@ const int TABAnimatedIndexTag = -100000;
                     tableView.rowHeight = UITableViewAutomaticDimension;
                 }
                 [tableView reloadData];
-                if (tableView.tableHeaderView != nil && tableView.tableHeaderView.tabAnimated != nil) {
+                if (tableView.tableHeaderView.tabAnimated != nil) {
                     [tableView.tableHeaderView tab_endAnimation];
                 }
-                if (tableView.tableFooterView != nil && tableView.tableFooterView.tabAnimated != nil) {
+                if (tableView.tableFooterView.tabAnimated != nil) {
                     [tableView.tableFooterView tab_endAnimation];
                 }
             }else {

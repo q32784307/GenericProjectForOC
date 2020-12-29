@@ -13,9 +13,6 @@
 #import "UIView+TABControlAnimation.h"
 #import <objc/runtime.h>
 
-NSString * const TABViewAnimatedHeaderPrefixString = @"tab_header_";
-NSString * const TABViewAnimatedFooterPrefixString = @"tab_footer_";
-
 @interface TABCollectionAnimated()
 
 @property (nonatomic, strong, readwrite) NSMutableArray <NSValue *> *headerSizeArray;
@@ -92,6 +89,15 @@ NSString * const TABViewAnimatedFooterPrefixString = @"tab_footer_";
     return obj;
 }
 
++ (instancetype)animatedWaterFallLayoutWithCellClass:(Class)cellClass
+                                         heightArray:(NSArray <NSNumber *> *)heightArray
+                                           heightSel:(SEL)heightSel {
+    TABCollectionAnimated *obj = [TABCollectionAnimated _animatedWithCellClass:cellClass cellSize:CGSizeZero animatedCount:0 toIndex:0 runMode:TABAnimatedRunBySection];
+    obj.waterFallLayoutHeightArray = heightArray;
+    obj.waterFallLayoutHeightSel = heightSel;
+   return obj;
+}
+
 #pragma mark -
 
 + (instancetype)_animatedWithCellClass:(Class)cellClass
@@ -118,7 +124,7 @@ NSString * const TABViewAnimatedFooterPrefixString = @"tab_footer_";
     obj.runMode = runMode;
     obj.cellClassArray = cellClassArray;
     obj.cellSizeArray = cellSizeArray;
-    obj.cellCountArray = animatedCountArray;
+    obj.cellCountArray = animatedCountArray ? animatedCountArray : @[].copy;
     if (cellClassArray.count > 0 && indexArray.count == 0) {
         NSMutableArray *newIndexArray = @[].mutableCopy;
         for (NSInteger i = 0; i < cellClassArray.count; i++) {
@@ -243,11 +249,12 @@ NSString * const TABViewAnimatedFooterPrefixString = @"tab_footer_";
 
 #pragma mark - Private Methods
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wundeclared-selector"
+
 - (void)exchangeDelegateMethods:(id<UICollectionViewDelegate>)delegate
                          target:(id)target {
         
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wundeclared-selector"
     SEL oldHeightSel = @selector(collectionView:layout:sizeForItemAtIndexPath:);
     SEL newHeightSel = @selector(tab_collectionView:layout:sizeForItemAtIndexPath:);
     [self exchangeDelegateOldSel:oldHeightSel
@@ -268,14 +275,11 @@ NSString * const TABViewAnimatedFooterPrefixString = @"tab_footer_";
                           newSel:newClickSel
                           target:target
                         delegate:delegate];
-#pragma clang diagnostic pop
 }
 
 - (void)exchangeDataSourceMethods:(id<UICollectionViewDataSource>)dataSource
                            target:(id)target {
-    
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wundeclared-selector"
+
     SEL oldSectionsSel = @selector(numberOfSectionsInCollectionView:);
     SEL newSectionsSel = @selector(tab_numberOfSectionsInCollectionView:);
     [self exchangeDelegateOldSel:oldSectionsSel
@@ -317,8 +321,19 @@ NSString * const TABViewAnimatedFooterPrefixString = @"tab_footer_";
                           newSel:newFooterCellSel
                           target:target
                         delegate:dataSource];
-#pragma clang diagnostic pop
+    
+    if (self.waterFallLayoutHeightSel) {
+        SEL oldWaterFallLayoutHeight = self.waterFallLayoutHeightSel;
+        SEL newWaterFallLayoutHeight = @selector(tab_waterFallLayout:index:itemWidth:);
+        
+        [self exchangeDelegateOldSel:oldWaterFallLayoutHeight
+                              newSel:newWaterFallLayoutHeight
+                              target:target
+                            delegate:dataSource];
+    }
 }
+
+#pragma clang diagnostic pop
 
 - (void)_registerCollectionHeaderOrFooter:(BOOL)isHeader collectionView:(UICollectionView *)collectionView {
     
@@ -327,11 +342,9 @@ NSString * const TABViewAnimatedFooterPrefixString = @"tab_footer_";
     NSString *kind = nil;
     
     if (isHeader) {
-        defaultPrefix = TABViewAnimatedHeaderPrefixString;
         classArray = self.headerClassArray;
         kind = UICollectionElementKindSectionHeader;
     }else {
-        defaultPrefix = TABViewAnimatedFooterPrefixString;
         classArray = self.footerClassArray;
         kind = UICollectionElementKindSectionFooter;
     }
@@ -453,7 +466,7 @@ NSString * const TABViewAnimatedFooterPrefixString = @"tab_footer_";
     if (index < 0) {
         return [self tab_collectionView:collectionView layout:collectionViewLayout referenceSizeForHeaderInSection:section];
     }
-    NSValue *value = value = collectionView.tabAnimated.headerSizeArray[index];
+    NSValue *value = collectionView.tabAnimated.headerSizeArray[index];
     return [value CGSizeValue];
 }
 
@@ -463,7 +476,7 @@ NSString * const TABViewAnimatedFooterPrefixString = @"tab_footer_";
     if (index < 0) {
         return [self tab_collectionView:collectionView layout:collectionViewLayout referenceSizeForFooterInSection:section];
     }
-    NSValue *value = value = collectionView.tabAnimated.footerSizeArray[index];
+    NSValue *value = collectionView.tabAnimated.footerSizeArray[index];
     return [value CGSizeValue];
 }
 
@@ -495,6 +508,28 @@ NSString * const TABViewAnimatedFooterPrefixString = @"tab_footer_";
     
     UICollectionReusableView *view = [collectionView.tabAnimated.producter productWithControlView:collectionView currentClass:currentClass indexPath:indexPath origin:origin];
     return view;
+}
+
+#pragma mark - 瀑布流
+
+- (CGFloat)tab_waterFallLayout:(UICollectionViewLayout *)waterFallLayout index:(NSInteger)index itemWidth:(CGFloat)itemWidth {
+    TABCollectionAnimated *tabAnimated = waterFallLayout.tabAnimated;
+    if (tabAnimated.state != TABViewAnimationStart) {
+        return [self tab_waterFallLayout:waterFallLayout index:index itemWidth:itemWidth];
+    }
+    return [tabAnimated.waterFallLayoutHeightArray[index] floatValue];
+}
+
+#pragma mark -
+
+- (void)setWaterFallLayoutHeightArray:(NSArray<NSNumber *> *)waterFallLayoutHeightArray {
+    _waterFallLayoutHeightArray = waterFallLayoutHeightArray;
+    _animatedCount = waterFallLayoutHeightArray.count;
+}
+
+- (void)setAnimatedCount:(NSInteger)animatedCount {
+    if (_waterFallLayoutHeightArray.count > 0) return;
+    _animatedCount = animatedCount;
 }
 
 @end

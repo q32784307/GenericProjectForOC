@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4EE958CD28D774381C5FB4F1281C4A49"
-               BuildableName = "libXHLaunchAd.a"
+               BuildableName = "XHLaunchAd.framework"
                BlueprintName = "XHLaunchAd"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>

@@ -129,7 +129,13 @@ static const CGFloat kTagLabelMinWidth = 15.f;
     return NO;
 }
 
-// 填充后
+/**
+  填充后行为：
+  1. frame兜底
+  2. 卡片视图frame处理
+  3. 标记过滤，穿透组件
+  4. 绑定layer
+ */
 + (void)bindView:(UIView *)view production:(TABAnimatedProduction *)production animatedHeight:(CGFloat)animatedHeight {
     
     // 防止不能覆盖底部视图
@@ -146,11 +152,25 @@ static const CGFloat kTagLabelMinWidth = 15.f;
 
     view.layer.cornerRadius = production.backgroundLayer.cornerRadius;
     [view.layer addSublayer:production.backgroundLayer];
+    
+    UIBezierPath *penetratePath = [UIBezierPath bezierPathWithRect:production.backgroundLayer.bounds];
+    BOOL isNeedPenetrate = NO;
     for (NSInteger i = 0; i < production.layers.count; i++) {
         TABComponentLayer *layer = production.layers[i];
         if (layer.loadStyle == TABViewLoadAnimationRemove) continue;
+        // 穿透
+        if (layer.loadStyle == TABViewLoadAnimationPenetrate) {
+            if (!isNeedPenetrate) isNeedPenetrate = YES;
+            UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:layer.originFrame cornerRadius:layer.cornerRadius];
+            [penetratePath appendPath:path];
+        }
         [production.backgroundLayer addLayer:layer viewWidth:view.frame.size.width animatedHeight:animatedHeight];
     }
+    
+    if (isNeedPenetrate) {
+        [self penetrateTargetLayer:production.backgroundLayer path:penetratePath];
+    }
+    
     production.state = TABAnimatedProductionBind;
     view.tabAnimatedProduction = production;
 }
@@ -228,6 +248,13 @@ static const CGFloat kTagLabelMinWidth = 15.f;
         shapeLayer.path = path.CGPath;
         [rootView.tabAnimatedProduction.backgroundLayer setMask:shapeLayer];
     });
+}
+
++ (void)penetrateTargetLayer:(TABComponentLayer *)targetLayer path:(UIBezierPath *)path {
+    CAShapeLayer *fillLayer = [CAShapeLayer layer];
+    fillLayer.path = path.CGPath;
+    fillLayer.fillRule = kCAFillRuleEvenOdd;
+    targetLayer.mask = fillLayer;
 }
 
 @end
