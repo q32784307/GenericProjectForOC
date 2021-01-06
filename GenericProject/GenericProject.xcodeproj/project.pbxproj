@@ -188,16 +188,13 @@
 		82F122C3235416D100BD0575 /* ZYWeekView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82F122B7235416D100BD0575 /* ZYWeekView.m */; };
 		82F122C4235416D100BD0575 /* ZYCalendarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 82F122BA235416D100BD0575 /* ZYCalendarManager.m */; };
 		82F122C5235416D100BD0575 /* ZYCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82F122BC235416D100BD0575 /* ZYCalendarView.m */; };
-		82F2FD002273096100E2045B /* AnimatedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 82F2FCFF2273096100E2045B /* AnimatedTableViewCell.m */; };
 		82F2FD0222730ABA00E2045B /* TABKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82F2FD0122730ABA00E2045B /* TABKit.framework */; };
 		82F2FD05227311F000E2045B /* head.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82F2FD03227311F000E2045B /* head.jpg */; };
 		82F2FD06227311F000E2045B /* test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82F2FD04227311F000E2045B /* test.jpg */; };
-		82F2FD0C227314F000E2045B /* ViewExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82F2FD0B227314F000E2045B /* ViewExampleViewController.m */; };
 		82F2FD1A227319B100E2045B /* AuthID.m in Sources */ = {isa = PBXBuildFile; fileRef = 82F2FD0F227319AF00E2045B /* AuthID.m */; };
 		82F2FD1B227319B100E2045B /* CheckVerifyCodeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 82F2FD11227319B000E2045B /* CheckVerifyCodeCell.m */; };
 		82F2FD1C227319B100E2045B /* CheckVerifyCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82F2FD12227319B000E2045B /* CheckVerifyCodeView.m */; };
 		82F312B72265DE30000E5154 /* AnimatedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82F312B62265DE30000E5154 /* AnimatedViewController.m */; };
-		82F312BA2265DF57000E5154 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 82F312B92265DF57000E5154 /* Game.m */; };
 		82F4F48120C8E1A400AF9C74 /* TabBarConfigure.plist in Resources */ = {isa = PBXBuildFile; fileRef = 82F4F48020C8E1A400AF9C74 /* TabBarConfigure.plist */; };
 		82FDF4E423541DB400F295F5 /* LSBaseCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FDF4E323541DB400F295F5 /* LSBaseCollectionViewFlowLayout.m */; };
 		82FDF4E823541E0200F295F5 /* LSBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FDF4E723541E0200F295F5 /* LSBaseTableViewCell.m */; };
@@ -811,13 +808,9 @@
 		82F122BA235416D100BD0575 /* ZYCalendarManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYCalendarManager.m; sourceTree = "<group>"; };
 		82F122BB235416D100BD0575 /* ZYMonthView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYMonthView.h; sourceTree = "<group>"; };
 		82F122BC235416D100BD0575 /* ZYCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYCalendarView.m; sourceTree = "<group>"; };
-		82F2FCFE2273096100E2045B /* AnimatedTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimatedTableViewCell.h; sourceTree = "<group>"; };
-		82F2FCFF2273096100E2045B /* AnimatedTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimatedTableViewCell.m; sourceTree = "<group>"; };
 		82F2FD0122730ABA00E2045B /* TABKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TABKit.framework; sourceTree = "<group>"; };
 		82F2FD03227311F000E2045B /* head.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = head.jpg; sourceTree = "<group>"; };
 		82F2FD04227311F000E2045B /* test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test.jpg; sourceTree = "<group>"; };
-		82F2FD0A227314F000E2045B /* ViewExampleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewExampleViewController.h; sourceTree = "<group>"; };
-		82F2FD0B227314F000E2045B /* ViewExampleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewExampleViewController.m; sourceTree = "<group>"; };
 		82F2FD0E227319AF00E2045B /* AuthID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthID.h; sourceTree = "<group>"; };
 		82F2FD0F227319AF00E2045B /* AuthID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthID.m; sourceTree = "<group>"; };
 		82F2FD11227319B000E2045B /* CheckVerifyCodeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckVerifyCodeCell.m; sourceTree = "<group>"; };
@@ -826,8 +819,6 @@
 		82F2FD14227319B000E2045B /* CheckVerifyCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckVerifyCodeView.h; sourceTree = "<group>"; };
 		82F312B52265DE30000E5154 /* AnimatedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimatedViewController.h; sourceTree = "<group>"; };
 		82F312B62265DE30000E5154 /* AnimatedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimatedViewController.m; sourceTree = "<group>"; };
-		82F312B82265DF57000E5154 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
-		82F312B92265DF57000E5154 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
 		82F4F48020C8E1A400AF9C74 /* TabBarConfigure.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = TabBarConfigure.plist; sourceTree = "<group>"; };
 		82FDF4E223541DB400F295F5 /* LSBaseCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSBaseCollectionViewFlowLayout.h; sourceTree = "<group>"; };
 		82FDF4E323541DB400F295F5 /* LSBaseCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSBaseCollectionViewFlowLayout.m; sourceTree = "<group>"; };
@@ -1566,8 +1557,6 @@
 				82D32B0C22524FC8003ECAA3 /* VideoPlayViewController.m */,
 				82F312B52265DE30000E5154 /* AnimatedViewController.h */,
 				82F312B62265DE30000E5154 /* AnimatedViewController.m */,
-				82F2FD0A227314F000E2045B /* ViewExampleViewController.h */,
-				82F2FD0B227314F000E2045B /* ViewExampleViewController.m */,
 				826A49D32265E68F000BF84B /* FaceViewController.h */,
 				826A49D42265E68F000BF84B /* FaceViewController.m */,
 				8211E5BD2266CF440051AD26 /* VerifyCodeViewController.h */,
@@ -1641,8 +1630,6 @@
 				D0D5FDAF23A24685000ED84D /* tabbar_home_un@2x.png */,
 				D0D5FDAE23A24684000ED84D /* tabbar_home_un@3x.png */,
 				D0C49672238F781000DAEF98 /* 方图.JPG */,
-				82F312B82265DF57000E5154 /* Game.h */,
-				82F312B92265DF57000E5154 /* Game.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1654,8 +1641,6 @@
 				D06E5B15247CC49D00ECE98D /* InputBar.m */,
 				82F2FD03227311F000E2045B /* head.jpg */,
 				82F2FD04227311F000E2045B /* test.jpg */,
-				82F2FCFE2273096100E2045B /* AnimatedTableViewCell.h */,
-				82F2FCFF2273096100E2045B /* AnimatedTableViewCell.m */,
 				D07B8852238D3CF100F951AC /* HtmlTableViewCell.h */,
 				D07B8853238D3CF100F951AC /* HtmlTableViewCell.m */,
 				D0E10ED6239A09250025AB6A /* CommonTreeDetailsTableViewCell.h */,
@@ -3562,14 +3547,12 @@
 				820BB6FE23E5691C006608D2 /* LabelTagViewController.m in Sources */,
 				D0BDC81F2386980900AEFC3F /* LSSensitiveWords.m in Sources */,
 				D07B8866238D3E6100F951AC /* PluralHtmlCellViewController.m in Sources */,
-				82F2FD002273096100E2045B /* AnimatedTableViewCell.m in Sources */,
 				D066106B239FA98E00D18086 /* LSPhotoSelect.m in Sources */,
 				82BA1365235966ED00EA7D01 /* LSKeyboardHelperView.m in Sources */,
 				82F122A92354147A00BD0575 /* ClearCacheTool.m in Sources */,
 				82F122BD235416D100BD0575 /* JTDateHelper.m in Sources */,
 				D06E5AFB247CC10500ECE98D /* YBEmojiContentView.m in Sources */,
 				82F2FD1A227319B100E2045B /* AuthID.m in Sources */,
-				82F2FD0C227314F000E2045B /* ViewExampleViewController.m in Sources */,
 				82A9EDCE20E17779007F87E8 /* FourthViewController.m in Sources */,
 				D0CD27ED239F40EC0019A357 /* LSEditSelectedBox.m in Sources */,
 				D07B8857238D3D3800F951AC /* AdaptiveHtmlViewController.m in Sources */,
@@ -3585,7 +3568,6 @@
 				D0CD2802239F4E270019A357 /* LSImageZoomView.m in Sources */,
 				82FDF4F123541E7000F295F5 /* Transition.m in Sources */,
 				D06E5AF0247CC10500ECE98D /* YBTextAttachment.m in Sources */,
-				82F312BA2265DF57000E5154 /* Game.m in Sources */,
 				824E4FA02441E116004AA9EE /* PPEmojiPreviewView.m in Sources */,
 				82F312B72265DE30000E5154 /* AnimatedViewController.m in Sources */,
 				D08EB80C23A254F200EAB828 /* LSPuzzleVerifyView.m in Sources */,

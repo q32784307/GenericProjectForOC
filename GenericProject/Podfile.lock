@@ -28,9 +28,9 @@ PODS:
   - ReactiveObjC (3.1.1)
   - SDCycleScrollView (1.82):
     - SDWebImage (>= 5.0.0)
-  - SDWebImage (5.10.1):
-    - SDWebImage/Core (= 5.10.1)
-  - SDWebImage/Core (5.10.1)
+  - SDWebImage (5.10.2):
+    - SDWebImage/Core (= 5.10.2)
+  - SDWebImage/Core (5.10.2)
   - SVProgressHUD (2.2.5)
   - TABAnimated (2.5.1)
   - TZImagePickerController (3.5.8)
@@ -101,7 +101,7 @@ SPEC CHECKSUMS:
   MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
   SDCycleScrollView: a0d74c3384caa72bdfc81470bdbc8c14b3e1fbcf
-  SDWebImage: f66a16b95183b92ed6b965ad21d33167bc07612d
+  SDWebImage: b969dcfc02c40a5da71eac0b03b8f1a0c794a86f
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   TABAnimated: f0bfba5c5c7d279b43cda503d9a5328e7e9891c8
   TZImagePickerController: 7fd9702897ef8c0b7c951e5463f4bcf398296f9e
