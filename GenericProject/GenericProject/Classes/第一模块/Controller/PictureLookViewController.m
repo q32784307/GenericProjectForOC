@@ -66,7 +66,30 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    [self.helper showImagePickerControllerWithMaxCount:9 WithViewController:self withSelectTakeType:LSManageSelectTakePhotoAndImagePickerType withAssetsArr:self.imageViewSelectAssetsArray andPhotosArr:self.imageViewSelectPhotoArray];
+    if (indexPath.item == self.imageViewSelectPhotoArray.count) {
+        [self.helper showImagePickerControllerWithMaxCount:9 WithViewController:self withSelectTakeType:LSManageSelectTakePhotoAndImagePickerType withAssetsArr:self.imageViewSelectAssetsArray andPhotosArr:self.imageViewSelectPhotoArray];
+    }else{
+        PHAsset *asset = self.imageViewSelectAssetsArray[indexPath.item];
+        BOOL isVideo = NO;
+        isVideo = asset.mediaType == PHAssetMediaTypeVideo;
+        if ([[asset valueForKey:@"filename"] containsString:@"GIF"]) {
+            TZGifPhotoPreviewController *vc = [[TZGifPhotoPreviewController alloc] init];
+            TZAssetModel *model = [TZAssetModel modelWithAsset:asset type:TZAssetModelMediaTypePhotoGif timeLength:@""];
+            vc.model = model;
+            vc.modalPresentationStyle = UIModalPresentationFullScreen;
+            [self presentViewController:vc animated:YES completion:nil];
+        } else if (isVideo) { // perview video / 预览视频
+            TZVideoPlayerController *vc = [[TZVideoPlayerController alloc] init];
+            TZAssetModel *model = [TZAssetModel modelWithAsset:asset type:TZAssetModelMediaTypeVideo timeLength:@""];
+            vc.model = model;
+            vc.modalPresentationStyle = UIModalPresentationFullScreen;
+            [self presentViewController:vc animated:YES completion:nil];
+        } else { // preview photos / 预览照片
+            TZImagePickerController *imagePickerVc = [[TZImagePickerController alloc] initWithSelectedAssets:self.imageViewSelectAssetsArray selectedPhotos:self.imageViewSelectPhotoArray index:indexPath.item];
+            imagePickerVc.modalPresentationStyle = UIModalPresentationFullScreen;
+            [self presentViewController:imagePickerVc animated:YES completion:nil];
+        }
+    }
 }
 
 #pragma mark -- 内部方法
