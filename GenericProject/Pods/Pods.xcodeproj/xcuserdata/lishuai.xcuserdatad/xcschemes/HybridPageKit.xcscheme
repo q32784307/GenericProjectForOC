@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1C6D5AA9A122BC9B0C9BDD7EDBF41B75"
-               BuildableName = "libHybridPageKit.a"
+               BuildableName = "HybridPageKit.framework"
                BlueprintName = "HybridPageKit"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>

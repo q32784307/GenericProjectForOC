@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B226767C94EFDDF6183068991A028098"
-               BuildableName = "libTABAnimated.a"
+               BuildableName = "TABAnimated.framework"
                BlueprintName = "TABAnimated"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
