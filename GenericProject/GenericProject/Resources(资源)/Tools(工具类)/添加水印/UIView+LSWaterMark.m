@@ -14,7 +14,7 @@
     //计算水印文字的宽高
     NSString *waterMark = waterText;
     CGSize textSize = [waterMark sizeWithAttributes:@{NSFontAttributeName:font}];
-    NSInteger line = ScreenHeight * 3.5 / 80; //多少行
+    NSInteger line = LSScreenHeight * 3.5 / 80; //多少行
     NSInteger row = 20;
    
     for (int i = 0; i < line; i++) {

@@ -22,24 +22,24 @@
     // Do any additional setup after loading the view.
     
     self.iconImageView = [[UIImageView alloc]init];
-    self.iconImageView.image = ImageNamed(@"方图.JPG");
+    self.iconImageView.image = LSImageNamed(@"方图.JPG");
     [self.view addSubview:self.iconImageView];
     [self.iconImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.view).with.offset(NAVIGATION_BAR_HEIGHT);
         make.left.equalTo(self.view).with.offset(0);
         make.right.equalTo(self.view.mas_right).with.offset(0);
-        make.height.mas_equalTo(ScreenHeight / 2);
+        make.height.mas_equalTo(LSScreenHeight / 2);
     }];
     
     UIButton *addFilterButton = [[UIButton alloc]init];
-    addFilterButton.backgroundColor = RedColor;
+    addFilterButton.backgroundColor = LSRedColor;
     [addFilterButton setTitle:@"添加滤镜" forState:UIControlStateNormal];
     [addFilterButton addTarget:self action:@selector(addFilterAction) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:addFilterButton];
     [addFilterButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.iconImageView.mas_bottom).with.offset(SYRealValue(100 / 2));
-        make.left.equalTo(self.view).with.offset(SYRealValue(60 / 2));
-        make.size.mas_equalTo(CGSizeMake(SYRealValue(200 / 2), SYRealValue(80 / 2)));
+        make.top.equalTo(self.iconImageView.mas_bottom).with.offset(LSSYRealValue(100 / 2));
+        make.left.equalTo(self.view).with.offset(LSSYRealValue(60 / 2));
+        make.size.mas_equalTo(CGSizeMake(LSSYRealValue(200 / 2), LSSYRealValue(80 / 2)));
     }];
 }
 
@@ -65,7 +65,7 @@
         make.top.equalTo(self.view).with.offset(NAVIGATION_BAR_HEIGHT);
         make.left.equalTo(self.view).with.offset(0);
         make.right.equalTo(self.view.mas_right).with.offset(0);
-        make.height.mas_equalTo(ScreenHeight / 2);
+        make.height.mas_equalTo(LSScreenHeight / 2);
     }];
 }
 

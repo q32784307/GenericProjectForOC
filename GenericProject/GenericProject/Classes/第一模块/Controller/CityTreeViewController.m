@@ -27,9 +27,9 @@
     self.navView.isShowRightButton = YES;
     self.navView.rightButtonTitle = @"提交";
     
-    WeakSelf(self);
+    LSWeakSelf(self);
     self.navView.RightActionBlock = ^{
-        StrongSelf(self);
+        LSStrongSelf(self);
         [self prepareCommit];
     };
     
@@ -39,7 +39,7 @@
     [self.navView addSubview:allCheckButton];
     [allCheckButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.navView.rightButton).with.offset(0);
-        make.right.equalTo(self.navView.rightButton.mas_left).with.offset(SYRealValue(-20 / 2));
+        make.right.equalTo(self.navView.rightButton.mas_left).with.offset(LSSYRealValue(-20 / 2));
         make.height.mas_equalTo(40);
     }];
     
@@ -49,7 +49,7 @@
     [self.navView addSubview:allExpandButton];
     [allExpandButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.navView.rightButton).with.offset(0);
-        make.right.equalTo(allCheckButton.mas_left).with.offset(SYRealValue(-20 / 2));
+        make.right.equalTo(allCheckButton.mas_left).with.offset(LSSYRealValue(-20 / 2));
         make.height.mas_equalTo(40);
     }];
 }

@@ -96,17 +96,17 @@
         
         CGRect frame = self.frame;
         
-        if (self.center.x <= ScreenWidth / 2.0){
+        if (self.center.x <= LSScreenWidth / 2.0){
             frame.origin.x = 0;
         }else
         {
-            frame.origin.x = ScreenWidth - frame.size.width;
+            frame.origin.x = LSScreenWidth - frame.size.width;
         }
         
         if (frame.origin.y < 20) {
             frame.origin.y = 20;
-        } else if (frame.origin.y + frame.size.height > ScreenHeight) {
-            frame.origin.y = ScreenHeight - frame.size.height;
+        } else if (frame.origin.y + frame.size.height > LSScreenHeight) {
+            frame.origin.y = LSScreenHeight - frame.size.height;
         }
         
         [UIView animateWithDuration:0.3 animations:^{
@@ -121,7 +121,7 @@
 //拖动改变控件的水平方向x值
 - (CGRect)changeXWithFrame:(CGRect)originalFrame point:(CGPoint)point{
     BOOL q1 = originalFrame.origin.x >= 0;
-    BOOL q2 = originalFrame.origin.x + originalFrame.size.width <= ScreenWidth;
+    BOOL q2 = originalFrame.origin.x + originalFrame.size.width <= LSScreenWidth;
     
     if (q1 && q2) {
         originalFrame.origin.x += point.x;
@@ -133,7 +133,7 @@
 - (CGRect)changeYWithFrame:(CGRect)originalFrame point:(CGPoint)point{
     
     BOOL q1 = originalFrame.origin.y >= 20;
-    BOOL q2 = originalFrame.origin.y + originalFrame.size.height <= ScreenHeight;
+    BOOL q2 = originalFrame.origin.y + originalFrame.size.height <= LSScreenHeight;
     if (q1 && q2) {
         originalFrame.origin.y += point.y;
     }

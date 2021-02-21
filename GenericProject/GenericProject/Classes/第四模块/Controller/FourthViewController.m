@@ -32,7 +32,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.StatusBarStyle = UIStatusBarStyleDefault;
+//    self.StatusBarStyle = UIStatusBarStyleDefault;
     self.navView.navColor = [UIColor cyanColor];
     self.navView.leftButtonImage = @"back_black";
     self.navView.leftButtonTitle = @"11";
@@ -105,7 +105,7 @@
     NSArray *arr = @[@"全国",@"全国省",@"全国市",@"全国县"];
     for (int i = 0; i<4; i++) {
         
-        UIView *bgView = [[UIView alloc] initWithFrame:CGRectMake(0, 45 * i + NAVIGATION_BAR_HEIGHT, ScreenWidth, 45)];
+        UIView *bgView = [[UIView alloc] initWithFrame:CGRectMake(0, 45 * i + NAVIGATION_BAR_HEIGHT, LSScreenWidth, 45)];
         bgView.backgroundColor = [UIColor whiteColor];
         bgView.tag = 1000+i;
         [self.view addSubview:bgView];
@@ -116,7 +116,7 @@
         addressLabel.textAlignment = NSTextAlignmentLeft;
         [bgView addSubview:addressLabel];
         
-        UIImageView *selectImage = [[UIImageView alloc] initWithFrame:CGRectMake(ScreenWidth - 30, 14.5, 16, 16)];
+        UIImageView *selectImage = [[UIImageView alloc] initWithFrame:CGRectMake(LSScreenWidth - 30, 14.5, 16, 16)];
         selectImage.tag = 3000+i;
         selectImage.userInteractionEnabled = YES;
         selectImage.hidden = YES;
@@ -136,14 +136,14 @@
         if (i == 3) {
             _totalHeight = CGRectGetMaxY(bgView.frame) + 10;
             
-            _backView = [[UIView alloc] initWithFrame:CGRectMake(0, _totalHeight, ScreenWidth, ScreenHeight - _totalHeight)];
+            _backView = [[UIView alloc] initWithFrame:CGRectMake(0, _totalHeight, LSScreenWidth, LSScreenHeight - _totalHeight)];
             _backView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.5];
             [self.view addSubview:_backView];
         }
     }
     
     
-    self.rootTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, STATUS_BAR_HEIGHT, ScreenWidth, ScreenHeight - HOME_INDICATOR_HEIGHT) style:UITableViewStyleGrouped];
+    self.rootTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, STATUS_BAR_HEIGHT, LSScreenWidth, LSScreenHeight - HOME_INDICATOR_HEIGHT) style:UITableViewStyleGrouped];
     self.rootTableView.delegate = self;
     self.rootTableView.dataSource = self;
     self.rootTableView.estimatedRowHeight = 0;

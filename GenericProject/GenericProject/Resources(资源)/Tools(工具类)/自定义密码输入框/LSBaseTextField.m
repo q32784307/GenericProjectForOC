@@ -144,7 +144,7 @@
 - (LSKeyboardHelperView *)helperView{
     if(!_helperView){
         __weak typeof(self) weakSelf     = self;
-        _helperView = [LSKeyboardHelperView createHelerViewWithFrame:CGRectMake(0, 0, ScreenWidth, 45) keyboardDismiss:^{
+        _helperView = [LSKeyboardHelperView createHelerViewWithFrame:CGRectMake(0, 0, LSScreenWidth, 45) keyboardDismiss:^{
             !weakSelf.ToolBarViewEvent ?  : weakSelf.ToolBarViewEvent ();
         }];
     }

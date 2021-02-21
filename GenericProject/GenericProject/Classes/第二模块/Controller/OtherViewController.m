@@ -57,7 +57,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
-        cell.textLabel.font = [UIFont systemFontOfSize:SYRealValue(30 / 2)];
+        cell.textLabel.font = [UIFont systemFontOfSize:LSSYRealValue(30 / 2)];
     }
     
     cell.textLabel.text = [self.dataModel rowModelOfIndexPath:indexPath].name;
@@ -72,7 +72,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return SYRealValue(100 / 2);
+    return LSSYRealValue(100 / 2);
 }
 
 - (void)didReceiveMemoryWarning {

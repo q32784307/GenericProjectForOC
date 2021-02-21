@@ -20,7 +20,7 @@
     // Do any additional setup after loading the view.
     self.navView.titleLabelText = @"电子签名";
     
-    LSSignatureView *sign = [[LSSignatureView alloc] initWithFrame:CGRectMake(0, NAVIGATION_BAR_HEIGHT, ScreenWidth, ScreenHeight - NAVIGATION_BAR_HEIGHT - HOME_INDICATOR_HEIGHT)];
+    LSSignatureView *sign = [[LSSignatureView alloc] initWithFrame:CGRectMake(0, NAVIGATION_BAR_HEIGHT, LSScreenWidth, LSScreenHeight - NAVIGATION_BAR_HEIGHT - HOME_INDICATOR_HEIGHT)];
     sign.lineColor = [UIColor blueColor];
     sign.signDone = ^(UIImage *signImage) {
         self.signResult(signImage);

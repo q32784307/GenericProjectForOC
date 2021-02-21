@@ -19,8 +19,11 @@
  */
 @property(nonatomic,copy)void(^RightActionBlock)(void);
 
+@property(nonatomic,strong)UIView *navView;
 //左按钮
 @property(nonatomic,strong)UIButton *leftButton;
+//标题
+@property(nonatomic,strong)UILabel *titleLabel;
 //右按钮
 @property(nonatomic,strong)UIButton *rightButton;
 

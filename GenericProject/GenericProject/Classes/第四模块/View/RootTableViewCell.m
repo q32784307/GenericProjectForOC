@@ -36,20 +36,20 @@
     
     
     // 剪头 展示下一级数据
-    _imageUpView = [[UIImageView alloc]initWithFrame:CGRectMake(ScreenWidth - 30, 12.5, 15, 15)];
+    _imageUpView = [[UIImageView alloc]initWithFrame:CGRectMake(LSScreenWidth - 30, 12.5, 15, 15)];
     _imageUpView.image = [UIImage imageNamed:@""];
     //    _imageUpView.backgroundColor = [UIColor redColor];
     //剪头 展示下一级数据 的 ges
     UIButton *showNextLevelBgItem = [UIButton buttonWithType:UIButtonTypeCustom];
     showNextLevelBgItem.backgroundColor = [UIColor clearColor];
-    showNextLevelBgItem.frame = CGRectMake(ScreenWidth - 40, 0, 40, 40);
+    showNextLevelBgItem.frame = CGRectMake(LSScreenWidth - 40, 0, 40, 40);
     [showNextLevelBgItem addTarget:self action:@selector(showNextLevelDataEvent) forControlEvents:(UIControlEventTouchUpInside)];
     showNextLevelBgItem.userInteractionEnabled = YES;
     
     
     
     //选中当前数据
-    _imageSelectView = [[UIImageView alloc]initWithFrame:CGRectMake(ScreenWidth - 60, 12, 16, 16)];
+    _imageSelectView = [[UIImageView alloc]initWithFrame:CGRectMake(LSScreenWidth - 60, 12, 16, 16)];
     _imageSelectView.image = [UIImage imageNamed:@""];
     _imageSelectView.hidden = YES;
     

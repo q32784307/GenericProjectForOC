@@ -38,7 +38,6 @@
     [self.view addSubview:dayslab];
 
     for(int i = 0; i < 3; i++){
-
        UILabel *timelab =  [[UILabel alloc]initWithFrame:CGRectMake(CGRectGetMaxX(dayslab.frame)+i*55, CGRectGetMinY(dayslab.frame), 40, 30)];
         timelab.textColor = [UIColor whiteColor];
         timelab.textAlignment = NSTextAlignmentCenter;
@@ -89,7 +88,7 @@
     self.titleScrollView.titleColor = [[UIColor blackColor] colorWithAlphaComponent:0.7];
     self.titleScrollView.scrollTimeInterval = 2;
     self.titleScrollView.titles = @[@"111111111111111111111111111111111", @"2222222222222222222222222222222222222222222222222222222222222222", @"3333333333333333333333333333333"];
-    self.titleScrollView.signImages = @[@"photo_delete"];
+    self.titleScrollView.signImages = @[@"photo_delete",@"photo_delete",@"photo_delete"];
     self.titleScrollView.titleFont = [UIFont systemFontOfSize:14];
     self.titleScrollView.delegate = self;
     self.titleScrollView.backgroundColor = [UIColor redColor];
@@ -138,8 +137,7 @@
 }
 
 
--(void)setDataWithLabAndDay:(NSString *)dayStr andHours:(NSString *)huorStr andMinte:(NSString *)minteStr andSecond:(NSString *)decondStr{
-    
+- (void)setDataWithLabAndDay:(NSString *)dayStr andHours:(NSString *)huorStr andMinte:(NSString *)minteStr andSecond:(NSString *)decondStr {
     dayslab.text = dayStr;
     NSArray *tarr = @[huorStr,minteStr,decondStr];
     for(int i = 0; i < tarr.count; i++){
@@ -150,7 +148,7 @@
 
 //=============================================================
 // 传入时间差值实现倒计时
--(void)countdownAnd:(NSInteger)timeInterval{
+- (void)countdownAnd:(NSInteger)timeInterval {
     __weak __typeof(self) weakSelf = self;
     if (_timer==nil) {
         __block NSInteger timeout = timeInterval; //倒计时时间
@@ -195,7 +193,7 @@
  *  这里测试用
  *  @return 格式为年-月-日
  */
--(NSString *)getyyyymmdd{
+- (NSString *)getyyyymmdd {
     NSDate *now = [NSDate date];
     NSDateFormatter *formatDay = [[NSDateFormatter alloc] init];
     formatDay.dateFormat = @"yyyy-MM-dd HH:mm:ss";

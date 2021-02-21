@@ -33,7 +33,7 @@
 }
 
 - (void)createSubViews {
-    self.mainTableView.frame = CGRectMake(0, NAVIGATION_BAR_HEIGHT, ScreenWidth, ScreenHeight - NAVIGATION_BAR_HEIGHT - HOME_INDICATOR_HEIGHT);
+    self.mainTableView.frame = CGRectMake(0, NAVIGATION_BAR_HEIGHT, LSScreenWidth, LSScreenHeight - NAVIGATION_BAR_HEIGHT - HOME_INDICATOR_HEIGHT);
     [self.view addSubview:self.mainTableView];
 }
 
@@ -154,7 +154,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return SYRealValue(100 / 2);
+    return LSSYRealValue(100 / 2);
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -166,10 +166,10 @@
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    UIView * backView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 45)];
+    UIView * backView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, LSScreenWidth, 45)];
     backView.backgroundColor = [UIColor blackColor];
     
-    UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake(15, 0, ScreenWidth, 30)];
+    UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake(15, 0, LSScreenWidth, 30)];
     label.textColor = [UIColor whiteColor];
     label.font = [UIFont systemFontOfSize:15];
     label.text = self.dataArray[section];

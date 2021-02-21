@@ -28,6 +28,12 @@
     pushButton.backgroundColor = [UIColor cyanColor];
     [pushButton addTarget:self action:@selector(pushAction) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:pushButton];
+    
+    
+    NSString *str = @"园林售卡";
+    NSString *transformStr = [NSString tansformToMixedStringWithOriginStr:str];
+    NSLog(@"转化前: %@", str);
+    NSLog(@"转化后: %@", transformStr);
 }
 
 - (void)setNavigation {

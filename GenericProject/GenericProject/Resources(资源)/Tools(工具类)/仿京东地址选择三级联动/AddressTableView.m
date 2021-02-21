@@ -52,10 +52,10 @@
     if (self.indexRow && self.indexRow.integerValue == indexPath.row) {
         cell.textLabel.textColor = [UIColor colorWithHexString:@"FDDE4C"];;
     }else{
-        cell.textLabel.textColor = BlackColor;
+        cell.textLabel.textColor = LSBlackColor;
     }
     
-    cell.textLabel.font = SystemFont(SYRealValue(28 / 2));
+    cell.textLabel.font = LSSystemFont(LSSYRealValue(28 / 2));
     
     return cell;
 }

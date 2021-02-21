@@ -302,7 +302,7 @@
                 }
             }
             if (editMenuType == LSEditMenuTypeText) {
-                LSEditTextView *editTextView = [[LSEditTextView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight)];
+                LSEditTextView *editTextView = [[LSEditTextView alloc] initWithFrame:CGRectMake(0, 0, LSScreenWidth, LSScreenHeight)];
                 [weakSelf.view addSubview:editTextView];
                 if ([setting[@"hidden"] boolValue]) weakSelf.editingMenuType = LSEditMenuTypeUnknown;
                 editTextView.editTextCompleted = ^(UILabel * _Nullable label) {
@@ -360,7 +360,7 @@
 - (UIButton *)trashTips {
     if (!_trashTips) {
         _trashTips = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 20)];
-        _trashTips.center = CGPointMake(ScreenWidth / 2.0, ScreenHeight - 60);
+        _trashTips.center = CGPointMake(LSScreenWidth / 2.0, LSScreenHeight - 60);
         [_trashTips setTitle:@"拖动到此处删除" forState:UIControlStateNormal];
         [_trashTips setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         _trashTips.titleLabel.font = [UIFont systemFontOfSize:14];
@@ -444,7 +444,7 @@
 
 //保存图片完成后调用的方法
 - (void)savedPhotoImage:(UIImage*)image didFinishSavingWithError:(NSError *)error contextInfo: (void *)contextInfo {
-    DISPATCH_MAIN_THREAD(^{
+    LSDISPATCH_MAIN_THREAD(^{
         [self againShotBtnClicked:nil];
     });
     if (error) {
@@ -501,7 +501,7 @@
     [self topSelectedView:doubleTap.view];
     doubleTap.view.hidden = YES;
     UILabel *tapLabel = (UILabel *)doubleTap.view;
-    LSEditTextView *editTextView = [[LSEditTextView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight)];
+    LSEditTextView *editTextView = [[LSEditTextView alloc] initWithFrame:CGRectMake(0, 0, LSScreenWidth, LSScreenHeight)];
     editTextView.configureEditParameters(@{@"textColor":tapLabel.textColor, @"backgroundColor":tapLabel.backgroundColor, @"text":tapLabel.text});
     editTextView.editTextCompleted = ^(UILabel * _Nullable label) {
         doubleTap.view.hidden = NO;

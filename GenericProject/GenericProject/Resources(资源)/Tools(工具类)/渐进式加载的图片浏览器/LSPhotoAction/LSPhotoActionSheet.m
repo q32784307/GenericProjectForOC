@@ -66,7 +66,7 @@ static id ActionSheet;
         [sheetView setDelegate:self];
         
         CGFloat buttonY = 49 * i;
-        [sheetView setFrame:(CGRect){{0,buttonY},{ScreenWidth,49}}];
+        [sheetView setFrame:(CGRect){{0,buttonY},{LSScreenWidth,49}}];
         
         if (i == _destructiveIndex && _destructiveBtnTitle.length){
             [sheetView setIsDestructive:YES];
@@ -77,7 +77,7 @@ static id ActionSheet;
         
         CALayer *line = [CALayer layer];
         [line setBackgroundColor: [[UIColor colorWithRed:220/255.f green:220/255.f blue:220/255.f alpha:1.f] CGColor]];
-        line.frame = CGRectMake(0, buttonY, ScreenWidth, 0.5);
+        line.frame = CGRectMake(0, buttonY, LSScreenWidth, 0.5);
         [_bgView.layer addSublayer:line];
     }
 
@@ -87,12 +87,12 @@ static id ActionSheet;
     [cancelView setTag:_otherBtnTitlesArr.count];
     
     CGFloat buttonY = 49 * (_otherBtnTitlesArr.count) + 5;
-    [cancelView setFrame:(CGRect){{0,buttonY},{ScreenWidth,49}}];
+    [cancelView setFrame:(CGRect){{0,buttonY},{LSScreenWidth,49}}];
     
     [cancelView setTitle:_cancelBtnTitle?_cancelBtnTitle:@"取消"];
     [_bgView addSubview:cancelView];
     
-    _bgView.frame = CGRectMake(0, ScreenHeight, ScreenWidth, height);
+    _bgView.frame = CGRectMake(0, LSScreenHeight, LSScreenWidth, height);
 }
 
 - (void)actionSheetViewIBAction:(NSInteger)index {

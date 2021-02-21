@@ -30,11 +30,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = BlackColor;
+    self.view.backgroundColor = LSBlackColor;
     // Do any additional setup after loading the view.
     [self setNavigation];
     // 编辑处 view
-    self.cropView = [[LSCropView alloc] initWithFrame:CGRectMake(0, NAVIGATION_BAR_HEIGHT, ScreenWidth, ScreenHeight - NAVIGATION_BAR_HEIGHT - HOME_INDICATOR_HEIGHT)];
+    self.cropView = [[LSCropView alloc] initWithFrame:CGRectMake(0, NAVIGATION_BAR_HEIGHT, LSScreenWidth, LSScreenHeight - NAVIGATION_BAR_HEIGHT - HOME_INDICATOR_HEIGHT)];
     self.cropView.delegate = self;
     [self.view addSubview:self.cropView];
     [self.view bringSubviewToFront:self.navView];
@@ -45,13 +45,13 @@
     self.navView.titleLabelText = @"裁剪照片";
     self.navView.isShowRightButton = YES;
     self.navView.rightButtonTitle = @"选取";
-    WeakSelf(self);
+    LSWeakSelf(self);
     self.navView.LeftActionBlock = ^{
-        StrongSelf(self);
+        LSStrongSelf(self);
         [self.navigationController popViewControllerAnimated:YES];
     };
     self.navView.RightActionBlock = ^{
-        StrongSelf(self);
+        LSStrongSelf(self);
         if (self.delegate &&
             [self.delegate respondsToSelector:@selector(lsdOptionalPhotoEditVC:didFinishCroppingImage:)]) {
             [self.delegate lsdOptionalPhotoEditVC:self didFinishCroppingImage:self.cropView.croppedImage];

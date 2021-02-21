@@ -100,8 +100,8 @@ typedef struct CGPointLSUserResizableViewAnchorPointPair {
         touchPoint.y = _topDistance;
         return;
     }
-    if (touchPoint.y >= ScreenHeight - _bottomDistance) {
-        touchPoint.y = ScreenHeight - _bottomDistance;
+    if (touchPoint.y >= LSScreenHeight - _bottomDistance) {
+        touchPoint.y = LSScreenHeight - _bottomDistance;
         return;
     }
     

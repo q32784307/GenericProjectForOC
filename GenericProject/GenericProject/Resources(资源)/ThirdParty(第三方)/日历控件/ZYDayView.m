@@ -19,11 +19,11 @@
     self.imageView.contentMode = UIViewContentModeScaleAspectFit;
     self.tintColor = _manager.selectedBackgroundColor;
     
-    [self setTitleColor:BlackColor forState:UIControlStateNormal];
-    [self setTitleColor:BlackColor forState:UIControlStateSelected];
+    [self setTitleColor:LSBlackColor forState:UIControlStateNormal];
+    [self setTitleColor:LSBlackColor forState:UIControlStateSelected];
     [self setTitleColor:[UIColor colorWithHexString:@"9B9B9B"] forState:UIControlStateDisabled];
     [self setImage:[[UIImage imageNamed:@"circle"] imageWithRenderingMode:_manager.imageRenderingMode] forState:UIControlStateSelected];
-    self.titleLabel.font = SystemFont(SYRealValue(28 / 2));
+    self.titleLabel.font = LSSystemFont(LSSYRealValue(28 / 2));
     
     [self setImage:nil forState:UIControlStateNormal];
     self.backgroundColor = [UIColor clearColor];

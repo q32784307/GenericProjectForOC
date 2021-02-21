@@ -91,7 +91,7 @@
     self.inputBar.textView.delegate = self;
     [self.view addSubview:self.inputBar];
     
-    self.mainTableView.frame = CGRectMake(0, NAVIGATION_BAR_HEIGHT, ScreenWidth, ScreenHeight - NAVIGATION_BAR_HEIGHT - CGRectGetHeight(self.inputBar.frame));
+    self.mainTableView.frame = CGRectMake(0, NAVIGATION_BAR_HEIGHT, LSScreenWidth, LSScreenHeight - NAVIGATION_BAR_HEIGHT - CGRectGetHeight(self.inputBar.frame));
     [self.view addSubview:self.mainTableView];
 
     YBEmojiConfig *config = [[YBEmojiConfig alloc] init];

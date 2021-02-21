@@ -26,25 +26,25 @@
 
 - (void)createSubViews {
     self.headImageView = [[UIImageView alloc]init];
-    self.headImageView.backgroundColor = RedColor;
+    self.headImageView.backgroundColor = LSRedColor;
     self.headImageView.layer.masksToBounds = YES;
-    self.headImageView.layer.cornerRadius = SYRealValue(120 / 2);
+    self.headImageView.layer.cornerRadius = LSSYRealValue(120 / 2);
     [self.view addSubview:self.headImageView];
     [self.headImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self.view.mas_centerX);
-        make.top.equalTo(self.view).with.offset(NAVIGATION_BAR_HEIGHT + SYRealValue(100 / 2));
-        make.size.mas_equalTo(CGSizeMake(SYRealValue(240 / 2), SYRealValue(240 / 2)));
+        make.top.equalTo(self.view).with.offset(NAVIGATION_BAR_HEIGHT + LSSYRealValue(100 / 2));
+        make.size.mas_equalTo(CGSizeMake(LSSYRealValue(240 / 2), LSSYRealValue(240 / 2)));
     }];
     
     UIButton *headButton = [[UIButton alloc]init];
-    headButton.backgroundColor = RedColor;
+    headButton.backgroundColor = LSRedColor;
     [headButton setTitle:@"选择头像" forState:UIControlStateNormal];
     [headButton addTarget:self action:@selector(headAction) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:headButton];
     [headButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.headImageView.mas_bottom).with.offset(SYRealValue(100 / 2));
+        make.top.equalTo(self.headImageView.mas_bottom).with.offset(LSSYRealValue(100 / 2));
         make.centerX.equalTo(self.view.mas_centerX);
-        make.size.mas_equalTo(CGSizeMake(SYRealValue(200 / 2), SYRealValue(100 / 2)));
+        make.size.mas_equalTo(CGSizeMake(LSSYRealValue(200 / 2), LSSYRealValue(100 / 2)));
     }];
 
     // 初始化配置

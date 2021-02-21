@@ -23,7 +23,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = WhiteColor;
+    self.view.backgroundColor = LSWhiteColor;
     // Do any additional setup after loading the view.
     [self createSubViews];
 }
@@ -59,7 +59,7 @@
 }
 
 - (void)setUpTextFieldViewWithType:(LSPSWTextFieldViewType)type {
-    self.textFieldView = [LSPSWTextFieldContext configureTextFieldView:type frame:CGRectMake(0, 110, ScreenWidth, ScreenHeight - 100)];
+    self.textFieldView = [LSPSWTextFieldContext configureTextFieldView:type frame:CGRectMake(0, 110, LSScreenWidth, LSScreenHeight - 100)];
     [self.textFieldView setDelegate:self];
     [self.view addSubview:self.textFieldView];
 }

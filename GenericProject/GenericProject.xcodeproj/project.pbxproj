@@ -22,6 +22,8 @@
 		7996DD9025079BCE0054E4C9 /* LSBaseTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7996DD8925079BCE0054E4C9 /* LSBaseTagView.m */; };
 		7996DD9125079BCE0054E4C9 /* LSCustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7996DD8B25079BCE0054E4C9 /* LSCustomButton.m */; };
 		7996DD9725079C1A0054E4C9 /* LSTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7996DD9625079C1A0054E4C9 /* LSTagView.m */; };
+		79C63F1125E23C94000FD7A6 /* NSString+LSFuzzySearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C63F1025E23C94000FD7A6 /* NSString+LSFuzzySearch.m */; };
+		79C63F1E25E26DE1000FD7A6 /* UIColor+LSDartOrLight.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C63F1D25E26DE1000FD7A6 /* UIColor+LSDartOrLight.m */; };
 		79F316B324EE0BFA00266A15 /* LSAttributedMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F316B224EE0BFA00266A15 /* LSAttributedMaker.m */; };
 		79F316B624EE0D1500266A15 /* NSString+LS_Attributed.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F316B524EE0D1500266A15 /* NSString+LS_Attributed.m */; };
 		8204212720CE1CB00026F2FD /* 城市数据.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8204212620CE1CB00026F2FD /* 城市数据.txt */; };
@@ -511,6 +513,10 @@
 		7996DD8D25079BCE0054E4C9 /* LSBaseTagView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSBaseTagView.h; sourceTree = "<group>"; };
 		7996DD9525079C1A0054E4C9 /* LSTagView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSTagView.h; sourceTree = "<group>"; };
 		7996DD9625079C1A0054E4C9 /* LSTagView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSTagView.m; sourceTree = "<group>"; };
+		79C63F0F25E23C94000FD7A6 /* NSString+LSFuzzySearch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+LSFuzzySearch.h"; sourceTree = "<group>"; };
+		79C63F1025E23C94000FD7A6 /* NSString+LSFuzzySearch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+LSFuzzySearch.m"; sourceTree = "<group>"; };
+		79C63F1C25E26DE1000FD7A6 /* UIColor+LSDartOrLight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+LSDartOrLight.h"; sourceTree = "<group>"; };
+		79C63F1D25E26DE1000FD7A6 /* UIColor+LSDartOrLight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+LSDartOrLight.m"; sourceTree = "<group>"; };
 		79F316B124EE0BFA00266A15 /* LSAttributedMaker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSAttributedMaker.h; sourceTree = "<group>"; };
 		79F316B224EE0BFA00266A15 /* LSAttributedMaker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSAttributedMaker.m; sourceTree = "<group>"; };
 		79F316B424EE0D1500266A15 /* NSString+LS_Attributed.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+LS_Attributed.h"; sourceTree = "<group>"; };
@@ -1378,6 +1384,15 @@
 			path = "方案一";
 			sourceTree = "<group>";
 		};
+		79C63F1525E2691D000FD7A6 /* 深色模式适配文件 */ = {
+			isa = PBXGroup;
+			children = (
+				79C63F1C25E26DE1000FD7A6 /* UIColor+LSDartOrLight.h */,
+				79C63F1D25E26DE1000FD7A6 /* UIColor+LSDartOrLight.m */,
+			);
+			path = "深色模式适配文件";
+			sourceTree = "<group>";
+		};
 		79F316B024EE0BBC00266A15 /* 富文本 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1737,6 +1752,7 @@
 		8234E179208A76FE0002DA97 /* Extend(扩展类) */ = {
 			isa = PBXGroup;
 			children = (
+				79C63F1525E2691D000FD7A6 /* 深色模式适配文件 */,
 				820BB6FA23E5680A006608D2 /* UILabel+LSAttributeTextTapAction.h */,
 				820BB6F923E56809006608D2 /* UILabel+LSAttributeTextTapAction.m */,
 				D0D5FD9823A237DF000ED84D /* UIImage+LSImage.h */,
@@ -1771,6 +1787,8 @@
 				D0D5FD9623A23755000ED84D /* UIButton+LSButtonGradient.m */,
 				D0D5FD9223A23605000ED84D /* UIImage+LSImageGradient.h */,
 				D0D5FD9323A23605000ED84D /* UIImage+LSImageGradient.m */,
+				79C63F0F25E23C94000FD7A6 /* NSString+LSFuzzySearch.h */,
+				79C63F1025E23C94000FD7A6 /* NSString+LSFuzzySearch.m */,
 			);
 			path = "Extend(扩展类)";
 			sourceTree = "<group>";
@@ -3488,6 +3506,7 @@
 				D0E10ED2239A08C60025AB6A /* CommonTreeDetailsViewController.m in Sources */,
 				7996DD9125079BCE0054E4C9 /* LSCustomButton.m in Sources */,
 				D024DBD123A8A498001723AF /* LSPhotoBrowser.m in Sources */,
+				79C63F1E25E26DE1000FD7A6 /* UIColor+LSDartOrLight.m in Sources */,
 				82D32B0D22524FC8003ECAA3 /* VideoPlayViewController.m in Sources */,
 				820BB6FB23E5680A006608D2 /* UILabel+LSAttributeTextTapAction.m in Sources */,
 				D0CD27F9239F47880019A357 /* LSPaddingLabel.m in Sources */,
@@ -3566,6 +3585,7 @@
 				D0E10EBF2399FEE80025AB6A /* LSTreeViewParam.m in Sources */,
 				79595A0A24E24F1D008D4528 /* LSRadio.m in Sources */,
 				D0CD2802239F4E270019A357 /* LSImageZoomView.m in Sources */,
+				79C63F1125E23C94000FD7A6 /* NSString+LSFuzzySearch.m in Sources */,
 				82FDF4F123541E7000F295F5 /* Transition.m in Sources */,
 				D06E5AF0247CC10500ECE98D /* YBTextAttachment.m in Sources */,
 				824E4FA02441E116004AA9EE /* PPEmojiPreviewView.m in Sources */,

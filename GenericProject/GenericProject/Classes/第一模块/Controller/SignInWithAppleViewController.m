@@ -65,7 +65,7 @@
         //授权成功后，你可以拿到苹果返回的全部数据，根据需要和后台交互。
         NSLog(@"user   -   %@  %@",user,identityToken);
         //保存apple返回的唯一标识符
-        SaveUserDefault(user, @"userIdentifier");
+        LSSaveUserDefault(user, @"userIdentifier");
     } else if ([authorization.credential isKindOfClass:[ASPasswordCredential class]]) {
         // 用户登录使用现有的密码凭证
         ASPasswordCredential *psdCredential = authorization.credential;

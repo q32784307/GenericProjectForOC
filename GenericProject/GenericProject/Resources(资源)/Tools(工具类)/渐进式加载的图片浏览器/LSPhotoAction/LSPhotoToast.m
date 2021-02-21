@@ -71,13 +71,13 @@ static id toast;
     /****************************** == Arrt == ********************************/
     
     NSDictionary *attrs = @{NSFontAttributeName:[_msgLabel font]};
-    CGSize size = [text boundingRectWithSize:CGSizeMake(ScreenWidth - 20,ScreenHeight - 20) options:NSStringDrawingUsesLineFragmentOrigin attributes:attrs context:nil].size;
+    CGSize size = [text boundingRectWithSize:CGSizeMake(LSScreenWidth - 20,LSScreenHeight - 20) options:NSStringDrawingUsesLineFragmentOrigin attributes:attrs context:nil].size;
     
     CGPoint CenterPoint;
-    if(offsetY <= 0 || offsetY >= ScreenHeight){
-        CenterPoint = (CGPoint){ScreenWidth * 0.5,ScreenHeight * 0.5};
+    if(offsetY <= 0 || offsetY >= LSScreenHeight){
+        CenterPoint = (CGPoint){LSScreenWidth * 0.5,LSScreenHeight * 0.5};
     }else{
-        CenterPoint = (CGPoint){ScreenWidth * 0.5,offsetY + size.height};
+        CenterPoint = (CGPoint){LSScreenWidth * 0.5,offsetY + size.height};
     }
     
     _toastView.bounds = (CGRect){CGPointZero,{size.width + 20,size.height + 20}};

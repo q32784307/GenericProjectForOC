@@ -57,9 +57,9 @@
 - (void)addTitleView {
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 55 *IPHONE6_SIZE)];
     titleLabel.text = @"所在地区";
-    titleLabel.textColor = BlackColor;
+    titleLabel.textColor = LSBlackColor;
     titleLabel.textAlignment = NSTextAlignmentCenter;
-    titleLabel.font = SystemFont(SYRealValue(30 / 2));
+    titleLabel.font = LSSystemFont(LSSYRealValue(30 / 2));
     [self.myView addSubview:titleLabel];
     
     UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH -55 *IPHONE6_SIZE, 0, 55 *IPHONE6_SIZE, 55 *IPHONE6_SIZE)];
@@ -70,7 +70,7 @@
     self.selectLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(titleLabel.frame), 75, 30 *IPHONE6_SIZE)];
     self.selectLabel.textColor = RGB(242, 36, 36);
     self.selectLabel.text = @"请选择";
-    self.selectLabel.font = SystemFont(SYRealValue(28 / 2));
+    self.selectLabel.font = LSSystemFont(LSSYRealValue(28 / 2));
     self.selectLabel.textAlignment = NSTextAlignmentCenter;
     self.selectLabel.userInteractionEnabled = YES;
     [self.myView addSubview:self.selectLabel];
@@ -82,7 +82,7 @@
     lineView.backgroundColor = RGB(229, 229, 229);
     [self.myView addSubview:lineView];
     
-    self.redLineView = [[UIView alloc] initWithFrame:CGRectMake(CGRectGetMinX(self.selectLabel.frame) +15, CGRectGetMaxY(self.selectLabel.frame), 45, SYRealValue(2 / 2))];
+    self.redLineView = [[UIView alloc] initWithFrame:CGRectMake(CGRectGetMinX(self.selectLabel.frame) +15, CGRectGetMaxY(self.selectLabel.frame), 45, LSSYRealValue(2 / 2))];
     self.redLineView.backgroundColor = [UIColor colorWithHexString:@"FDDE4C"];
     [self.myView addSubview:self.redLineView];
     

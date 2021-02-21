@@ -10,9 +10,6 @@
 
 @interface LSBaseNavigationView ()
 
-@property(nonatomic,strong)UIView *navView;
-@property(nonatomic,strong)UILabel *titleLabel;
-
 @end
 
 @implementation LSBaseNavigationView
@@ -38,9 +35,9 @@
     }
     //颜色
     if(!self.navColor) {
-        self.navView.backgroundColor = MainColor;
+        self.navView.backgroundColor = [UIColor lsLigthColor:navBGColor darkColor:LSBlackColor];
     }else{
-        self.navView.backgroundColor = self.navColor;
+        self.navView.backgroundColor = [UIColor lsLigthColor:self.navColor darkColor:LSBlackColor];
     }
     //背景图片
     if (!self.navBackgroundViewImage) {
@@ -55,7 +52,7 @@
     self.leftButton = [[UIButton alloc]init];
     //图片
     if (!self.leftButtonImage) {
-        [self.leftButton setImage:[UIImage imageNamed:@"back_white"] forState:UIControlStateNormal];
+        [self.leftButton setImage:[UIImage imageNamed:@"back_black"] forState:UIControlStateNormal];
     }else{
         [self.leftButton setImage:[UIImage imageNamed:self.leftButtonImage] forState:UIControlStateNormal];
     }
@@ -66,12 +63,12 @@
     }else{
         [self.leftButton setTitle:self.leftButtonTitle forState:UIControlStateNormal];
     }
-    self.leftButton.titleLabel.font = [UIFont systemFontOfSize:SYRealValue(28 / 2)];
+    self.leftButton.titleLabel.font = [UIFont systemFontOfSize:LSSYRealValue(28 / 2)];
     //颜色
     if (!self.leftButtonTitleColor) {
-        [self.leftButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [self.leftButton setTitleColor:[UIColor lsLigthColor:blackTitleColor darkColor:LSWhiteColor] forState:UIControlStateNormal];
     }else{
-        [self.leftButton setTitleColor:self.leftButtonTitleColor forState:UIControlStateNormal];
+        [self.leftButton setTitleColor:[UIColor lsLigthColor:self.leftButtonTitleColor darkColor:LSWhiteColor] forState:UIControlStateNormal];
     }
     [self.leftButton addTarget:self action:@selector(leftAction) forControlEvents:UIControlEventTouchUpInside];
     //是否显示
@@ -83,7 +80,7 @@
     [self.navView addSubview:self.leftButton];
     [self.leftButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.navView).with.offset(STATUS_BAR_HEIGHT + 2);
-        make.left.equalTo(self.navView).with.offset(SYRealValue(20 / 2));
+        make.left.equalTo(self.navView).with.offset(LSSYRealValue(20 / 2));
         make.height.mas_equalTo(40);
     }];
     
@@ -98,17 +95,17 @@
     }
     //颜色
     if (!self.titleLabelTextColor) {
-        self.titleLabel.textColor = [UIColor whiteColor];
+        self.titleLabel.textColor = [UIColor lsLigthColor:navTitleColor darkColor:LSWhiteColor];
     }else{
-        self.titleLabel.textColor = self.titleLabelTextColor;
+        self.titleLabel.textColor = [UIColor lsLigthColor:self.titleLabelTextColor darkColor:LSWhiteColor];
     }
     self.titleLabel.textAlignment = NSTextAlignmentCenter;
-    self.titleLabel.font = [UIFont boldSystemFontOfSize:SYRealValue(SYRealValue(32 / 2))];
+    self.titleLabel.font = [UIFont boldSystemFontOfSize:LSSYRealValue(LSSYRealValue(32 / 2))];
     [self.navView addSubview:self.titleLabel];
     [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.navView).with.offset(STATUS_BAR_HEIGHT + 2);
         make.centerX.equalTo(self.navView.mas_centerX);
-        make.size.mas_equalTo(CGSizeMake(SYRealValue(300 / 2), 40));
+        make.size.mas_equalTo(CGSizeMake(LSSYRealValue(300 / 2), 40));
     }];
     
     
@@ -127,12 +124,12 @@
     }else{
         [self.rightButton setTitle:self.rightButtonTitle forState:UIControlStateNormal];
     }
-    self.rightButton.titleLabel.font = [UIFont systemFontOfSize:SYRealValue(28 / 2)];
+    self.rightButton.titleLabel.font = [UIFont systemFontOfSize:LSSYRealValue(28 / 2)];
     //颜色
     if (!self.rightButtonTitleColor) {
-        [self.rightButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [self.rightButton setTitleColor:[UIColor lsLigthColor:rightTitleColor darkColor:LSWhiteColor] forState:UIControlStateNormal];
     }else{
-        [self.rightButton setTitleColor:self.rightButtonTitleColor forState:UIControlStateNormal];
+        [self.rightButton setTitleColor:[UIColor lsLigthColor:self.rightButtonTitleColor darkColor:LSWhiteColor] forState:UIControlStateNormal];
     }
     self.rightButton.titleLabel.textAlignment = NSTextAlignmentRight;
     [self.rightButton addTarget:self action:@selector(rightAction) forControlEvents:UIControlEventTouchUpInside];
@@ -145,7 +142,7 @@
     [self.navView addSubview:self.rightButton];
     [self.rightButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.navView).with.offset(STATUS_BAR_HEIGHT + 2);
-        make.right.equalTo(self.navView.mas_right).with.offset(SYRealValue(-20 / 2));
+        make.right.equalTo(self.navView.mas_right).with.offset(LSSYRealValue(-20 / 2));
         make.height.mas_equalTo(40);
     }];
     

@@ -58,7 +58,7 @@
     _jsHandler = [[JSHandler alloc]initWithViewController:self configuration:configuration];
     
     
-    self.webView = [[WKWebView alloc]initWithFrame:CGRectMake(0, NAVIGATION_BAR_HEIGHT, ScreenWidth, ScreenHeight - NAVIGATION_BAR_HEIGHT - HOME_INDICATOR_HEIGHT) configuration:configuration];
+    self.webView = [[WKWebView alloc]initWithFrame:CGRectMake(0, NAVIGATION_BAR_HEIGHT, LSScreenWidth, LSScreenHeight - NAVIGATION_BAR_HEIGHT - HOME_INDICATOR_HEIGHT) configuration:configuration];
     _webView.navigationDelegate = self;
     _webView.backgroundColor = [UIColor clearColor];
     _webView.allowsBackForwardNavigationGestures = YES;//打开网页间的 滑动返回
@@ -80,12 +80,12 @@
     self.closeItem = [[UIButton alloc]init];
     [self.closeItem setTitle:@"关闭" forState:UIControlStateNormal];
     [self.closeItem setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    self.closeItem.titleLabel.font = [UIFont systemFontOfSize:SYRealValue(30 / 2)];
+    self.closeItem.titleLabel.font = [UIFont systemFontOfSize:LSSYRealValue(30 / 2)];
     [self.closeItem addTarget:self action:@selector(closeNative) forControlEvents:UIControlEventTouchUpInside];
     [self.navView addSubview:self.closeItem];
     [self.closeItem mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.navView).with.offset(STATUS_BAR_HEIGHT + 2);
-        make.left.equalTo(self.navView.leftButton.mas_right).with.offset(SYRealValue(20 / 2));
+        make.left.equalTo(self.navView.leftButton.mas_right).with.offset(LSSYRealValue(20 / 2));
         make.height.mas_equalTo(40);
     }];
 }

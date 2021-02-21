@@ -60,7 +60,7 @@
         _iconView.frame = CGRectMake(20, 20, 50, 50);
         _iconView.backgroundColor = [UIColor orangeColor];
     }else{
-        _iconView.frame = CGRectMake(ScreenWidth - 20 - 50, 20, 50, 50);
+        _iconView.frame = CGRectMake(LSScreenWidth - 20 - 50, 20, 50, 50);
         _iconView.backgroundColor = [UIColor lightGrayColor];
     }
     
@@ -81,7 +81,7 @@
             if(imModel.isLeft){
                 _picImgView.x = CGRectGetMaxX(_iconView.frame) + 20;
             }else{
-                _picImgView.x = ScreenWidth - 40 - rect.size.width - 50;
+                _picImgView.x = LSScreenWidth - 40 - rect.size.width - 50;
             }
             imModel.cellHeight = CGRectGetMaxY(self->_picImgView.frame) + 20;
             _picImgView.image = image;
@@ -90,7 +90,7 @@
                 if(imModel.isLeft){
                     self->_picImgView.x = CGRectGetMaxX(self->_iconView.frame) + 20;
                 }else{
-                    self->_picImgView.x = ScreenWidth - 40 - rect.size.width - 50;
+                    self->_picImgView.x = LSScreenWidth - 40 - rect.size.width - 50;
                 }
                 if (imModel.rate > 1) { // 横图
                     self.picImgView.size = CGSizeMake(100 * imModel.rate, 100);
@@ -144,7 +144,7 @@
                         if(imModel.isLeft){
                             self->_picImgView.x = CGRectGetMaxX(self->_iconView.frame) + 20;
                         }else{
-                            self->_picImgView.x = ScreenWidth - 40 - rect.size.width - 50;
+                            self->_picImgView.x = LSScreenWidth - 40 - rect.size.width - 50;
                         }
                         
                         imModel.cellHeight = CGRectGetMaxY(self->_iconView.frame) + 20;
@@ -169,7 +169,7 @@
         if(imModel.isLeft){
             _picImgView.x = CGRectGetMaxX(self->_iconView.frame) + 20;
         }else{
-            _picImgView.x = ScreenWidth - 40 - rect.size.width - 50;
+            _picImgView.x = LSScreenWidth - 40 - rect.size.width - 50;
         }
         
         imModel.cellHeight = CGRectGetMaxY(self->_picImgView.frame) + 20;

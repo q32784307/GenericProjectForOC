@@ -58,7 +58,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
-        cell.textLabel.font = [UIFont systemFontOfSize:SYRealValue(30 / 2)];
+        cell.textLabel.font = [UIFont systemFontOfSize:LSSYRealValue(30 / 2)];
     }
     cell.backgroundColor = [self randomColor];
     cell.textLabel.text = _titleArray[indexPath.row];
@@ -84,7 +84,7 @@
     }
     
     if (indexPath.row == 1) {
-        [self showAlertWithTitle:EmptyTitle message:@"一个按钮" appearanceProcess:^(AlertController * _Nonnull alertMaker) {
+        [self showAlertWithTitle:LSEmptyTitle message:@"一个按钮" appearanceProcess:^(AlertController * _Nonnull alertMaker) {
             alertMaker.
             addActionCancelTitle(@"确定");
         } actionsBlock:^(NSInteger buttonIndex, UIAlertAction * _Nonnull action, AlertController * _Nonnull alertSelf) {
@@ -96,7 +96,7 @@
     }
     
     if (indexPath.row == 2) {
-        [self showAlertWithTitle:EmptyTitle message:@"toast样式，可自定义展示延时时间，支持配置弹出、关闭回调，可关闭弹出动画" appearanceProcess:^(AlertController * _Nonnull alertMaker) {
+        [self showAlertWithTitle:LSEmptyTitle message:@"toast样式，可自定义展示延时时间，支持配置弹出、关闭回调，可关闭弹出动画" appearanceProcess:^(AlertController * _Nonnull alertMaker) {
             alertMaker.toastStyleDuration = 2;
         } actionsBlock:NULL];
     }
@@ -160,7 +160,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return SYRealValue(100 / 2);
+    return LSSYRealValue(100 / 2);
 }
 
 #pragma mark - 随机色

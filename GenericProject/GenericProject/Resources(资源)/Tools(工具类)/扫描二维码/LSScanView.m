@@ -64,7 +64,7 @@ static CGFloat const timer_animation_Duration = 0.05;
 }
 
 - (instancetype)initWithFrame:(CGRect)frame {
-    frame = CGRectMake(0, NAVIGATION_BAR_HEIGHT, ScreenWidth, ScreenHeight - NAVIGATION_BAR_HEIGHT - HOME_INDICATOR_HEIGHT);
+    frame = CGRectMake(0, NAVIGATION_BAR_HEIGHT, LSScreenWidth, LSScreenHeight - NAVIGATION_BAR_HEIGHT - HOME_INDICATOR_HEIGHT);
     if (self = [super initWithFrame: frame]) {
         self.backgroundColor = [UIColor colorWithWhite:0.f alpha:0.2f];
         [self.layer addSublayer:self.scanView];
@@ -171,7 +171,7 @@ static CGFloat const timer_animation_Duration = 0.05;
         textRect.size.height = 25.f;
         
         _remind = [[UILabel alloc]initWithFrame:textRect];
-        _remind.font = [UIFont systemFontOfSize:SYRealValue(28 / 2)];
+        _remind.font = [UIFont systemFontOfSize:LSSYRealValue(28 / 2)];
         _remind.textColor = [UIColor whiteColor];
         _remind.textAlignment = NSTextAlignmentCenter;
         _remind.text = REMINDTEXT;
@@ -185,7 +185,7 @@ static CGFloat const timer_animation_Duration = 0.05;
  */
 - (UIButton *)FlashlightButton {
     if (!_FlashlightButton) {
-        _FlashlightButton = [[UIButton alloc]initWithFrame:CGRectMake((ScreenWidth - SYRealValue(120 / 2)) / 2, self.remind.frame.origin.y + SYRealValue(100 / 2), SYRealValue(120 / 2), SYRealValue(150 / 2))];
+        _FlashlightButton = [[UIButton alloc]initWithFrame:CGRectMake((LSScreenWidth - LSSYRealValue(120 / 2)) / 2, self.remind.frame.origin.y + LSSYRealValue(100 / 2), LSSYRealValue(120 / 2), LSSYRealValue(150 / 2))];
         [_FlashlightButton setImage:[UIImage imageNamed:@"Glim_Off"] forState:UIControlStateNormal];
         [_FlashlightButton setImage:[UIImage imageNamed:@"Glim_On"] forState:UIControlStateSelected];
     }

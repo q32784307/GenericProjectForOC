@@ -27,20 +27,20 @@
 }
 
 - (void)makeBaseUIWithTitleArr:(NSArray *)titleArr {
-    self.backgroundView = [[UIView alloc] initWithFrame:CGRectMake(0, [UIScreen mainScreen].bounds.size.height, [UIScreen mainScreen].bounds.size.width, titleArr.count * SYRealValue(100 / 2) + SYRealValue(110 / 2) + HOME_INDICATOR_HEIGHT)];
+    self.backgroundView = [[UIView alloc] initWithFrame:CGRectMake(0, [UIScreen mainScreen].bounds.size.height, [UIScreen mainScreen].bounds.size.width, titleArr.count * LSSYRealValue(100 / 2) + LSSYRealValue(110 / 2) + HOME_INDICATOR_HEIGHT)];
     _backgroundView.backgroundColor = [UIColor whiteColor];
     [self addSubview:_backgroundView];
     
-    CGFloat y = [self createBtnWithTitle:@"取消" origin_y:_backgroundView.frame.size.height - SYRealValue(100 / 2) - HOME_INDICATOR_HEIGHT tag:-1 action:@selector(hiddenSheet)] - SYRealValue(110 / 2);
+    CGFloat y = [self createBtnWithTitle:@"取消" origin_y:_backgroundView.frame.size.height - LSSYRealValue(100 / 2) - HOME_INDICATOR_HEIGHT tag:-1 action:@selector(hiddenSheet)] - LSSYRealValue(110 / 2);
     
-    UIView *lineView = [[UIView alloc]initWithFrame:CGRectMake(0, titleArr.count * SYRealValue(100 / 2), ScreenWidth, SYRealValue(20 / 2))];
+    UIView *lineView = [[UIView alloc]initWithFrame:CGRectMake(0, titleArr.count * LSSYRealValue(100 / 2), LSScreenWidth, LSSYRealValue(20 / 2))];
     lineView.backgroundColor = [UIColor colorWithRed:0xe9/255.0 green:0xe9/255.0 blue:0xe9/255.0 alpha:1.0];
     [_backgroundView addSubview:lineView];
     
     for (int i = 0; i < titleArr.count; i++) {
         y = [self createBtnWithTitle:titleArr[i] origin_y:y tag:i action:@selector(click:)];
         
-        UIView *lineView1 = [[UIView alloc]initWithFrame:CGRectMake(0, (i + 1) * SYRealValue(100 / 2), ScreenWidth, 1)];
+        UIView *lineView1 = [[UIView alloc]initWithFrame:CGRectMake(0, (i + 1) * LSSYRealValue(100 / 2), LSScreenWidth, 1)];
         lineView1.backgroundColor = [UIColor colorWithRed:0xe9/255.0 green:0xe9/255.0 blue:0xe9/255.0 alpha:1.0];
         [self.backgroundView addSubview:lineView1];
         
@@ -58,14 +58,14 @@
 - (CGFloat)createBtnWithTitle:(NSString *)title origin_y:(CGFloat)y tag:(NSInteger)tag action:(SEL)method {
     UIButton *ActionSheetButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [ActionSheetButton setTitle:title forState:UIControlStateNormal];
-    ActionSheetButton.frame = CGRectMake(0, y, [UIScreen mainScreen].bounds.size.width, SYRealValue(100 / 2));
+    ActionSheetButton.frame = CGRectMake(0, y, [UIScreen mainScreen].bounds.size.width, LSSYRealValue(100 / 2));
 //    ActionSheetButton.backgroundColor = [UIColor whiteColor];
     ActionSheetButton.tag = tag;
-    ActionSheetButton.titleLabel.font = [UIFont systemFontOfSize:SYRealValue(30 / 2)];
+    ActionSheetButton.titleLabel.font = [UIFont systemFontOfSize:LSSYRealValue(30 / 2)];
     [ActionSheetButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [ActionSheetButton addTarget:self action:method forControlEvents:UIControlEventTouchUpInside];
     [_backgroundView addSubview:ActionSheetButton];
-    return y -= tag == -1 ? 0 : SYRealValue(100 / 2);
+    return y -= tag == -1 ? 0 : LSSYRealValue(100 / 2);
 }
 
 - (void)hiddenSheet {

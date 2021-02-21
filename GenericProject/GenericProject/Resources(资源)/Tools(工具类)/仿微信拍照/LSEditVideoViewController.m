@@ -349,7 +349,7 @@
                 }
             }
             if (editMenuType == LSEditMenuTypeText) {
-                LSEditTextView *editTextView = [[LSEditTextView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight)];
+                LSEditTextView *editTextView = [[LSEditTextView alloc] initWithFrame:CGRectMake(0, 0, LSScreenWidth, LSScreenHeight)];
                 [weakSelf.view addSubview:editTextView];
                 editTextView.editTextCompleted = ^(UILabel * _Nullable label) {
                     if (label.text.length == 0 || label == nil) {
@@ -369,11 +369,11 @@
                 weakSelf.videoClippingView.exitClipping = ^{
                     [weakSelf hiddenEditMenus:NO];
                     weakSelf.preview.transform = CGAffineTransformIdentity;
-                    weakSelf.preview.center = CGPointMake(ScreenWidth / 2.0, ScreenHeight / 2.0);
+                    weakSelf.preview.center = CGPointMake(LSScreenWidth / 2.0, LSScreenHeight / 2.0);
                 };
                 [weakSelf hiddenEditMenus:YES];
-                weakSelf.preview.transform = CGAffineTransformMakeScale((ScreenWidth - 30 * 2) / ScreenWidth, (ScreenWidth - 30 * 2) / ScreenWidth);
-                weakSelf.preview.center = CGPointMake(ScreenWidth / 2.0, (ScreenHeight - weakSelf.videoClippingView.height) / 2.0);
+                weakSelf.preview.transform = CGAffineTransformMakeScale((LSScreenWidth - 30 * 2) / LSScreenWidth, (LSScreenWidth - 30 * 2) / LSScreenWidth);
+                weakSelf.preview.center = CGPointMake(LSScreenWidth / 2.0, (LSScreenHeight - weakSelf.videoClippingView.height) / 2.0);
                 weakSelf.videoClippingView.asset = [AVAsset assetWithURL:weakSelf.videoPath];
                 [weakSelf.view addSubview:weakSelf.videoClippingView];
             }
@@ -386,7 +386,7 @@
 - (UIButton *)trashTips {
     if (!_trashTips) {
         _trashTips = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 20)];
-        _trashTips.center = CGPointMake(ScreenWidth / 2.0, ScreenHeight - 60);
+        _trashTips.center = CGPointMake(LSScreenWidth / 2.0, LSScreenHeight - 60);
         [_trashTips setTitle:@"拖动到此处删除" forState:UIControlStateNormal];
         [_trashTips setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         _trashTips.titleLabel.font = [UIFont systemFontOfSize:14];
@@ -425,7 +425,7 @@
 
 - (LSEditVideoClipping *)videoClippingView {
     if (!_videoClippingView) {
-        _videoClippingView = [[LSEditVideoClipping alloc] initWithFrame:CGRectMake(0, ScreenHeight - 110, ScreenWidth, 110)];
+        _videoClippingView = [[LSEditVideoClipping alloc] initWithFrame:CGRectMake(0, LSScreenHeight - 110, LSScreenWidth, 110)];
         _videoClippingView.backgroundColor = [UIColor blackColor];
         __weak typeof(self) weakSelf = self;
         _videoClippingView.selectedClippingBegin = ^(CMTime beginTime, CMTime endTime, UIGestureRecognizerState state) {
@@ -483,7 +483,7 @@
     [photoLibrary performChanges:^{
         [PHAssetChangeRequest creationRequestForAssetFromVideoAtFileURL:self.videoPath];
     } completionHandler:^(BOOL success, NSError * _Nullable error) {
-        DISPATCH_MAIN_THREAD(^{
+        LSDISPATCH_MAIN_THREAD(^{
             [self againShotBtnClicked:nil];
         });
         if (success) {
@@ -496,7 +496,7 @@
 
 //保存图片完成后调用的方法
 - (void)savedPhotoImage:(UIImage*)image didFinishSavingWithError:(NSError *)error contextInfo: (void *)contextInfo {
-    DISPATCH_MAIN_THREAD(^{
+    LSDISPATCH_MAIN_THREAD(^{
         [self againShotBtnClicked:nil];
     });
     if (error) {
@@ -535,7 +535,7 @@
     UIActivityIndicatorView *activityIndicatorView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
     activityIndicatorView.frame = CGRectMake(0, 0, 50, 50);
     activityIndicatorView.color = [UIColor colorWithRed:45 / 255.0 green:175 / 255.0 blue:45 / 255.0 alpha:1];
-    activityIndicatorView.center = CGPointMake(ScreenWidth / 2.0, ScreenHeight / 2.0);
+    activityIndicatorView.center = CGPointMake(LSScreenWidth / 2.0, LSScreenHeight / 2.0);
     [activityIndicatorView startAnimating];
     [self.view addSubview:activityIndicatorView];
 
@@ -573,7 +573,7 @@
     [self topSelectedView:doubleTap.view];
     doubleTap.view.hidden = YES;
     UILabel *tapLabel = (UILabel *)doubleTap.view;
-    LSEditTextView *editTextView = [[LSEditTextView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight)];
+    LSEditTextView *editTextView = [[LSEditTextView alloc] initWithFrame:CGRectMake(0, 0, LSScreenWidth, LSScreenHeight)];
     editTextView.configureEditParameters(@{@"textColor":tapLabel.textColor, @"backgroundColor":tapLabel.backgroundColor, @"text":tapLabel.text});
     editTextView.editTextCompleted = ^(UILabel * _Nullable label) {
         doubleTap.view.hidden = NO;

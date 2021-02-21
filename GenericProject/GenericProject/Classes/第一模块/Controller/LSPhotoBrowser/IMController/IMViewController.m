@@ -100,7 +100,7 @@
         model.isVideo  = true;
         model.url      = videoUrl2;
         model.isLeft   = true;
-        model.rate     = ScreenWidth / ScreenHeight;
+        model.rate     = LSScreenWidth / LSScreenHeight;
         [self.dataArr addObject:model];
     }
     
@@ -109,7 +109,7 @@
         IMModel *model = [[IMModel alloc] init];
         model.url      = path;
         model.isVideo  = true;
-        model.rate     = ScreenWidth / ScreenHeight;
+        model.rate     = LSScreenWidth / LSScreenHeight;
         [self.dataArr addObject:model];
     }
     

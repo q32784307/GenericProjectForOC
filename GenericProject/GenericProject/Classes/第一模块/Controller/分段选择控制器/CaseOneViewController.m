@@ -13,8 +13,8 @@
 #import "LSPageMenu.h"
 #import "JSBadgeView.h"
 
-#define NaviH (ScreenHeight >= 812 ? 88 : 64) // 812是iPhoneX的高度
-#define scrollViewHeight (ScreenHeight-NaviH-40)
+#define NaviH (LSScreenHeight >= 812 ? 88 : 64) // 812是iPhoneX的高度
+#define scrollViewHeight (LSScreenHeight-NaviH-40)
 
 @interface CaseOneViewController ()<LSPageMenuDelegate, UIScrollViewDelegate>
 
@@ -32,7 +32,7 @@
     self.dataArr = @[@"生活",@"影视中心",@"交通",@"电视剧",@"搞笑",@"综艺"];
 
     // trackerStyle:跟踪器的样式
-    LSPageMenu *pageMenu = [LSPageMenu pageMenuWithFrame:CGRectMake(0, NaviH, ScreenWidth, 40) trackerStyle:LSPageMenuTrackerStyleLine];
+    LSPageMenu *pageMenu = [LSPageMenu pageMenuWithFrame:CGRectMake(0, NaviH, LSScreenWidth, 40) trackerStyle:LSPageMenuTrackerStyleLine];
     // 传递数组，默认选中第2个
     [pageMenu setItems:self.dataArr selectedItemIndex:0];
     // 设置代理
@@ -74,7 +74,7 @@
     self.dataArr = @[@"生活",@"影视中心",@"交通",@"电视剧",@"搞笑",@"综艺"];
     
     // trackerStyle:跟踪器的样式
-    LSPageMenu *pageMenu = [LSPageMenu pageMenuWithFrame:CGRectMake(0, NaviH, ScreenWidth, 40) trackerStyle:LSPageMenuTrackerStyleLineAttachment];
+    LSPageMenu *pageMenu = [LSPageMenu pageMenuWithFrame:CGRectMake(0, NaviH, LSScreenWidth, 40) trackerStyle:LSPageMenuTrackerStyleLineAttachment];
     // 传递数组，默认选中第2个
     [pageMenu setItems:self.dataArr selectedItemIndex:1];
     // 设置代理
@@ -90,7 +90,7 @@
     self.dataArr = @[@"生活",@"影视中心",@"交通",@"电视剧",@"搞笑",@"综艺"];
     
     // trackerStyle:跟踪器的样式
-    LSPageMenu *pageMenu = [LSPageMenu pageMenuWithFrame:CGRectMake(0, NaviH, ScreenWidth, 40) trackerStyle:LSPageMenuTrackerStyleNothing];
+    LSPageMenu *pageMenu = [LSPageMenu pageMenuWithFrame:CGRectMake(0, NaviH, LSScreenWidth, 40) trackerStyle:LSPageMenuTrackerStyleNothing];
     // 传递数组，默认选中第1个
     [pageMenu setItems:self.dataArr selectedItemIndex:0];
     // 设置缩放
@@ -109,7 +109,7 @@
     self.dataArr = @[@"生活",@"影视中心",@"交通",@"电视剧",@"搞笑",@"综艺"];
     
     // trackerStyle:跟踪器的样式
-    LSPageMenu *pageMenu = [LSPageMenu pageMenuWithFrame:CGRectMake(0, NaviH, ScreenWidth, 40) trackerStyle:LSPageMenuTrackerStyleRoundedRect];
+    LSPageMenu *pageMenu = [LSPageMenu pageMenuWithFrame:CGRectMake(0, NaviH, LSScreenWidth, 40) trackerStyle:LSPageMenuTrackerStyleRoundedRect];
     // 传递数组，默认选中第1个
     [pageMenu setItems:self.dataArr selectedItemIndex:0];
     pageMenu.tracker.backgroundColor = [UIColor redColor];
@@ -126,7 +126,7 @@
     self.dataArr = @[@"生活",@"影视中心",@"交通"];
 
     // trackerStyle:跟踪器的样式
-    LSPageMenu *pageMenu = [LSPageMenu pageMenuWithFrame:CGRectMake(15, NaviH, ScreenWidth-30, 40) trackerStyle:LSPageMenuTrackerStyleRoundedRect];
+    LSPageMenu *pageMenu = [LSPageMenu pageMenuWithFrame:CGRectMake(15, NaviH, LSScreenWidth-30, 40) trackerStyle:LSPageMenuTrackerStyleRoundedRect];
     // 设置pageMenu边框
     pageMenu.layer.borderWidth = 1;
     pageMenu.layer.borderColor = [UIColor redColor].CGColor;
@@ -156,7 +156,7 @@
     self.dataArr = @[@"生活",@"影视中心",@"交通",@"电视剧",@"搞笑",@"综艺"];
     
     // trackerStyle:跟踪器的样式
-    LSPageMenu *pageMenu = [LSPageMenu pageMenuWithFrame:CGRectMake(0, NaviH, ScreenWidth, 40) trackerStyle:LSPageMenuTrackerStyleRect];
+    LSPageMenu *pageMenu = [LSPageMenu pageMenuWithFrame:CGRectMake(0, NaviH, LSScreenWidth, 40) trackerStyle:LSPageMenuTrackerStyleRect];
     // 传递数组，默认选中第2个
     [pageMenu setItems:self.dataArr selectedItemIndex:1];
     // 设置代理
@@ -172,7 +172,7 @@
     self.dataArr = @[@"生活",@"影视中心",@"交通",@"电视剧",@"搞笑",@"综艺"];
 
     // trackerStyle:跟踪器的样式
-    LSPageMenu *pageMenu = [LSPageMenu pageMenuWithFrame:CGRectMake(0, NaviH, ScreenWidth, 40) trackerStyle:LSPageMenuTrackerStyleNothing];
+    LSPageMenu *pageMenu = [LSPageMenu pageMenuWithFrame:CGRectMake(0, NaviH, LSScreenWidth, 40) trackerStyle:LSPageMenuTrackerStyleNothing];
     // 传递数组，默认选中第2个
     [pageMenu setItems:self.dataArr selectedItemIndex:1];
     // 设置代理
@@ -188,7 +188,7 @@
     self.dataArr = @[@"生活",@"影视中心",@"交通",@"电视剧",@"搞笑",@"综艺"];
     
     // trackerStyle:跟踪器的样式
-    LSPageMenu *pageMenu = [LSPageMenu pageMenuWithFrame:CGRectMake(0, NaviH, ScreenWidth, 40) trackerStyle:LSPageMenuTrackerStyleLine];
+    LSPageMenu *pageMenu = [LSPageMenu pageMenuWithFrame:CGRectMake(0, NaviH, LSScreenWidth, 40) trackerStyle:LSPageMenuTrackerStyleLine];
     // 传递数组，默认选中第2个
     [pageMenu setItems:self.dataArr selectedItemIndex:1];
     // 可滑动的自适应内容排列
@@ -206,7 +206,7 @@
     self.dataArr = @[@"生活",@"影视中心",@"交通规则"];
     
     // trackerStyle:跟踪器的样式
-    LSPageMenu *pageMenu = [LSPageMenu pageMenuWithFrame:CGRectMake(0, NaviH, ScreenWidth, 40) trackerStyle:LSPageMenuTrackerStyleLine];
+    LSPageMenu *pageMenu = [LSPageMenu pageMenuWithFrame:CGRectMake(0, NaviH, LSScreenWidth, 40) trackerStyle:LSPageMenuTrackerStyleLine];
     // 传递数组，默认选中第2个
     [pageMenu setItems:self.dataArr selectedItemIndex:1];
     // 不可滑动的等宽排列
@@ -226,7 +226,7 @@
     self.dataArr = @[@"生活",@"音乐榜中榜",@"交通规则"];
     
     // trackerStyle:跟踪器的样式
-    LSPageMenu *pageMenu = [LSPageMenu pageMenuWithFrame:CGRectMake(0, NaviH, ScreenWidth, 40) trackerStyle:LSPageMenuTrackerStyleLine];
+    LSPageMenu *pageMenu = [LSPageMenu pageMenuWithFrame:CGRectMake(0, NaviH, LSScreenWidth, 40) trackerStyle:LSPageMenuTrackerStyleLine];
     // 传递数组，默认选中第2个
     [pageMenu setItems:self.dataArr selectedItemIndex:1];
     // 不可滑动的自适应内容排列
@@ -244,7 +244,7 @@
     self.dataArr = @[@"生活",@"影视中心",@"交通",@"电视剧",@"军事",@"综艺"];
 
     // trackerStyle:跟踪器的样式
-    LSPageMenu *pageMenu = [LSPageMenu pageMenuWithFrame:CGRectMake(0, NaviH, ScreenWidth, 40) trackerStyle:LSPageMenuTrackerStyleLine];
+    LSPageMenu *pageMenu = [LSPageMenu pageMenuWithFrame:CGRectMake(0, NaviH, LSScreenWidth, 40) trackerStyle:LSPageMenuTrackerStyleLine];
     // 传递数组，默认选中第2个
     [pageMenu setItems:self.dataArr selectedItemIndex:0];
     pageMenu.trackerFollowingMode = LSPageMenuTrackerFollowingModeAlways;
@@ -261,7 +261,7 @@
     self.dataArr = @[@"生活",@"影视中心",@"交通",@"电视剧",@"军事",@"综艺"];
 
     // trackerStyle:跟踪器的样式
-    LSPageMenu *pageMenu = [LSPageMenu pageMenuWithFrame:CGRectMake(0, NaviH, ScreenWidth, 40) trackerStyle:LSPageMenuTrackerStyleLine];
+    LSPageMenu *pageMenu = [LSPageMenu pageMenuWithFrame:CGRectMake(0, NaviH, LSScreenWidth, 40) trackerStyle:LSPageMenuTrackerStyleLine];
     // 传递数组，默认选中第2个
     [pageMenu setItems:self.dataArr selectedItemIndex:0];
     pageMenu.trackerFollowingMode = LSPageMenuTrackerFollowingModeEnd;
@@ -278,7 +278,7 @@
     self.dataArr = @[@"生活",@"影视中心",@"交通",@"电视剧",@"军事",@"综艺"];
 
     // trackerStyle:跟踪器的样式
-    LSPageMenu *pageMenu = [LSPageMenu pageMenuWithFrame:CGRectMake(0, NaviH, ScreenWidth, 40) trackerStyle:LSPageMenuTrackerStyleLine];
+    LSPageMenu *pageMenu = [LSPageMenu pageMenuWithFrame:CGRectMake(0, NaviH, LSScreenWidth, 40) trackerStyle:LSPageMenuTrackerStyleLine];
     // 传递数组，默认选中第2个
     [pageMenu setItems:self.dataArr selectedItemIndex:0];
     pageMenu.trackerFollowingMode = LSPageMenuTrackerFollowingModeHalf;
@@ -295,7 +295,7 @@
     self.dataArr = @[@"生活",@"影视中心",@"交通",@"电视剧",@"军事",@"综艺"];
     
     // trackerStyle:跟踪器的样式
-    LSPageMenu *pageMenu = [LSPageMenu pageMenuWithFrame:CGRectMake(0, NaviH, ScreenWidth, 40) trackerStyle:LSPageMenuTrackerStyleLine];
+    LSPageMenu *pageMenu = [LSPageMenu pageMenuWithFrame:CGRectMake(0, NaviH, LSScreenWidth, 40) trackerStyle:LSPageMenuTrackerStyleLine];
     // 传递数组，默认选中第2个
     [pageMenu setItems:self.dataArr selectedItemIndex:0];
     pageMenu.showFuntionButton = YES;
@@ -312,7 +312,7 @@
     self.dataArr = @[@"生活",@"娱乐",@"交通"];
     
     // trackerStyle:跟踪器的样式
-    LSPageMenu *pageMenu = [LSPageMenu pageMenuWithFrame:CGRectMake(0, NaviH, ScreenWidth, 40) trackerStyle:LSPageMenuTrackerStyleLine];
+    LSPageMenu *pageMenu = [LSPageMenu pageMenuWithFrame:CGRectMake(0, NaviH, LSScreenWidth, 40) trackerStyle:LSPageMenuTrackerStyleLine];
     // 传递数组，默认选中第2个
     [pageMenu setItems:self.dataArr selectedItemIndex:1];
     // 同时设置图片和文字，如果只想要文字，image传nil，如果只想要图片，title传nil，imagePosition和ratio传0即可
@@ -330,7 +330,7 @@
 // 示例17:含有图片的按钮
 - (void)test17 {
     self.dataArr = @[@"生活",[UIImage imageNamed:@"Expression_1"],@"交通",[UIImage imageNamed:@"Expression_2"],@"搞笑",@"综艺"];
-    LSPageMenu *pageMenu = [LSPageMenu pageMenuWithFrame:CGRectMake(0, NaviH, ScreenWidth, 40) trackerStyle:LSPageMenuTrackerStyleLineLongerThanItem];
+    LSPageMenu *pageMenu = [LSPageMenu pageMenuWithFrame:CGRectMake(0, NaviH, LSScreenWidth, 40) trackerStyle:LSPageMenuTrackerStyleLineLongerThanItem];
     // 传递数组，默认选中第2个
     [pageMenu setItems:self.dataArr selectedItemIndex:1];
     pageMenu.delegate = self;
@@ -345,7 +345,7 @@
 - (void)test18 {
     self.dataArr = @[@"生活",@"影视中心",@"交通",@"电视剧",@"搞笑",@"综艺"];
 
-    LSPageMenu *pageMenu = [LSPageMenu pageMenuWithFrame:CGRectMake(0, NaviH, ScreenWidth, 40) trackerStyle:LSPageMenuTrackerStyleRect];
+    LSPageMenu *pageMenu = [LSPageMenu pageMenuWithFrame:CGRectMake(0, NaviH, LSScreenWidth, 40) trackerStyle:LSPageMenuTrackerStyleRect];
     // 传递数组，默认选中第1个
     [pageMenu setItems:self.dataArr selectedItemIndex:0];
     // 指定第1个item为图片
@@ -369,7 +369,7 @@
 - (void)test19 {
     self.dataArr = @[@"生活",@"校园",@"交通",@"军事",@"搞笑",@"综艺"];
 
-    LSPageMenu *pageMenu = [LSPageMenu pageMenuWithFrame:CGRectMake(0, NaviH, ScreenWidth, 40) trackerStyle:LSPageMenuTrackerStyleNothing];
+    LSPageMenu *pageMenu = [LSPageMenu pageMenuWithFrame:CGRectMake(0, NaviH, LSScreenWidth, 40) trackerStyle:LSPageMenuTrackerStyleNothing];
     // 传递数组，默认选中第2个
     [pageMenu setItems:self.dataArr selectedItemIndex:1];
     pageMenu.selectedItemTitleColor = [UIColor whiteColor];
@@ -391,7 +391,7 @@
 - (void)test20 {
     self.dataArr = @[@"点菜",@"评论",@"商家",@"已购"];
     
-    LSPageMenu *pageMenu = [LSPageMenu pageMenuWithFrame:CGRectMake(0, NaviH, ScreenWidth, 40) trackerStyle:LSPageMenuTrackerStyleLineAttachment];
+    LSPageMenu *pageMenu = [LSPageMenu pageMenuWithFrame:CGRectMake(0, NaviH, LSScreenWidth, 40) trackerStyle:LSPageMenuTrackerStyleLineAttachment];
     // 传递数组，默认选中第2个
     [pageMenu setItems:self.dataArr selectedItemIndex:0];
     pageMenu.itemTitleFont = [UIFont  boldSystemFontOfSize:17];
@@ -422,7 +422,7 @@
 - (void)test21 {
     self.dataArr = @[@"生活",@"军事",@"水木年华",@"综艺"];
 
-    LSPageMenu *pageMenu = [LSPageMenu pageMenuWithFrame:CGRectMake(0, NaviH, ScreenWidth, 40) trackerStyle:LSPageMenuTrackerStyleNothing];
+    LSPageMenu *pageMenu = [LSPageMenu pageMenuWithFrame:CGRectMake(0, NaviH, LSScreenWidth, 40) trackerStyle:LSPageMenuTrackerStyleNothing];
     // 传递数组，默认选中第2个
     [pageMenu setItems:self.dataArr selectedItemIndex:1];
     pageMenu.delegate = self;
@@ -540,9 +540,9 @@
     if (self.pageMenu.selectedItemIndex < self.myChildViewControllers.count) {
         LSBaseViewController *baseVc = self.myChildViewControllers[self.pageMenu.selectedItemIndex];
         [self.scrollView addSubview:baseVc.view];
-        baseVc.view.frame = CGRectMake(ScreenWidth*self.pageMenu.selectedItemIndex, 0, ScreenWidth, scrollViewHeight);
-        self.scrollView .contentOffset = CGPointMake(ScreenWidth*self.pageMenu.selectedItemIndex, 0);
-        self.scrollView .contentSize = CGSizeMake(self.dataArr.count*ScreenWidth, 0);
+        baseVc.view.frame = CGRectMake(LSScreenWidth*self.pageMenu.selectedItemIndex, 0, LSScreenWidth, scrollViewHeight);
+        self.scrollView .contentOffset = CGPointMake(LSScreenWidth*self.pageMenu.selectedItemIndex, 0);
+        self.scrollView .contentSize = CGSizeMake(self.dataArr.count*LSScreenWidth, 0);
     }
 }
 
@@ -557,9 +557,9 @@
     if (!self.scrollView.isDragging) { // 判断用户是否在拖拽scrollView
         // 如果fromIndex与toIndex之差大于等于2,说明跨界面移动了,此时不动画.
         if (labs(toIndex - fromIndex) >= 2) {
-            [self.scrollView setContentOffset:CGPointMake(ScreenWidth * toIndex, 0) animated:NO];
+            [self.scrollView setContentOffset:CGPointMake(LSScreenWidth * toIndex, 0) animated:NO];
         } else {
-            [self.scrollView setContentOffset:CGPointMake(ScreenWidth * toIndex, 0) animated:YES];
+            [self.scrollView setContentOffset:CGPointMake(LSScreenWidth * toIndex, 0) animated:YES];
         }
     }
 
@@ -569,7 +569,7 @@
     // 如果已经加载过，就不再加载
     if ([targetViewController isViewLoaded]) return;
 
-    targetViewController.view.frame = CGRectMake(ScreenWidth * toIndex, 0, ScreenWidth, scrollViewHeight);
+    targetViewController.view.frame = CGRectMake(LSScreenWidth * toIndex, 0, LSScreenWidth, scrollViewHeight);
     [_scrollView addSubview:targetViewController.view];
 
 }
@@ -608,13 +608,13 @@
     for (int i = 0; i < self.myChildViewControllers.count; i++) {
         if (i >= insertNumber) {
             UIViewController *childController = self.myChildViewControllers[i];
-            childController.view.frame = CGRectMake(ScreenWidth * (i+1), 0, ScreenWidth, scrollViewHeight);
+            childController.view.frame = CGRectMake(LSScreenWidth * (i+1), 0, LSScreenWidth, scrollViewHeight);
             [self.scrollView addSubview:childController.view];
         }
     }
     if (insertNumber <= self.pageMenu.selectedItemIndex && self.myChildViewControllers.count) { // 如果新插入的item在当前选中的item之前
         // scrollView往后偏移
-        self.scrollView.contentOffset = CGPointMake(ScreenWidth*(self.pageMenu.selectedItemIndex+1), 0);
+        self.scrollView.contentOffset = CGPointMake(LSScreenWidth*(self.pageMenu.selectedItemIndex+1), 0);
     } else {
         self.scrollView.contentOffset = CGPointMake(0, 0);
     }
@@ -629,7 +629,7 @@
     }
     
     // 重新设置scrollView容量
-    self.scrollView.contentSize = CGSizeMake(ScreenWidth*self.myChildViewControllers.count, 0);
+    self.scrollView.contentSize = CGSizeMake(LSScreenWidth*self.myChildViewControllers.count, 0);
 }
 
 - (void)removeItemAtIndex:(NSInteger)index {
@@ -644,7 +644,7 @@
     for (int i = 0; i < self.myChildViewControllers.count; i++) {
         if (i >= index) {
             UIViewController *childController = self.myChildViewControllers[i];
-            childController.view.frame = CGRectMake(ScreenWidth * (i>0?(i-1):i), 0, ScreenWidth, scrollViewHeight);
+            childController.view.frame = CGRectMake(LSScreenWidth * (i>0?(i-1):i), 0, LSScreenWidth, scrollViewHeight);
             [self.scrollView addSubview:childController.view];
         }
     }
@@ -654,7 +654,7 @@
         if (offsetIndex < 0) {
             offsetIndex = 0;
         }
-        self.scrollView.contentOffset = CGPointMake(ScreenWidth*offsetIndex, 0);
+        self.scrollView.contentOffset = CGPointMake(LSScreenWidth*offsetIndex, 0);
     }
     
     UIViewController *vc = [self.myChildViewControllers objectAtIndex:index];
@@ -663,7 +663,7 @@
     [vc.view removeFromSuperview];
     
     // 重新设置scrollView容量
-    self.scrollView.contentSize = CGSizeMake(ScreenWidth*self.myChildViewControllers.count, 0);
+    self.scrollView.contentSize = CGSizeMake(LSScreenWidth*self.myChildViewControllers.count, 0);
 }
 
 - (void)removeAllItems {
@@ -692,7 +692,7 @@
 
 - (UIScrollView *)scrollView {
     if (!_scrollView) {
-        _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, NaviH+40, ScreenWidth, scrollViewHeight)];
+        _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, NaviH+40, LSScreenWidth, scrollViewHeight)];
         _scrollView.delegate = self;
         _scrollView.pagingEnabled = YES;
         _scrollView.showsHorizontalScrollIndicator = NO;

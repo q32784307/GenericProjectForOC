@@ -37,7 +37,7 @@
 }
 
 - (void)createSubViews {
-    self.mainTableView.frame = CGRectMake(0, NAVIGATION_BAR_HEIGHT, ScreenWidth, ScreenHeight - NAVIGATION_BAR_HEIGHT - HOME_INDICATOR_HEIGHT);
+    self.mainTableView.frame = CGRectMake(0, NAVIGATION_BAR_HEIGHT, LSScreenWidth, LSScreenHeight - NAVIGATION_BAR_HEIGHT - HOME_INDICATOR_HEIGHT);
     [self.view addSubview:self.mainTableView];
 }
 
@@ -53,7 +53,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
-        cell.textLabel.font = [UIFont systemFontOfSize:SYRealValue(30 / 2)];
+        cell.textLabel.font = [UIFont systemFontOfSize:LSSYRealValue(30 / 2)];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     

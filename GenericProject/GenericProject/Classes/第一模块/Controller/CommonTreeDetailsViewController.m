@@ -126,7 +126,7 @@
 
 //自定义节点内容+增删节点
 - (void)thirdDemo{
-    WeakSelf(self);
+    LSWeakSelf(self);
     LSTreeViewParam *param =TreeViewParam()
     .lsFrameSet(CGRectMake(0, NAVIGATION_BAR_HEIGHT, self.view.bounds.size.width, self.view.bounds.size.height-NAVIGATION_BAR_HEIGHT))
     .lsDataSet([self randomArr:10 level:5])
@@ -207,7 +207,7 @@
     [self.navView addSubview:btn];
     [btn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.navView).with.offset(STATUS_BAR_HEIGHT + 2);
-        make.right.equalTo(self.navView.mas_right).with.offset(SYRealValue(-20 / 2));
+        make.right.equalTo(self.navView.mas_right).with.offset(LSSYRealValue(-20 / 2));
         make.height.mas_equalTo(40);
     }];
 }
@@ -226,7 +226,7 @@
 - (void)dealModel:(id)model path:(NSIndexPath*)path userInfo:(id)userInfo{
     if ([userInfo isEqualToString:@"add"]) {
          LSTreeParam *param = model;
-        WeakSelf(self);
+        LSWeakSelf(self);
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:@"请输入节点" preferredStyle:UIAlertControllerStyleAlert];
         [alertController addAction:[UIAlertAction actionWithTitle:@"追加子节点" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             UITextField *idText = alertController.textFields[0];

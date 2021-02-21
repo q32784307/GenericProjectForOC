@@ -61,11 +61,11 @@
     //获取屏幕高度
     CGFloat screenHeight = CGRectGetHeight([[UIScreen mainScreen] bounds]);
     //Label的字号
-    UIFont *font = [UIFont systemFontOfSize:SYRealValue(30 / 2)];
+    UIFont *font = [UIFont systemFontOfSize:LSSYRealValue(30 / 2)];
     //控件的宽
     CGFloat width = screenWidth / 3.0 * 2.0;
     //Label所需的宽高
-    CGSize labelSize = [self calculationTextNeedSize:message andFont:SYRealValue(30 / 2) andWidth:width];
+    CGSize labelSize = [self calculationTextNeedSize:message andFont:LSSYRealValue(30 / 2) andWidth:width];
     self.textLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, labelSize.width, labelSize.height)];
     self.textLabel.backgroundColor = [UIColor clearColor];
     self.textLabel.textColor = [UIColor whiteColor];

@@ -34,7 +34,7 @@ typedef void(^LSScrollRectBlock)();
 @implementation LSSegmentViewController
 
 + (instancetype)segmentControllerWithTitles:(NSArray<NSString *> *)titles {
-    return [[self alloc] initWithFrame:CGRectMake(0, 0, ScreenBounds.size.width, ScreenBounds.size.height) titles:titles];
+    return [[self alloc] initWithFrame:CGRectMake(0, 0, LSScreenBounds.size.width, LSScreenBounds.size.height) titles:titles];
 }
 
 - (instancetype)initWithFrame:(CGRect)frame titles:(NSArray *)titles {

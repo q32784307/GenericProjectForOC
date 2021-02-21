@@ -32,7 +32,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UIView *bgView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, TAB_BAR_HEIGHT)];
+    UIView *bgView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, LSScreenWidth, TAB_BAR_HEIGHT)];
     bgView.backgroundColor = [UIColor whiteColor];
     [self.tabBar insertSubview:bgView atIndex:0];
     // Do any additional setup after loading the view.
@@ -83,41 +83,41 @@
         //未选中状态
         UITabBarItemStateAppearance *normal = appearance.stackedLayoutAppearance.normal;
         if (normal) {
-            normal.titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor colorWithHexString:@"9B9B9B"],NSParagraphStyleAttributeName : par};
+            normal.titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor lsLigthColor:[UIColor colorWithHexString:@"9B9B9B"] darkColor:LSWhiteColor],NSParagraphStyleAttributeName : par};
         }
         //选中状态
         UITabBarItemStateAppearance *selected = appearance.stackedLayoutAppearance.selected;
         if (selected) {
-            selected.titleTextAttributes = @{NSForegroundColorAttributeName:MainColor,NSParagraphStyleAttributeName : par};
+            selected.titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor lsLigthColor:MainColor darkColor:MainColor],NSParagraphStyleAttributeName : par};
         }
-        
+
         appearance.backgroundImage = [UIImage imageWithColor:[UIColor clearColor]];
         appearance.shadowImage = [UIImage imageWithColor:[UIColor clearColor]];
         [appearance configureWithTransparentBackground];
-        
+
         self.tabBar.standardAppearance = appearance;
     }else{
         //未选中状态
         NSMutableDictionary *textAttrs = [NSMutableDictionary dictionary];
-        textAttrs[NSForegroundColorAttributeName] = [UIColor colorWithHexString:@"9B9B9B"];
+        textAttrs[NSForegroundColorAttributeName] = [UIColor lsLigthColor:[UIColor colorWithHexString:@"9B9B9B"] darkColor:LSWhiteColor];
         textAttrs[NSFontAttributeName] = [UIFont systemFontOfSize:10];
         [vc.tabBarItem setTitleTextAttributes:textAttrs forState:UIControlStateNormal];
-        
+
         //选中状态
         NSMutableDictionary *selectedTextAttrs = [NSMutableDictionary dictionary];
-        selectedTextAttrs[NSForegroundColorAttributeName] = MainColor;
+        selectedTextAttrs[NSForegroundColorAttributeName] = [UIColor lsLigthColor:MainColor darkColor:MainColor];
         selectedTextAttrs[NSFontAttributeName] = [UIFont systemFontOfSize:10];
         [vc.tabBarItem setTitleTextAttributes:selectedTextAttrs forState:UIControlStateSelected];
-        
+
         //隐藏分割线
         UITabBar.appearance.backgroundImage = [UIImage new];
         UITabBar.appearance.shadowImage = [UIImage new];
     }
     vc.tabBarItem.image = [[UIImage imageNamed:image] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     vc.tabBarItem.selectedImage = [[UIImage imageNamed:selectedImage] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    
+
     //tabbar的背景色
-    [UITabBar appearance].backgroundColor = RGBAColor(0.98, 0.98, 0.98, 1);
+    [UITabBar appearance].backgroundColor = [UIColor lsLigthColor:RGBAColor(0.98, 0.98, 0.98, 1) darkColor:LSBlackColor];
     //解决iOS12系统下pop返回时tabbar偏移的问题
     [UITabBar appearance].translucent = NO;
     

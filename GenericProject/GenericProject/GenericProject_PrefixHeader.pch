@@ -107,6 +107,8 @@
 #import "NSArray+ErrorHandle.h"                      //不可变数组越界处理
 #import "NSMutableArray+ErrorHandle.h"               //可变数组越界处理
 #import "UITextView+LSClassification.h"              //UITextView扩展
+#import "NSString+LSFuzzySearch.h"                   //模糊搜索
+#import "UIColor+LSDartOrLight.h"                    //适配黑夜模式颜色
 
 /**
  * 第三方封装

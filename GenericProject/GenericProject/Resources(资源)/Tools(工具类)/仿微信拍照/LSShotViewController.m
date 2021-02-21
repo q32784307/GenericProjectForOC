@@ -49,7 +49,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.avCaptureTool startRunning];
-    [self focusAtPoint:CGPointMake(ScreenWidth / 2.0, ScreenHeight / 2.0)];
+    [self focusAtPoint:CGPointMake(LSScreenWidth / 2.0, LSScreenHeight / 2.0)];
     //监听设备方向，旋转切换摄像头按钮
     [self.avCaptureTool addObserver:self forKeyPath:@"shootingOrientation" options:NSKeyValueObservingOptionNew context:nil];
 }
@@ -243,14 +243,14 @@
     //    __weak typeof(self) weakSelf = self;
     dispatch_source_set_event_handler(_gcdTimer, ^{
         self->_durationOfVideo+= timeInterval;
-        DISPATCH_MAIN_THREAD(^{
+        LSDISPATCH_MAIN_THREAD(^{
             //主线程更新UI
             self.progressLayer.strokeEnd = self->_durationOfVideo / KMaxDurationOfVideo;
         });
         
         if(self->_durationOfVideo > KMaxDurationOfVideo) {
             NSLog(@"时长 %f", self->_durationOfVideo);
-            DISPATCH_MAIN_THREAD(^{
+            LSDISPATCH_MAIN_THREAD(^{
                 self.progressLayer.strokeEnd = 1;
             });
             
@@ -296,7 +296,7 @@
         self.focusView.transform = CGAffineTransformIdentity;
     }];
     [self.avCaptureTool focusAtPoint:point];
-    WeakSelf(self);
+    LSWeakSelf(self);
     [LSDelayPerform ls_startDelayPerform:^{
         [weakself.focusView removeFromSuperview];
     } afterDelay:1.0];

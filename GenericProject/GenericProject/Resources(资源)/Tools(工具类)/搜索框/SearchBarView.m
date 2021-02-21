@@ -69,7 +69,7 @@ static NSInteger space = 15;
 #pragma mark --- 懒加载
 - (UITextField *)textField {
     if (!_textField) {
-        _textField = [[UITextField alloc]initWithFrame:CGRectMake(0, 0, self.frame.size.width - SYRealValue(100 / 2), self.frame.size.height)];
+        _textField = [[UITextField alloc]initWithFrame:CGRectMake(0, 0, self.frame.size.width - LSSYRealValue(100 / 2), self.frame.size.height)];
     }
     return _textField;
 }
@@ -95,7 +95,7 @@ static NSInteger space = 15;
 - (UIButton *)cancelButton {
     if (!_cancelButton) {
         _cancelButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        _cancelButton.frame = CGRectMake(CGRectGetMaxX(_textField.frame) + SYRealValue(20 / 2), 0, SYRealValue(80 / 2), self.frame.size.height);
+        _cancelButton.frame = CGRectMake(CGRectGetMaxX(_textField.frame) + LSSYRealValue(20 / 2), 0, LSSYRealValue(80 / 2), self.frame.size.height);
         [_cancelButton addTarget:self action:@selector(cancelAction) forControlEvents:UIControlEventTouchUpInside];
         [_cancelButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
         [_cancelButton setTitle:@"取消" forState:UIControlStateNormal];

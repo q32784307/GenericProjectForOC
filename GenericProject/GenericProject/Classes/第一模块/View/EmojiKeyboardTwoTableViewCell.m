@@ -20,19 +20,19 @@
 
 - (void)createSubviews {
     self.contentLabel = [[UILabel alloc]init];
-    self.contentLabel.font = SystemFont(SYRealValue(28 / 2));
+    self.contentLabel.font = LSSystemFont(LSSYRealValue(28 / 2));
     [self.contentView addSubview:self.contentLabel];
     [self.contentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self.contentView.mas_centerY);
-        make.left.equalTo(self.contentView).with.offset(SYRealValue(30 / 2));
+        make.left.equalTo(self.contentView).with.offset(LSSYRealValue(30 / 2));
     }];
     
     self.contentImageView = [[YBEmojiGifImageView alloc]init];
     [self.contentView addSubview:self.contentImageView];
     [self.contentImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self.contentView.mas_centerY);
-        make.left.equalTo(self.contentView).with.offset(SYRealValue(30 / 2));
-        make.size.mas_equalTo(CGSizeMake(SYRealValue(100 / 2), SYRealValue(100 / 2)));
+        make.left.equalTo(self.contentView).with.offset(LSSYRealValue(30 / 2));
+        make.size.mas_equalTo(CGSizeMake(LSSYRealValue(100 / 2), LSSYRealValue(100 / 2)));
     }];
 }
 

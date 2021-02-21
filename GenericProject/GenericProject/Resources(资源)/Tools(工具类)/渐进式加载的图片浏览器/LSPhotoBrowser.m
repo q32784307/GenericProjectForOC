@@ -489,16 +489,16 @@
     CGFloat height = tempView.image.size.height;
     
     if(IsPortrait == true){
-        tempRectSize = (CGSize){ScreenWidth,(height * ScreenWidth / width) > ScreenHeight?ScreenHeight:(height * ScreenWidth / width)};
+        tempRectSize = (CGSize){LSScreenWidth,(height * LSScreenWidth / width) > LSScreenHeight ? LSScreenHeight:(height * LSScreenWidth / width)};
     }else{
         if(width > height){
-            if(width / height > ScreenWidth / ScreenHeight){
-                tempRectSize = (CGSize){ScreenWidth,height * ScreenWidth / width};
+            if(width / height > LSScreenWidth / LSScreenHeight){
+                tempRectSize = (CGSize){LSScreenWidth,height * LSScreenWidth / width};
             }else{
-                tempRectSize = (CGSize){ScreenHeight * width / height,ScreenHeight};
+                tempRectSize = (CGSize){LSScreenHeight * width / height,LSScreenHeight};
             }
         }else{
-            tempRectSize = (CGSize){(width * ScreenHeight) / height,ScreenHeight};
+            tempRectSize = (CGSize){(width * LSScreenHeight) / height,LSScreenHeight};
         }
     }
     [_collectionView setHidden:true];
@@ -623,7 +623,7 @@
     }else{
         CGFloat width  = tempView.image.size.width;
         CGFloat height = tempView.image.size.height;
-        CGSize tempRectSize = (CGSize){ScreenWidth,(height * ScreenWidth / width) > ScreenHeight ? ScreenHeight:(height * ScreenWidth / width)};
+        CGSize tempRectSize = (CGSize){LSScreenWidth,(height * LSScreenWidth / width) > LSScreenHeight ? LSScreenHeight:(height * LSScreenWidth / width)};
         
         if(IsPortrait == true){
             [tempView setBounds:(CGRect){CGPointZero,{tempRectSize.width,tempRectSize.height}}];
@@ -674,16 +674,16 @@
 
 - (BOOL)isOutOfScreen:(CGRect)rect {
     if(IsPortrait){
-        if(rect.origin.y > ScreenHeight ||
+        if(rect.origin.y > LSScreenHeight ||
            rect.origin.y <= - rect.size.height ||
-           rect.origin.x > ScreenWidth ||
+           rect.origin.x > LSScreenWidth ||
            rect.origin.x <= - rect.size.width ){
             return true;
         }
     }else{
-        if(rect.origin.y > ScreenWidth ||
+        if(rect.origin.y > LSScreenWidth ||
            rect.origin.y <= - rect.size.height ||
-           rect.origin.x > ScreenHeight ||
+           rect.origin.x > LSScreenHeight ||
            rect.origin.x <= - rect.size.width){
             return true;
         }
@@ -735,9 +735,9 @@
         x = 35;
     }
     
-    [_numView setFrame:(CGRect){{0,y},{ScreenWidth,25}}];
-    [_pageControl setFrame:(CGRect){{0,self.view.height - 50},{ScreenWidth,30}}];
-    [_operationBtn setFrame:(CGRect){{ScreenWidth - 35 - 15 - x,y},{35,20}}];
+    [_numView setFrame:(CGRect){{0,y},{LSScreenWidth,25}}];
+    [_pageControl setFrame:(CGRect){{0,self.view.height - 50},{LSScreenWidth,30}}];
+    [_operationBtn setFrame:(CGRect){{LSScreenWidth - 35 - 15 - x,y},{35,20}}];
     
     if(_offsetPageIndex){
         [_collectionView setContentOffset:(CGPoint){_layout.itemSize.width * _offsetPageIndex,0} animated:false];
@@ -1082,9 +1082,9 @@
     
     if(imageView.image == nil){
         if (items.isVideo == false) {
-            imageView.image = [self createImageWithUIColor:[UIColor grayColor] size:CGSizeMake(ScreenWidth, ScreenWidth)];
+            imageView.image = [self createImageWithUIColor:[UIColor grayColor] size:CGSizeMake(LSScreenWidth, LSScreenWidth)];
         }else {
-            imageView.image = [self createImageWithUIColor:UIColor.clearColor size:CGSizeMake(ScreenWidth, ScreenWidth)];
+            imageView.image = [self createImageWithUIColor:UIColor.clearColor size:CGSizeMake(LSScreenWidth, LSScreenWidth)];
         }
     }
     

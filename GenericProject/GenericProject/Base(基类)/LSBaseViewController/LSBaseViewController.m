@@ -23,16 +23,6 @@ static NSString * NSStringFromZYNetworkAccessibleState(NetworkAccessibleState st
     state == NetworkRestricted ? @"NetworkRestricted" : nil;
 }
 
-- (UIStatusBarStyle)preferredStatusBarStyle {
-    return _StatusBarStyle;
-}
-
-//动态更新状态栏颜色
-- (void)setStatusBarStyle:(UIStatusBarStyle)StatusBarStyle {
-    _StatusBarStyle = StatusBarStyle;
-    [self setNeedsStatusBarAppearanceUpdate];
-}
-
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
@@ -44,17 +34,10 @@ static NSString * NSStringFromZYNetworkAccessibleState(NetworkAccessibleState st
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = ViewBackgroundColor;
+    self.view.backgroundColor = [UIColor lsLigthColor:ViewBackgroundColor darkColor:LSBlackColor];
     // Do any additional setup after loading the view.
     //是否隐藏系统导航栏
     self.isHidenNaviBar = YES;
-    //默认导航栏样式：白字
-    if (@available(iOS 13.0, *)) {
-        self.StatusBarStyle = UIStatusBarStyleDarkContent;
-    } else {
-        // Fallback on earlier versions
-        self.StatusBarStyle = UIStatusBarStyleDefault;
-    }
     [self setNavigationView];
     
     //检查网络通知
@@ -69,8 +52,8 @@ static NSString * NSStringFromZYNetworkAccessibleState(NetworkAccessibleState st
 
 //创建自定义导航栏
 - (void)setNavigationView {
-    WeakSelf(self);
-    self.navView = [[LSBaseNavigationView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, NAVIGATION_BAR_HEIGHT)];
+    LSWeakSelf(self);
+    self.navView = [[LSBaseNavigationView alloc]initWithFrame:CGRectMake(0, 0, LSScreenWidth, NAVIGATION_BAR_HEIGHT)];
     self.navView.isShowRightButton = NO;
     [self.navView setLeftActionBlock:^{
         [weakself backBtnClicked];
@@ -187,7 +170,7 @@ static NSString * NSStringFromZYNetworkAccessibleState(NetworkAccessibleState st
 
 - (UITableView *)mainTableView {
     if (!_mainTableView) {
-        _mainTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, NAVIGATION_BAR_HEIGHT, ScreenWidth, ScreenHeight - TAB_BAR_HEIGHT - HOME_INDICATOR_HEIGHT) style:UITableViewStyleGrouped];
+        _mainTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, NAVIGATION_BAR_HEIGHT, LSScreenWidth, LSScreenHeight - TAB_BAR_HEIGHT - HOME_INDICATOR_HEIGHT) style:UITableViewStyleGrouped];
         _mainTableView.delegate = self;
         _mainTableView.dataSource = self;
         _mainTableView.estimatedRowHeight = 0;
@@ -234,31 +217,14 @@ static NSString * NSStringFromZYNetworkAccessibleState(NetworkAccessibleState st
     }
 }
 
-//监听当前模式为深夜模式还是日间模式
-- (void)traitCollectionDidChange:(UITraitCollection *)previousTraitCollection {
-    [super traitCollectionDidChange:previousTraitCollection];
-    if (@available(iOS 13.0, *)) {
-        if ([self.traitCollection hasDifferentColorAppearanceComparedToTraitCollection:previousTraitCollection]) {
-            //适配代码
-            if (@available(iOS 12.0, *)) {
-                if (self.view.traitCollection.userInterfaceStyle == UIUserInterfaceStyleDark) {
-                    NSLog(@"深夜模式");
-                    self.navView.navColor = BlackColor;
-                }else{
-                    NSLog(@"日间模式");
-                    self.navView.navColor = MainColor;
-//                    //强制设置全局模式  夜间模式
-//                    [AppDelegate shareAppDelegate].window.overrideUserInterfaceStyle = UIUserInterfaceStyleDark;
-//                    //强制设置全局模式  日间模式
-//                    [AppDelegate shareAppDelegate].window.overrideUserInterfaceStyle = UIUserInterfaceStyleLight;
-                }
-            } else {
-                // Fallback on earlier versions
-            }
-        }
-    } else {
-        // Fallback on earlier versions
-    }
+//动态更新状态栏颜色
+- (void)setStatusBarStyle:(UIStatusBarStyle)StatusBarStyle {
+    _StatusBarStyle = StatusBarStyle;
+    [self setNeedsStatusBarAppearanceUpdate];
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return _StatusBarStyle;
 }
 
 /*

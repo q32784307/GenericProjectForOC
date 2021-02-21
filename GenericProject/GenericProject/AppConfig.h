@@ -11,10 +11,6 @@
 
 /****************************************************颜色****************************************************/
 /**
- * 页面底色
- */
-#define ViewBackgroundColor [UIColor colorWithRed:242 / 255.0 green:242 / 255.0 blue:242 / 255.0 alpha:1]
-/**
  * 颜色
  */
 #define kRGBAColor(R,G,B,A) [UIColor colorWithRed:(R)/255.0f green:(G)/255.0f blue:(B)/255.0f alpha:(A)]
@@ -23,18 +19,20 @@
  * rgb颜色转换（16进制->10进制）
  */
 #define ColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
-#define ClearColor [UIColor clearColor]
-#define WhiteColor [UIColor whiteColor]
-#define BlackColor [UIColor blackColor]
-#define GrayColor [UIColor grayColor]
-#define BlueColor [UIColor blueColor]
-#define RedColor [UIColor redColor]
+#define LSClearColor [UIColor clearColor]
+#define LSWhiteColor [UIColor whiteColor]
+#define LSBlackColor [UIColor blackColor]
+#define LSGrayColor [UIColor grayColor]
+#define LSBlueColor [UIColor blueColor]
+#define LSRedColor [UIColor redColor]
+#define LSPurpleColor [UIColor purpleColor]
+
 //字体
-#define BoldSystemFont(FONTSIZE)    [UIFont boldSystemFontOfSize:FONTSIZE]
-#define SystemFont(FONTSIZE)    [UIFont systemFontOfSize:FONTSIZE]
-#define Font(NAME, FONTSIZE)    [UIFont fontWithName:(NAME) size:(FONTSIZE)]
+#define LSBoldSystemFont(FONTSIZE)    [UIFont boldSystemFontOfSize:FONTSIZE]
+#define LSSystemFont(FONTSIZE)    [UIFont systemFontOfSize:FONTSIZE]
+#define LSFont(NAME, FONTSIZE)    [UIFont fontWithName:(NAME) size:(FONTSIZE)]
 //定义UIImage对象
-#define ImageNamed(name) [UIImage imageNamed:name]
+#define LSImageNamed(name) [UIImage imageNamed:name]
 ////读取本地图片
 //#define LOADIMAGE(file,ext) [UIImage imageWithContentsOfFile:[[NSBundle mainBundle]pathForResource:file ofType:ext]]
 ////定义UIImage对象
@@ -45,9 +43,9 @@
 /**
  * 屏幕宽和高
  */
-#define ScreenWidth ([UIScreen mainScreen].bounds.size.width)
-#define ScreenHeight ([UIScreen mainScreen].bounds.size.height)
-#define ScreenBounds [UIScreen mainScreen].bounds
+#define LSScreenWidth ([UIScreen mainScreen].bounds.size.width)
+#define LSScreenHeight ([UIScreen mainScreen].bounds.size.height)
+#define LSScreenBounds [UIScreen mainScreen].bounds
 //判断横屏还是竖屏
 #define IsPortrait ([[UIApplication sharedApplication] statusBarOrientation] == UIInterfaceOrientationPortrait || [[UIApplication sharedApplication] statusBarOrientation] == UIInterfaceOrientationPortraitUpsideDown)
 
@@ -57,7 +55,7 @@
 // 判断是否为iPad
 #define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 
-#define SYRealValue(value) (IS_IPHONE == YES ? ((value) / 375.0f * ScreenWidth) : ((value) / 834.0f * ScreenWidth))
+#define LSSYRealValue(value) (IS_IPHONE == YES ? ((value) / 375.0f * LSScreenWidth) : ((value) / 834.0f * LSScreenWidth))
 
 //----------------判断系统版本---------------
 // 获取系统版本
@@ -107,11 +105,21 @@ isLiuHaiPhone = [[UIApplication sharedApplication] delegate].window.safeAreaInse
 (isLiuHaiPhone);})
 
 //状态栏高度
-#define STATUS_BAR_HEIGHT_For_iPad ((Is_iPad_Pro_10_5 == YES || Is_iPad_Pro_12_9 == YES) ? 24.0f : 20.0f)
-#define STATUS_BAR_HEIGHT_For_iPhone1 ((Is_iPhoneX == YES || Is_iPhoneXr == YES || Is_iPhoneXs == YES || Is_iPhoneXs_Max == YES || Is_iPhone12 || Is_iPhone12_mini || Is_iPhone12_Pro_Max) ? 44.0f : 20.0f)
-#define STATUS_BAR_HEIGHT_For_iPhone2 ((Is_iPhoneX == YES || Is_iPhoneXr == YES || Is_iPhoneXs == YES || Is_iPhoneXs_Max == YES || Is_iPhone12 || Is_iPhone12_mini || Is_iPhone12_Pro_Max) ? 48.0f : 20.0f)
-#define STATUS_BAR_HEIGHT_For_iPhone ([[UIDevice currentDevice].systemVersion floatValue] == 14.0 ? STATUS_BAR_HEIGHT_For_iPhone1 : STATUS_BAR_HEIGHT_For_iPhone2)
-#define STATUS_BAR_HEIGHT (IS_IPHONE == YES ? STATUS_BAR_HEIGHT_For_iPhone : STATUS_BAR_HEIGHT_For_iPad)
+//#define STATUS_BAR_HEIGHT_For_iPad ((Is_iPad_Pro_10_5 == YES || Is_iPad_Pro_12_9 == YES) ? 24.0f : 20.0f)
+//#define STATUS_BAR_HEIGHT_For_iPhone1 ((Is_iPhoneX == YES || Is_iPhoneXr == YES || Is_iPhoneXs == YES || Is_iPhoneXs_Max == YES || Is_iPhone12 || Is_iPhone12_mini || Is_iPhone12_Pro_Max) ? 44.0f : 20.0f)
+//#define STATUS_BAR_HEIGHT_For_iPhone2 ((Is_iPhoneX == YES || Is_iPhoneXr == YES || Is_iPhoneXs == YES || Is_iPhoneXs_Max == YES || Is_iPhone12 || Is_iPhone12_mini || Is_iPhone12_Pro_Max) ? 48.0f : 20.0f)
+//#define STATUS_BAR_HEIGHT_For_iPhone ([[UIDevice currentDevice].systemVersion floatValue] == 14.0 ? STATUS_BAR_HEIGHT_For_iPhone1 : STATUS_BAR_HEIGHT_For_iPhone2)
+//#define STATUS_BAR_HEIGHT (IS_IPHONE == YES ? STATUS_BAR_HEIGHT_For_iPhone : STATUS_BAR_HEIGHT_For_iPad)
+
+#define STATUS_BAR_HEIGHT \
+^(){\
+if (@available(iOS 13.0, *)) {\
+    UIStatusBarManager *statusBarManager = [UIApplication sharedApplication].windows.firstObject.windowScene.statusBarManager;\
+    return statusBarManager.statusBarFrame.size.height;\
+} else {\
+    return [UIApplication sharedApplication].statusBarFrame.size.height;\
+}\
+}()
 //状态栏+导航栏高度
 #define NAVIGATION_BAR_HEIGHT_For_iPad ((Is_iPad_Pro_10_5 == YES || Is_iPad_Pro_12_9 == YES) ? 74.0f : 70.0f)
 #define NAVIGATION_BAR_HEIGHT_For_iPhone1 ((Is_iPhoneX == YES || Is_iPhoneXr == YES || Is_iPhoneXs == YES || Is_iPhoneXs_Max == YES || Is_iPhone12 || Is_iPhone12_mini || Is_iPhone12_Pro_Max) ? 88.0f : 64.0f)
@@ -123,9 +131,18 @@ isLiuHaiPhone = [[UIApplication sharedApplication] delegate].window.safeAreaInse
 #define TAB_BAR_HEIGHT_For_iPhone ((Is_iPhoneX == YES || Is_iPhoneXr == YES || Is_iPhoneXs == YES || Is_iPhoneXs_Max == YES || Is_iPhone12 || Is_iPhone12_mini || Is_iPhone12_Pro_Max) ? 83.0f : 49.0f)
 #define TAB_BAR_HEIGHT (IS_IPHONE == YES ? TAB_BAR_HEIGHT_For_iPhone : TAB_BAR_HEIGHT_For_iPad)
 //home indicator高度（底部安全曲区域）
-#define HOME_INDICATOR_HEIGHT_For_iPad ((Is_iPad_Pro_10_5 == YES || Is_iPad_Pro_12_9 == YES) ? 15.0f : 0.0f)
-#define HOME_INDICATOR_HEIGHT_For_iPhone ((Is_iPhoneX == YES || Is_iPhoneXr == YES || Is_iPhoneXs == YES || Is_iPhoneXs_Max == YES || Is_iPhone12 || Is_iPhone12_mini || Is_iPhone12_Pro_Max) ? 34.0f : 0.0f)
-#define HOME_INDICATOR_HEIGHT (IS_IPHONE == YES ? HOME_INDICATOR_HEIGHT_For_iPhone : HOME_INDICATOR_HEIGHT_For_iPad)
+//#define HOME_INDICATOR_HEIGHT_For_iPad ((Is_iPad_Pro_10_5 == YES || Is_iPad_Pro_12_9 == YES) ? 15.0f : 0.0f)
+//#define HOME_INDICATOR_HEIGHT_For_iPhone ((Is_iPhoneX == YES || Is_iPhoneXr == YES || Is_iPhoneXs == YES || Is_iPhoneXs_Max == YES || Is_iPhone12 || Is_iPhone12_mini || Is_iPhone12_Pro_Max) ? 34.0f : 0.0f)
+//#define HOME_INDICATOR_HEIGHT (IS_IPHONE == YES ? HOME_INDICATOR_HEIGHT_For_iPhone : HOME_INDICATOR_HEIGHT_For_iPad)
+#define HOME_INDICATOR_HEIGHT \
+^(){\
+if (@available(iOS 11.0, *)) {\
+    UIEdgeInsets safeAreaInsets = [[UIApplication sharedApplication] delegate].window.safeAreaInsets;\
+    return safeAreaInsets.bottom;\
+} else {\
+    return UIEdgeInsetsMake(0, 0, 0, 0).bottom;\
+}\
+}()
 /***********************************************************************************************************/
 
 /************************************************日志打印****************************************************/
@@ -133,9 +150,9 @@ isLiuHaiPhone = [[UIApplication sharedApplication] delegate].window.safeAreaInse
  * 打印日志
  */
 #ifdef DEBUG
-#define NSLog(format, ...) printf("\n[%s] %s [第%d行] %s\n", __TIME__, __FUNCTION__, __LINE__, [[NSString stringWithFormat:format, ## __VA_ARGS__] UTF8String]);
+#define LSNSLog(format, ...) printf("\n[%s] %s [第%d行] %s\n", __TIME__, __FUNCTION__, __LINE__, [[NSString stringWithFormat:format, ## __VA_ARGS__] UTF8String]);
 #else
-#define NSLog(format, ...)
+#define LSNSLog(format, ...)
 #endif
 /***********************************************************************************************************/
 
@@ -144,12 +161,12 @@ isLiuHaiPhone = [[UIApplication sharedApplication] delegate].window.safeAreaInse
  * UserDefault本地缓存
  */
 //存
-#define SaveUserDefault(obj,key) {[[NSUserDefaults standardUserDefaults]setObject:obj forKey:key];\
+#define LSSaveUserDefault(obj,key) {[[NSUserDefaults standardUserDefaults]setObject:obj forKey:key];\
 [[NSUserDefaults standardUserDefaults] synchronize];}
 //取
-#define GetUserDefault(key) [[NSUserDefaults standardUserDefaults]objectForKey:key]
+#define LSGetUserDefault(key) [[NSUserDefaults standardUserDefaults]objectForKey:key]
 //删除
-#define RemoveUserDefault(key) {[[NSUserDefaults standardUserDefaults]removeObjectForKey:key];\
+#define LSRemoveUserDefault(key) {[[NSUserDefaults standardUserDefaults]removeObjectForKey:key];\
 [[NSUserDefaults standardUserDefaults] synchronize];}
 /***********************************************************************************************************/
 
@@ -169,29 +186,29 @@ isLiuHaiPhone = [[UIApplication sharedApplication] delegate].window.safeAreaInse
 /**
  * 弱引用
  */
-#define WeakSelf(type)  __weak typeof(type) weak##type = type;
+#define LSWeakSelf(type)  __weak typeof(type) weak##type = type;
 /**
  * 强引用
  */
-#define StrongSelf(type)  __strong typeof(type) type = weak##type;
+#define LSStrongSelf(type)  __strong typeof(type) type = weak##type;
 /***********************************************************************************************************/
 
 /**************************************************GCD******************************************************/
 //GCD - 一次性执行
-#define DISPATCH_ONCE_BLOCK(onceBlock) static dispatch_once_t onceToken; dispatch_once(&onceToken, onceBlock);
+#define LSDISPATCH_ONCE_BLOCK(onceBlock) static dispatch_once_t onceToken; dispatch_once(&onceToken, onceBlock);
 //GCD - 在Main线程上运行
-#define DISPATCH_MAIN_THREAD(mainQueueBlock) dispatch_async(dispatch_get_main_queue(), mainQueueBlock);
+#define LSDISPATCH_MAIN_THREAD(mainQueueBlock) dispatch_async(dispatch_get_main_queue(), mainQueueBlock);
 //GCD - 开启异步线程
-#define DISPATCH_GLOBAL_QUEUE_DEFAULT(globalQueueBlock) dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), globalQueueBlocl);
+#define LSDISPATCH_GLOBAL_QUEUE_DEFAULT(globalQueueBlock) dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), globalQueueBlocl);
 /***********************************************************************************************************/
 
 /**************************************************通知******************************************************/
 //创建通知
-#define AddNotification(selectorName,key) [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(selectorName) name:key object:nil];
+#define LSAddNotification(selectorName,key) [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(selectorName) name:key object:nil];
 //发送通知
-#define SendNotification(key) [[NSNotificationCenter defaultCenter] postNotificationName:key object:self userInfo:nil];
+#define LSSendNotification(key) [[NSNotificationCenter defaultCenter] postNotificationName:key object:self userInfo:nil];
 //移除通知
-#define RemoveNotification(key) [[NSNotificationCenter defaultCenter]removeObserver:self name:key object:nil];
+#define LSRemoveNotification(key) [[NSNotificationCenter defaultCenter]removeObserver:self name:key object:nil];
 /***********************************************************************************************************/
 
 /************************************************手机信息****************************************************/
@@ -219,8 +236,8 @@ isLiuHaiPhone = [[UIApplication sharedApplication] delegate].window.safeAreaInse
 //拼接字符串
 #define NSStringFormat(format,...) [NSString stringWithFormat:format,##__VA_ARGS__]
 
-#define EmptyTitle nil
-#define MessageTiele @"请检查您的网络"
+#define LSEmptyTitle nil
+#define LSMessageTiele @"请检查您的网络"
 
 /***********************************************************************************************************/
 //获取系统时间戳

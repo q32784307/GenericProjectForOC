@@ -101,12 +101,12 @@
             }
             NSHTTPURLResponse *resoinse = (NSHTTPURLResponse *)task.response;
             NSString *codeStr = [NSString stringWithFormat:@"%ld - %@",(long)resoinse.statusCode,[error.userInfo objectForKey:@"NSLocalizedDescription"]];
-            [[UIViewController ViewController] showAlertWithTitle:EmptyTitle message:codeStr appearanceProcess:^(AlertController * _Nonnull alertMaker) {
+            [[UIViewController ViewController] showAlertWithTitle:LSEmptyTitle message:codeStr appearanceProcess:^(AlertController * _Nonnull alertMaker) {
                 alertMaker.toastStyleDuration = 2;
             } actionsBlock:NULL];
         }];
     }else{
-        [[UIViewController ViewController] showAlertWithTitle:EmptyTitle message:MessageTiele appearanceProcess:^(AlertController * _Nonnull alertMaker) {
+        [[UIViewController ViewController] showAlertWithTitle:LSEmptyTitle message:LSMessageTiele appearanceProcess:^(AlertController * _Nonnull alertMaker) {
             alertMaker.toastStyleDuration = 2;
         } actionsBlock:NULL];
     }
@@ -150,12 +150,12 @@
             }
             NSHTTPURLResponse *resoinse = (NSHTTPURLResponse *)task.response;
             NSString *codeStr = [NSString stringWithFormat:@"%ld - %@",(long)resoinse.statusCode,[error.userInfo objectForKey:@"NSLocalizedDescription"]];
-            [[UIViewController ViewController] showAlertWithTitle:EmptyTitle message:codeStr appearanceProcess:^(AlertController * _Nonnull alertMaker) {
+            [[UIViewController ViewController] showAlertWithTitle:LSEmptyTitle message:codeStr appearanceProcess:^(AlertController * _Nonnull alertMaker) {
                 alertMaker.toastStyleDuration = 2;
             } actionsBlock:NULL];
         }];
     }else{
-        [[UIViewController ViewController] showAlertWithTitle:EmptyTitle message:MessageTiele appearanceProcess:^(AlertController * _Nonnull alertMaker) {
+        [[UIViewController ViewController] showAlertWithTitle:LSEmptyTitle message:LSMessageTiele appearanceProcess:^(AlertController * _Nonnull alertMaker) {
             alertMaker.toastStyleDuration = 2;
         } actionsBlock:NULL];
     }
@@ -201,12 +201,12 @@
             }
             NSHTTPURLResponse *resoinse = (NSHTTPURLResponse *)task.response;
             NSString *codeStr = [NSString stringWithFormat:@"%ld - %@",(long)resoinse.statusCode,[error.userInfo objectForKey:@"NSLocalizedDescription"]];
-            [[UIViewController ViewController] showAlertWithTitle:EmptyTitle message:codeStr appearanceProcess:^(AlertController * _Nonnull alertMaker) {
+            [[UIViewController ViewController] showAlertWithTitle:LSEmptyTitle message:codeStr appearanceProcess:^(AlertController * _Nonnull alertMaker) {
                 alertMaker.toastStyleDuration = 2;
             } actionsBlock:NULL];
         }];
     }else{
-        [[UIViewController ViewController] showAlertWithTitle:EmptyTitle message:MessageTiele appearanceProcess:^(AlertController * _Nonnull alertMaker) {
+        [[UIViewController ViewController] showAlertWithTitle:LSEmptyTitle message:LSMessageTiele appearanceProcess:^(AlertController * _Nonnull alertMaker) {
             alertMaker.toastStyleDuration = 2;
         } actionsBlock:NULL];
     }
@@ -256,12 +256,12 @@
             }
             NSHTTPURLResponse *resoinse = (NSHTTPURLResponse *)task.response;
             NSString *codeStr = [NSString stringWithFormat:@"%ld - %@",(long)resoinse.statusCode,[error.userInfo objectForKey:@"NSLocalizedDescription"]];
-            [[UIViewController ViewController] showAlertWithTitle:EmptyTitle message:codeStr appearanceProcess:^(AlertController * _Nonnull alertMaker) {
+            [[UIViewController ViewController] showAlertWithTitle:LSEmptyTitle message:codeStr appearanceProcess:^(AlertController * _Nonnull alertMaker) {
                 alertMaker.toastStyleDuration = 2;
             } actionsBlock:NULL];
         }];
     }else{
-        [[UIViewController ViewController] showAlertWithTitle:EmptyTitle message:MessageTiele appearanceProcess:^(AlertController * _Nonnull alertMaker) {
+        [[UIViewController ViewController] showAlertWithTitle:LSEmptyTitle message:LSMessageTiele appearanceProcess:^(AlertController * _Nonnull alertMaker) {
             alertMaker.toastStyleDuration = 2;
         } actionsBlock:NULL];
     }
@@ -305,12 +305,12 @@
             }
             NSHTTPURLResponse *resoinse = (NSHTTPURLResponse *)task.response;
             NSString *codeStr = [NSString stringWithFormat:@"%ld - %@",(long)resoinse.statusCode,[error.userInfo objectForKey:@"NSLocalizedDescription"]];
-            [[UIViewController ViewController] showAlertWithTitle:EmptyTitle message:codeStr appearanceProcess:^(AlertController * _Nonnull alertMaker) {
+            [[UIViewController ViewController] showAlertWithTitle:LSEmptyTitle message:codeStr appearanceProcess:^(AlertController * _Nonnull alertMaker) {
                 alertMaker.toastStyleDuration = 2;
             } actionsBlock:NULL];
         }];
     }else{
-        [[UIViewController ViewController] showAlertWithTitle:EmptyTitle message:MessageTiele appearanceProcess:^(AlertController * _Nonnull alertMaker) {
+        [[UIViewController ViewController] showAlertWithTitle:LSEmptyTitle message:LSMessageTiele appearanceProcess:^(AlertController * _Nonnull alertMaker) {
             alertMaker.toastStyleDuration = 2;
         } actionsBlock:NULL];
     }
@@ -362,7 +362,7 @@
             }
         }];
     }else{
-        [[UIViewController ViewController] showAlertWithTitle:EmptyTitle message:MessageTiele appearanceProcess:^(AlertController * _Nonnull alertMaker) {
+        [[UIViewController ViewController] showAlertWithTitle:LSEmptyTitle message:LSMessageTiele appearanceProcess:^(AlertController * _Nonnull alertMaker) {
             alertMaker.toastStyleDuration = 2;
         } actionsBlock:NULL];
     }

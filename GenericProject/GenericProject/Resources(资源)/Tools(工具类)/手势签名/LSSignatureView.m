@@ -33,13 +33,13 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     CGSize size = self.frame.size;
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(SYRealValue(20 / 2), SYRealValue(20 / 2), size.width - SYRealValue(20 / 2) * 2, size.height - SYRealValue(20 / 2) * 3 - SYRealValue(100 / 2))];
-    imageView.layer.cornerRadius = SYRealValue(20 / 2);
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(LSSYRealValue(20 / 2), LSSYRealValue(20 / 2), size.width - LSSYRealValue(20 / 2) * 2, size.height - LSSYRealValue(20 / 2) * 3 - LSSYRealValue(100 / 2))];
+    imageView.layer.cornerRadius = LSSYRealValue(20 / 2);
     imageView.layer.masksToBounds = YES;
     imageView.backgroundColor = [UIColor groupTableViewBackgroundColor];
     self.signImageView = imageView;
     [self addSubview:imageView];
-    UILabel *placeHoalderLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, (size.height - SYRealValue(200 / 2)) / 2.0, imageView.frame.size.width, SYRealValue(200 / 2))];
+    UILabel *placeHoalderLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, (size.height - LSSYRealValue(200 / 2)) / 2.0, imageView.frame.size.width, LSSYRealValue(200 / 2))];
     placeHoalderLabel.textAlignment = NSTextAlignmentCenter;
     placeHoalderLabel.alpha = 0.8;
     if (self.placeHoalder) {
@@ -61,10 +61,10 @@
     [self addSubview:placeHoalderLabel];
     
     //
-    CGFloat buttonSpace = (size.width - SYRealValue(200 / 2) * 2) / 3.0;
+    CGFloat buttonSpace = (size.width - LSSYRealValue(200 / 2) * 2) / 3.0;
     UIButton *clearBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    clearBtn.frame = CGRectMake(buttonSpace, CGRectGetMaxY(imageView.frame) + SYRealValue(20 / 2), SYRealValue(200 / 2), SYRealValue(100 / 2));
-    clearBtn.layer.cornerRadius = SYRealValue(100 / 2) / 2.0;
+    clearBtn.frame = CGRectMake(buttonSpace, CGRectGetMaxY(imageView.frame) + LSSYRealValue(20 / 2), LSSYRealValue(200 / 2), LSSYRealValue(100 / 2));
+    clearBtn.layer.cornerRadius = LSSYRealValue(100 / 2) / 2.0;
     clearBtn.layer.masksToBounds = YES;
     NSString *title = @"清除";
     if (self.signImage) {
@@ -78,10 +78,10 @@
     [self addSubview:clearBtn];
     
     UIButton *signDone = [UIButton buttonWithType:UIButtonTypeCustom];
-    signDone.frame = CGRectMake(CGRectGetMaxX(clearBtn.frame)+buttonSpace, clearBtn.frame.origin.y, SYRealValue(200 / 2), SYRealValue(100 / 2));
+    signDone.frame = CGRectMake(CGRectGetMaxX(clearBtn.frame)+buttonSpace, clearBtn.frame.origin.y, LSSYRealValue(200 / 2), LSSYRealValue(100 / 2));
     signDone.layer.borderColor = [UIColor redColor].CGColor;
     signDone.layer.borderWidth = 1.0;
-    signDone.layer.cornerRadius = SYRealValue(100 / 2) / 2.0;
+    signDone.layer.cornerRadius = LSSYRealValue(100 / 2) / 2.0;
     signDone.layer.masksToBounds = YES;
     [signDone setTitle:@"完成" forState:UIControlStateNormal];
     [signDone setTitleColor:[UIColor redColor] forState:UIControlStateNormal];

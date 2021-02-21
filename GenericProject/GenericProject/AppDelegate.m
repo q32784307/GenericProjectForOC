@@ -75,7 +75,7 @@
     [self advertisingView];
 
     //FPS实时监测
-    OttoFPSButton *btn = [OttoFPSButton setTouchWithFrame:CGRectMake(0, 300, 80, 30) titleFont:[UIFont systemFontOfSize:15] backgroundColor:GrayColor backgroundImage:nil];
+    OttoFPSButton *btn = [OttoFPSButton setTouchWithFrame:CGRectMake(0, 300, 80, 30) titleFont:[UIFont systemFontOfSize:15] backgroundColor:LSGrayColor backgroundImage:nil];
     [self.window addSubview:btn];
     
     
@@ -193,7 +193,7 @@
     //广告停留时间
     videoAdconfiguration.duration = 5;
     //广告frame
-    videoAdconfiguration.frame = CGRectMake(0, 0, ScreenWidth, ScreenHeight);
+    videoAdconfiguration.frame = CGRectMake(0, 0, LSScreenWidth, LSScreenHeight);
     //广告视频URLString/或本地视频名(请带上后缀)
     //注意:视频广告只支持先缓存,下次显示(看效果请二次运行)
     videoAdconfiguration.videoNameOrURLString = @"https://statics.yanxian.org/files/20190628/7c1aca65282be23957a3d6a6251ea86c.mp4";

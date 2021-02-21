@@ -20,15 +20,15 @@
     // Do any additional setup after loading the view.
     
     UIButton *takingPicturesButton = [[UIButton alloc]init];
-    takingPicturesButton.backgroundColor = RedColor;
+    takingPicturesButton.backgroundColor = LSRedColor;
     [takingPicturesButton setTitle:@"拍照" forState:UIControlStateNormal];
-    [takingPicturesButton setTitleColor:BlackColor forState:UIControlStateNormal];
+    [takingPicturesButton setTitleColor:LSBlackColor forState:UIControlStateNormal];
     [takingPicturesButton addTarget:self action:@selector(takingPicturesAction) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:takingPicturesButton];
     [takingPicturesButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.view).with.offset(SYRealValue(500 / 2));
+        make.top.equalTo(self.view).with.offset(LSSYRealValue(500 / 2));
         make.centerX.equalTo(self.view.mas_centerX);
-        make.size.mas_equalTo(CGSizeMake(SYRealValue(200 / 2), SYRealValue(200 / 2)));
+        make.size.mas_equalTo(CGSizeMake(LSSYRealValue(200 / 2), LSSYRealValue(200 / 2)));
     }];
 }
 

@@ -37,15 +37,15 @@
         make.top.equalTo(self.titleLab.mas_bottom).with.offset(0);
         make.left.equalTo(self).with.offset(0);
         make.right.equalTo(self.mas_right).with.offset(0);
-        make.height.mas_equalTo(SYRealValue(80 / 2));
+        make.height.mas_equalTo(LSSYRealValue(80 / 2));
     }];
     CGFloat weekW = self.frame.size.width/7;
     NSArray *titles = @[@"日", @"一", @"二", @"三",
                         @"四", @"五", @"六"];
     for (int i = 0; i < 7; i++) {
-        UILabel *week = [[UILabel alloc] initWithFrame:CGRectMake(i*weekW, 0, weekW, SYRealValue(80 / 2))];
+        UILabel *week = [[UILabel alloc] initWithFrame:CGRectMake(i*weekW, 0, weekW, LSSYRealValue(80 / 2))];
         week.textAlignment = NSTextAlignmentCenter;
-        week.font = SystemFont(SYRealValue(28 / 2));
+        week.font = LSSystemFont(LSSYRealValue(28 / 2));
         [weekTitlesView addSubview:week];
         week.text = titles[i];
     }
@@ -60,7 +60,7 @@
             weekView = [ZYWeekView new];
             weekView.manager = self.manager;
         }
-        weekView.frame = CGRectMake(0, _manager.dayViewHeight+_manager.dayViewGap*2 + (_manager.dayViewHeight+_manager.dayViewGap)*i + SYRealValue(80 / 2), self.frame.size.width, _manager.dayViewHeight);
+        weekView.frame = CGRectMake(0, _manager.dayViewHeight+_manager.dayViewGap*2 + (_manager.dayViewHeight+_manager.dayViewGap)*i + LSSYRealValue(80 / 2), self.frame.size.width, _manager.dayViewHeight);
         
         weekView.theMonthFirstDay = firstDay;
         weekView.date = [_manager.helper addToDate:firstDay weeks:i];
@@ -68,14 +68,14 @@
     }
     
     CGRect frame = self.frame;
-    frame.size.height = weekNumber * (_manager.dayViewHeight+_manager.dayViewGap) + _manager.dayViewHeight + 2*_manager.dayViewGap + SYRealValue(80 / 2);
+    frame.size.height = weekNumber * (_manager.dayViewHeight+_manager.dayViewGap) + _manager.dayViewHeight + 2*_manager.dayViewGap + LSSYRealValue(80 / 2);
     self.frame = frame;
 }
 
 - (UILabel *)titleLab {
     if (!_titleLab) {
         _titleLab = [[UILabel alloc] initWithFrame:CGRectMake(0, _manager.dayViewGap+10, self.frame.size.width, _manager.dayViewHeight-10)];
-        _titleLab.font = [UIFont systemFontOfSize:SYRealValue(28 / 2)];
+        _titleLab.font = [UIFont systemFontOfSize:LSSYRealValue(28 / 2)];
         _titleLab.textAlignment = NSTextAlignmentCenter;
     }
     return _titleLab;
