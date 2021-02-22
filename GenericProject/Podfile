@@ -24,4 +24,5 @@ target 'GenericProject' do
     pod 'XHLaunchAd'
     pod 'FLAnimatedImage'
     pod "HybridPageKit", :testspecs => ["HybridPageKitTests"]
+    pod 'ZLPhotoBrowser'
 end
