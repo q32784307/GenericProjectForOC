@@ -452,7 +452,7 @@ didReceiveResponse:(NSURLResponse *)response
         [self done];
     } else {
         if ([self callbacksForKey:kCompletedCallbackKey].count > 0) {
-            NSData *imageData = self.imageData;
+            NSData *imageData = [self.imageData copy];
             self.imageData = nil;
             // data decryptor
             if (imageData && self.decryptor) {

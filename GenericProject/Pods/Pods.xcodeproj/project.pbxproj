@@ -80,10 +80,10 @@
 		46EB2E00005650 /* DZNEmptyDataSet-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E00005640 /* DZNEmptyDataSet-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		46EB2E00005690 /* DZNEmptyDataSet-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00005680 /* DZNEmptyDataSet-dummy.m */; };
 		46EB2E00005730 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E00005030 /* Foundation.framework */; };
-		46EB2E00005740 /* FLAnimatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000580 /* FLAnimatedImage.m */; };
-		46EB2E00005750 /* FLAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000590 /* FLAnimatedImageView.m */; };
-		46EB2E00005760 /* FLAnimatedImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E000005A0 /* FLAnimatedImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		46EB2E00005770 /* FLAnimatedImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E000005B0 /* FLAnimatedImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		46EB2E00005740 /* FLAnimatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000590 /* FLAnimatedImage.m */; };
+		46EB2E00005750 /* FLAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E000005B0 /* FLAnimatedImageView.m */; };
+		46EB2E00005760 /* FLAnimatedImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E00000580 /* FLAnimatedImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		46EB2E00005770 /* FLAnimatedImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E000005A0 /* FLAnimatedImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		46EB2E000057D0 /* FLAnimatedImage-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E000057C0 /* FLAnimatedImage-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		46EB2E00005810 /* FLAnimatedImage-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00005800 /* FLAnimatedImage-dummy.m */; };
 		46EB2E000058B0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E00005030 /* Foundation.framework */; };
@@ -1302,195 +1302,196 @@
 		46EB2E0000B530 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E0000B520 /* UIKit.framework */; };
 		46EB2E0000B550 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E0000B540 /* QuartzCore.framework */; };
 		46EB2E0000B570 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E0000B560 /* ImageIO.framework */; };
-		46EB2E0000B590 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E0000B580 /* CoreGraphics.framework */; };
-		46EB2E0000B5B0 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E0000B5A0 /* OpenGLES.framework */; };
-		46EB2E0000B5D0 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E0000B5C0 /* CoreMedia.framework */; };
-		46EB2E0000B5E0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E0000B540 /* QuartzCore.framework */; };
-		46EB2E0000B600 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E0000B5F0 /* AVFoundation.framework */; };
-		46EB2E0000B610 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E0000B520 /* UIKit.framework */; };
-		46EB2E0000B620 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E0000B580 /* CoreGraphics.framework */; };
-		46EB2E0000B630 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E0000B540 /* QuartzCore.framework */; };
-		46EB2E0000B640 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E0000B580 /* CoreGraphics.framework */; };
+		46EB2E0000B590 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E0000B580 /* MobileCoreServices.framework */; };
+		46EB2E0000B5B0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E0000B5A0 /* CoreGraphics.framework */; };
+		46EB2E0000B5D0 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E0000B5C0 /* OpenGLES.framework */; };
+		46EB2E0000B5F0 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E0000B5E0 /* CoreMedia.framework */; };
+		46EB2E0000B600 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E0000B540 /* QuartzCore.framework */; };
+		46EB2E0000B620 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E0000B610 /* AVFoundation.framework */; };
+		46EB2E0000B630 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E0000B520 /* UIKit.framework */; };
+		46EB2E0000B640 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E0000B5A0 /* CoreGraphics.framework */; };
 		46EB2E0000B650 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E0000B540 /* QuartzCore.framework */; };
-		46EB2E0000B660 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E0000B520 /* UIKit.framework */; };
-		46EB2E0000B670 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E0000B560 /* ImageIO.framework */; };
-		46EB2E0000B680 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E0000B540 /* QuartzCore.framework */; };
-		46EB2E0000B6A0 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E0000B690 /* Photos.framework */; };
-		46EB2E0000B6B0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E0000B520 /* UIKit.framework */; };
-		46EB2E0000B6D0 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E0000B6C0 /* CoreFoundation.framework */; };
-		46EB2E0000B6F0 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E0000B6E0 /* CoreText.framework */; };
-		46EB2E0000B700 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E0000B580 /* CoreGraphics.framework */; };
-		46EB2E0000B720 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E0000B710 /* CoreImage.framework */; };
-		46EB2E0000B730 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E0000B540 /* QuartzCore.framework */; };
-		46EB2E0000B740 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E0000B560 /* ImageIO.framework */; };
-		46EB2E0000B760 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E0000B750 /* AssetsLibrary.framework */; };
-		46EB2E0000B780 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E0000B770 /* Accelerate.framework */; };
-		46EB2E0000B7A0 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E0000B790 /* MobileCoreServices.framework */; };
-		46EB2E0000B7C0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E0000B7B0 /* SystemConfiguration.framework */; };
-		46EB2E0000B860 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E00005030 /* Foundation.framework */; };
-		46EB2E0000B8D0 /* Pods-GenericProject-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E0000B8C0 /* Pods-GenericProject-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		46EB2E0000B920 /* Pods-GenericProject-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E0000B910 /* Pods-GenericProject-dummy.m */; };
-		46EB2E0000BBF0 /* HybridPageKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E0000BBE0 /* HybridPageKit.framework */; };
-		46EB2E0000BC30 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E0000BC20 /* SDWebImage.framework */; };
-		46EB2E0000BC70 /* FLAnimatedImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E0000BC60 /* FLAnimatedImage.framework */; };
+		46EB2E0000B660 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E0000B5A0 /* CoreGraphics.framework */; };
+		46EB2E0000B670 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E0000B540 /* QuartzCore.framework */; };
+		46EB2E0000B680 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E0000B520 /* UIKit.framework */; };
+		46EB2E0000B690 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E0000B560 /* ImageIO.framework */; };
+		46EB2E0000B6A0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E0000B540 /* QuartzCore.framework */; };
+		46EB2E0000B6C0 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E0000B6B0 /* Photos.framework */; };
+		46EB2E0000B6D0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E0000B520 /* UIKit.framework */; };
+		46EB2E0000B6F0 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E0000B6E0 /* CoreFoundation.framework */; };
+		46EB2E0000B710 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E0000B700 /* CoreText.framework */; };
+		46EB2E0000B720 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E0000B5A0 /* CoreGraphics.framework */; };
+		46EB2E0000B740 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E0000B730 /* CoreImage.framework */; };
+		46EB2E0000B750 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E0000B540 /* QuartzCore.framework */; };
+		46EB2E0000B760 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E0000B560 /* ImageIO.framework */; };
+		46EB2E0000B780 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E0000B770 /* AssetsLibrary.framework */; };
+		46EB2E0000B7A0 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E0000B790 /* Accelerate.framework */; };
+		46EB2E0000B7B0 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E0000B580 /* MobileCoreServices.framework */; };
+		46EB2E0000B7D0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E0000B7C0 /* SystemConfiguration.framework */; };
+		46EB2E0000B870 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E00005030 /* Foundation.framework */; };
+		46EB2E0000B8E0 /* Pods-GenericProject-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E0000B8D0 /* Pods-GenericProject-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		46EB2E0000B930 /* Pods-GenericProject-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E0000B920 /* Pods-GenericProject-dummy.m */; };
+		46EB2E0000BC00 /* HybridPageKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E0000BBF0 /* HybridPageKit.framework */; };
+		46EB2E0000BC40 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E0000BC30 /* SDWebImage.framework */; };
+		46EB2E0000BC80 /* FLAnimatedImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E0000BC70 /* FLAnimatedImage.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		46EB2E0000B940 /* PBXContainerItemProxy */ = {
+		46EB2E0000B950 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 46EB2E00000000 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 0130B3724283586C0E9D2A112D4F2AA1;
 			remoteInfo = AFNetworking;
 		};
-		46EB2E0000B960 /* PBXContainerItemProxy */ = {
+		46EB2E0000B970 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 46EB2E00000000 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 25A41AE5E52F6C0CE6354B9305FD89EE;
 			remoteInfo = BabyBluetooth;
 		};
-		46EB2E0000B980 /* PBXContainerItemProxy */ = {
+		46EB2E0000B990 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 46EB2E00000000 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = F1BCD9702276377FB5B3BDB6EAF709D7;
 			remoteInfo = DZNEmptyDataSet;
 		};
-		46EB2E0000B9A0 /* PBXContainerItemProxy */ = {
+		46EB2E0000B9B0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 46EB2E00000000 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 4A8E8992707D01510894596DB9BCCA00;
 			remoteInfo = FLAnimatedImage;
 		};
-		46EB2E0000B9C0 /* PBXContainerItemProxy */ = {
+		46EB2E0000B9D0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 46EB2E00000000 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = DB13B1641D72A72D8C9AE53FF81C8950;
 			remoteInfo = GPUImage;
 		};
-		46EB2E0000B9E0 /* PBXContainerItemProxy */ = {
+		46EB2E0000B9F0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 46EB2E00000000 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 1C6D5AA9A122BC9B0C9BDD7EDBF41B75;
 			remoteInfo = HybridPageKit;
 		};
-		46EB2E0000BA00 /* PBXContainerItemProxy */ = {
+		46EB2E0000BA10 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 46EB2E00000000 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = FBA456CB50E371584C11231929A0971E;
 			remoteInfo = IQKeyboardManager;
 		};
-		46EB2E0000BA20 /* PBXContainerItemProxy */ = {
+		46EB2E0000BA30 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 46EB2E00000000 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 82B0A41D3031FF27D78E17B0A9A46FB0;
 			remoteInfo = MBProgressHUD;
 		};
-		46EB2E0000BA40 /* PBXContainerItemProxy */ = {
+		46EB2E0000BA50 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 46EB2E00000000 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 4D3BA58D0583DF37575CACAB3DDADC85;
 			remoteInfo = MJExtension;
 		};
-		46EB2E0000BA60 /* PBXContainerItemProxy */ = {
+		46EB2E0000BA70 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 46EB2E00000000 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 6868056D761E163D10FDAF8CF1C4D9B8;
 			remoteInfo = MJRefresh;
 		};
-		46EB2E0000BA80 /* PBXContainerItemProxy */ = {
+		46EB2E0000BA90 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 46EB2E00000000 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 55AF53E6C77A10ED4985E04D74A8878E;
 			remoteInfo = Masonry;
 		};
-		46EB2E0000BAA0 /* PBXContainerItemProxy */ = {
+		46EB2E0000BAB0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 46EB2E00000000 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 438B238ACC7DF1178D1BCE1A31983146;
 			remoteInfo = ReactiveObjC;
 		};
-		46EB2E0000BAC0 /* PBXContainerItemProxy */ = {
+		46EB2E0000BAD0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 46EB2E00000000 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = CBED833AAD6266F3AEFE9BE31C68E094;
 			remoteInfo = SDCycleScrollView;
 		};
-		46EB2E0000BAE0 /* PBXContainerItemProxy */ = {
+		46EB2E0000BAF0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 46EB2E00000000 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 3847153A6E5EEFB86565BA840768F429;
 			remoteInfo = SDWebImage;
 		};
-		46EB2E0000BB00 /* PBXContainerItemProxy */ = {
+		46EB2E0000BB10 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 46EB2E00000000 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 1C8D67D8B72D6BA42CCEDB648537A340;
 			remoteInfo = SVProgressHUD;
 		};
-		46EB2E0000BB20 /* PBXContainerItemProxy */ = {
+		46EB2E0000BB30 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 46EB2E00000000 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = B226767C94EFDDF6183068991A028098;
 			remoteInfo = TABAnimated;
 		};
-		46EB2E0000BB40 /* PBXContainerItemProxy */ = {
+		46EB2E0000BB50 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 46EB2E00000000 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = A96BBB982D62BB807B5BD10774BE2D07;
 			remoteInfo = TZImagePickerController;
 		};
-		46EB2E0000BB60 /* PBXContainerItemProxy */ = {
+		46EB2E0000BB70 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 46EB2E00000000 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 8554F6236D2AA202CF58503D2DF29730;
 			remoteInfo = WechatOpenSDK;
 		};
-		46EB2E0000BB80 /* PBXContainerItemProxy */ = {
+		46EB2E0000BB90 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 46EB2E00000000 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 4EE958CD28D774381C5FB4F1281C4A49;
 			remoteInfo = XHLaunchAd;
 		};
-		46EB2E0000BBA0 /* PBXContainerItemProxy */ = {
+		46EB2E0000BBB0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 46EB2E00000000 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 0015D99E4D861A08F3CD42DA521AEF40;
 			remoteInfo = YYKit;
 		};
-		46EB2E0000BBC0 /* PBXContainerItemProxy */ = {
+		46EB2E0000BBD0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 46EB2E00000000 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 1C6D5AA9A122BC9B0C9BDD7EDBF41B75;
 			remoteInfo = HybridPageKit;
 		};
-		46EB2E0000BC00 /* PBXContainerItemProxy */ = {
+		46EB2E0000BC10 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 46EB2E00000000 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 3847153A6E5EEFB86565BA840768F429;
 			remoteInfo = SDWebImage;
 		};
-		46EB2E0000BC40 /* PBXContainerItemProxy */ = {
+		46EB2E0000BC50 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 46EB2E00000000 /* Project object */;
 			proxyType = 1;
@@ -1557,10 +1558,10 @@
 		46EB2E00000550 /* BabyToy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BabyToy.m; path = Classes/objc/BabyToy.m; sourceTree = "<group>"; };
 		46EB2E00000560 /* UIScrollView+EmptyDataSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+EmptyDataSet.h"; path = "Source/UIScrollView+EmptyDataSet.h"; sourceTree = "<group>"; };
 		46EB2E00000570 /* UIScrollView+EmptyDataSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+EmptyDataSet.m"; path = "Source/UIScrollView+EmptyDataSet.m"; sourceTree = "<group>"; };
-		46EB2E00000580 /* FLAnimatedImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLAnimatedImage.m; path = FLAnimatedImage/FLAnimatedImage.m; sourceTree = "<group>"; };
-		46EB2E00000590 /* FLAnimatedImageView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLAnimatedImageView.m; path = FLAnimatedImage/FLAnimatedImageView.m; sourceTree = "<group>"; };
-		46EB2E000005A0 /* FLAnimatedImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLAnimatedImage.h; path = FLAnimatedImage/include/FLAnimatedImage.h; sourceTree = "<group>"; };
-		46EB2E000005B0 /* FLAnimatedImageView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLAnimatedImageView.h; path = FLAnimatedImage/include/FLAnimatedImageView.h; sourceTree = "<group>"; };
+		46EB2E00000580 /* FLAnimatedImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLAnimatedImage.h; path = FLAnimatedImage/FLAnimatedImage.h; sourceTree = "<group>"; };
+		46EB2E00000590 /* FLAnimatedImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLAnimatedImage.m; path = FLAnimatedImage/FLAnimatedImage.m; sourceTree = "<group>"; };
+		46EB2E000005A0 /* FLAnimatedImageView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLAnimatedImageView.h; path = FLAnimatedImage/FLAnimatedImageView.h; sourceTree = "<group>"; };
+		46EB2E000005B0 /* FLAnimatedImageView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLAnimatedImageView.m; path = FLAnimatedImage/FLAnimatedImageView.m; sourceTree = "<group>"; };
 		46EB2E000005C0 /* GLProgram.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GLProgram.h; path = framework/Source/GLProgram.h; sourceTree = "<group>"; };
 		46EB2E000005D0 /* GLProgram.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GLProgram.m; path = framework/Source/GLProgram.m; sourceTree = "<group>"; };
 		46EB2E000005E0 /* GPUImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPUImage.h; path = framework/Source/GPUImage.h; sourceTree = "<group>"; };
@@ -2877,30 +2878,30 @@
 		46EB2E0000B520 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		46EB2E0000B540 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		46EB2E0000B560 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/ImageIO.framework; sourceTree = DEVELOPER_DIR; };
-		46EB2E0000B580 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		46EB2E0000B5A0 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/OpenGLES.framework; sourceTree = DEVELOPER_DIR; };
-		46EB2E0000B5C0 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CoreMedia.framework; sourceTree = DEVELOPER_DIR; };
-		46EB2E0000B5F0 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
-		46EB2E0000B690 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Photos.framework; sourceTree = DEVELOPER_DIR; };
-		46EB2E0000B6C0 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CoreFoundation.framework; sourceTree = DEVELOPER_DIR; };
-		46EB2E0000B6E0 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
-		46EB2E0000B710 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CoreImage.framework; sourceTree = DEVELOPER_DIR; };
-		46EB2E0000B750 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/AssetsLibrary.framework; sourceTree = DEVELOPER_DIR; };
-		46EB2E0000B770 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Accelerate.framework; sourceTree = DEVELOPER_DIR; };
-		46EB2E0000B790 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
-		46EB2E0000B7B0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
-		46EB2E0000B880 /* Pods-GenericProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GenericProject.release.xcconfig"; sourceTree = "<group>"; };
-		46EB2E0000B890 /* Pods-GenericProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GenericProject.debug.xcconfig"; sourceTree = "<group>"; };
-		46EB2E0000B8A0 /* Pods-GenericProject-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GenericProject-Info.plist"; sourceTree = "<group>"; };
-		46EB2E0000B8B0 /* Pods-GenericProject.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-GenericProject.modulemap"; sourceTree = "<group>"; };
-		46EB2E0000B8C0 /* Pods-GenericProject-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GenericProject-umbrella.h"; sourceTree = "<group>"; };
-		46EB2E0000B8E0 /* Pods-GenericProject-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GenericProject-frameworks.sh"; sourceTree = "<group>"; };
-		46EB2E0000B8F0 /* Pods-GenericProject-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GenericProject-acknowledgements.plist"; sourceTree = "<group>"; };
-		46EB2E0000B900 /* Pods-GenericProject-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GenericProject-acknowledgements.markdown"; sourceTree = "<group>"; };
-		46EB2E0000B910 /* Pods-GenericProject-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GenericProject-dummy.m"; sourceTree = "<group>"; };
-		46EB2E0000BBE0 /* HybridPageKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HybridPageKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		46EB2E0000BC20 /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		46EB2E0000BC60 /* FLAnimatedImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FLAnimatedImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		46EB2E0000B580 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
+		46EB2E0000B5A0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		46EB2E0000B5C0 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/OpenGLES.framework; sourceTree = DEVELOPER_DIR; };
+		46EB2E0000B5E0 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CoreMedia.framework; sourceTree = DEVELOPER_DIR; };
+		46EB2E0000B610 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		46EB2E0000B6B0 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Photos.framework; sourceTree = DEVELOPER_DIR; };
+		46EB2E0000B6E0 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CoreFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		46EB2E0000B700 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
+		46EB2E0000B730 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CoreImage.framework; sourceTree = DEVELOPER_DIR; };
+		46EB2E0000B770 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/AssetsLibrary.framework; sourceTree = DEVELOPER_DIR; };
+		46EB2E0000B790 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Accelerate.framework; sourceTree = DEVELOPER_DIR; };
+		46EB2E0000B7C0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		46EB2E0000B890 /* Pods-GenericProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GenericProject.release.xcconfig"; sourceTree = "<group>"; };
+		46EB2E0000B8A0 /* Pods-GenericProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GenericProject.debug.xcconfig"; sourceTree = "<group>"; };
+		46EB2E0000B8B0 /* Pods-GenericProject-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GenericProject-Info.plist"; sourceTree = "<group>"; };
+		46EB2E0000B8C0 /* Pods-GenericProject.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-GenericProject.modulemap"; sourceTree = "<group>"; };
+		46EB2E0000B8D0 /* Pods-GenericProject-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GenericProject-umbrella.h"; sourceTree = "<group>"; };
+		46EB2E0000B8F0 /* Pods-GenericProject-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GenericProject-frameworks.sh"; sourceTree = "<group>"; };
+		46EB2E0000B900 /* Pods-GenericProject-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GenericProject-acknowledgements.plist"; sourceTree = "<group>"; };
+		46EB2E0000B910 /* Pods-GenericProject-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GenericProject-acknowledgements.markdown"; sourceTree = "<group>"; };
+		46EB2E0000B920 /* Pods-GenericProject-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GenericProject-dummy.m"; sourceTree = "<group>"; };
+		46EB2E0000BBF0 /* HybridPageKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HybridPageKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		46EB2E0000BC30 /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		46EB2E0000BC70 /* FLAnimatedImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FLAnimatedImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DA4577FE3BC4A03751108FFED07B385 /* DZNEmptyDataSet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DZNEmptyDataSet.framework; path = DZNEmptyDataSet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FDBC42DC77E971151CD0142DFAF6E69 /* XHLaunchAd.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = XHLaunchAd.framework; path = XHLaunchAd.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		763A52DD1E7FC3B334E49C94604A4AD7 /* BabyBluetooth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BabyBluetooth.framework; path = BabyBluetooth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -2949,9 +2950,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46EB2E0000B590 /* CoreGraphics.framework in Frameworks */,
+				46EB2E0000B5B0 /* CoreGraphics.framework in Frameworks */,
 				46EB2E00005730 /* Foundation.framework in Frameworks */,
 				46EB2E0000B570 /* ImageIO.framework in Frameworks */,
+				46EB2E0000B590 /* MobileCoreServices.framework in Frameworks */,
 				46EB2E0000B550 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2960,11 +2962,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46EB2E0000B600 /* AVFoundation.framework in Frameworks */,
-				46EB2E0000B5D0 /* CoreMedia.framework in Frameworks */,
+				46EB2E0000B620 /* AVFoundation.framework in Frameworks */,
+				46EB2E0000B5F0 /* CoreMedia.framework in Frameworks */,
 				46EB2E000058B0 /* Foundation.framework in Frameworks */,
-				46EB2E0000B5B0 /* OpenGLES.framework in Frameworks */,
-				46EB2E0000B5E0 /* QuartzCore.framework in Frameworks */,
+				46EB2E0000B5D0 /* OpenGLES.framework in Frameworks */,
+				46EB2E0000B600 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2981,7 +2983,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46EB2E00006F70 /* Foundation.framework in Frameworks */,
-				46EB2E0000BBF0 /* HybridPageKit.framework in Frameworks */,
+				46EB2E0000BC00 /* HybridPageKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2989,10 +2991,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46EB2E0000B620 /* CoreGraphics.framework in Frameworks */,
+				46EB2E0000B640 /* CoreGraphics.framework in Frameworks */,
 				46EB2E00007310 /* Foundation.framework in Frameworks */,
-				46EB2E0000B630 /* QuartzCore.framework in Frameworks */,
-				46EB2E0000B610 /* UIKit.framework in Frameworks */,
+				46EB2E0000B650 /* QuartzCore.framework in Frameworks */,
+				46EB2E0000B630 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3000,9 +3002,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46EB2E0000B640 /* CoreGraphics.framework in Frameworks */,
+				46EB2E0000B660 /* CoreGraphics.framework in Frameworks */,
 				46EB2E00007610 /* Foundation.framework in Frameworks */,
-				46EB2E0000B650 /* QuartzCore.framework in Frameworks */,
+				46EB2E0000B670 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3027,7 +3029,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46EB2E00007E40 /* Foundation.framework in Frameworks */,
-				46EB2E0000B660 /* UIKit.framework in Frameworks */,
+				46EB2E0000B680 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3044,7 +3046,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46EB2E00008E20 /* Foundation.framework in Frameworks */,
-				46EB2E0000BC30 /* SDWebImage.framework in Frameworks */,
+				46EB2E0000BC40 /* SDWebImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3053,7 +3055,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46EB2E00009040 /* Foundation.framework in Frameworks */,
-				46EB2E0000B670 /* ImageIO.framework in Frameworks */,
+				46EB2E0000B690 /* ImageIO.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3062,7 +3064,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46EB2E00009A60 /* Foundation.framework in Frameworks */,
-				46EB2E0000B680 /* QuartzCore.framework in Frameworks */,
+				46EB2E0000B6A0 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3079,7 +3081,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46EB2E0000A3F0 /* Foundation.framework in Frameworks */,
-				46EB2E0000B6A0 /* Photos.framework in Frameworks */,
+				46EB2E0000B6C0 /* Photos.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3087,7 +3089,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46EB2E0000BC70 /* FLAnimatedImage.framework in Frameworks */,
+				46EB2E0000BC80 /* FLAnimatedImage.framework in Frameworks */,
 				46EB2E0000A790 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -3096,26 +3098,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46EB2E0000B780 /* Accelerate.framework in Frameworks */,
-				46EB2E0000B760 /* AssetsLibrary.framework in Frameworks */,
-				46EB2E0000B6D0 /* CoreFoundation.framework in Frameworks */,
-				46EB2E0000B700 /* CoreGraphics.framework in Frameworks */,
-				46EB2E0000B720 /* CoreImage.framework in Frameworks */,
-				46EB2E0000B6F0 /* CoreText.framework in Frameworks */,
+				46EB2E0000B7A0 /* Accelerate.framework in Frameworks */,
+				46EB2E0000B780 /* AssetsLibrary.framework in Frameworks */,
+				46EB2E0000B6F0 /* CoreFoundation.framework in Frameworks */,
+				46EB2E0000B720 /* CoreGraphics.framework in Frameworks */,
+				46EB2E0000B740 /* CoreImage.framework in Frameworks */,
+				46EB2E0000B710 /* CoreText.framework in Frameworks */,
 				46EB2E0000AA30 /* Foundation.framework in Frameworks */,
-				46EB2E0000B740 /* ImageIO.framework in Frameworks */,
-				46EB2E0000B7A0 /* MobileCoreServices.framework in Frameworks */,
-				46EB2E0000B730 /* QuartzCore.framework in Frameworks */,
-				46EB2E0000B7C0 /* SystemConfiguration.framework in Frameworks */,
-				46EB2E0000B6B0 /* UIKit.framework in Frameworks */,
+				46EB2E0000B760 /* ImageIO.framework in Frameworks */,
+				46EB2E0000B7B0 /* MobileCoreServices.framework in Frameworks */,
+				46EB2E0000B750 /* QuartzCore.framework in Frameworks */,
+				46EB2E0000B7D0 /* SystemConfiguration.framework in Frameworks */,
+				46EB2E0000B6D0 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		46EB2E0000B840 /* Frameworks */ = {
+		46EB2E0000B850 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46EB2E0000B860 /* Foundation.framework in Frameworks */,
+				46EB2E0000B870 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3164,9 +3166,9 @@
 		46EB2E00000060 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				46EB2E0000BC60 /* FLAnimatedImage.framework */,
-				46EB2E0000BBE0 /* HybridPageKit.framework */,
-				46EB2E0000BC20 /* SDWebImage.framework */,
+				46EB2E0000BC70 /* FLAnimatedImage.framework */,
+				46EB2E0000BBF0 /* HybridPageKit.framework */,
+				46EB2E0000BC30 /* SDWebImage.framework */,
 				46EB2E00005020 /* iOS */,
 			);
 			name = Frameworks;
@@ -3175,7 +3177,7 @@
 		46EB2E00000070 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				46EB2E0000B870 /* Pods-GenericProject */,
+				46EB2E0000B880 /* Pods-GenericProject */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
@@ -3263,10 +3265,10 @@
 		46EB2E000000E0 /* FLAnimatedImage */ = {
 			isa = PBXGroup;
 			children = (
-				46EB2E000005A0 /* FLAnimatedImage.h */,
-				46EB2E00000580 /* FLAnimatedImage.m */,
-				46EB2E000005B0 /* FLAnimatedImageView.h */,
-				46EB2E00000590 /* FLAnimatedImageView.m */,
+				46EB2E00000580 /* FLAnimatedImage.h */,
+				46EB2E00000590 /* FLAnimatedImage.m */,
+				46EB2E000005A0 /* FLAnimatedImageView.h */,
+				46EB2E000005B0 /* FLAnimatedImageView.m */,
 				46EB2E00005780 /* Support Files */,
 			);
 			name = FLAnimatedImage;
@@ -4729,21 +4731,21 @@
 		46EB2E00005020 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				46EB2E0000B770 /* Accelerate.framework */,
-				46EB2E0000B750 /* AssetsLibrary.framework */,
-				46EB2E0000B5F0 /* AVFoundation.framework */,
-				46EB2E0000B6C0 /* CoreFoundation.framework */,
-				46EB2E0000B580 /* CoreGraphics.framework */,
-				46EB2E0000B710 /* CoreImage.framework */,
-				46EB2E0000B5C0 /* CoreMedia.framework */,
-				46EB2E0000B6E0 /* CoreText.framework */,
+				46EB2E0000B790 /* Accelerate.framework */,
+				46EB2E0000B770 /* AssetsLibrary.framework */,
+				46EB2E0000B610 /* AVFoundation.framework */,
+				46EB2E0000B6E0 /* CoreFoundation.framework */,
+				46EB2E0000B5A0 /* CoreGraphics.framework */,
+				46EB2E0000B730 /* CoreImage.framework */,
+				46EB2E0000B5E0 /* CoreMedia.framework */,
+				46EB2E0000B700 /* CoreText.framework */,
 				46EB2E00005030 /* Foundation.framework */,
 				46EB2E0000B560 /* ImageIO.framework */,
-				46EB2E0000B790 /* MobileCoreServices.framework */,
-				46EB2E0000B5A0 /* OpenGLES.framework */,
-				46EB2E0000B690 /* Photos.framework */,
+				46EB2E0000B580 /* MobileCoreServices.framework */,
+				46EB2E0000B5C0 /* OpenGLES.framework */,
+				46EB2E0000B6B0 /* Photos.framework */,
 				46EB2E0000B540 /* QuartzCore.framework */,
-				46EB2E0000B7B0 /* SystemConfiguration.framework */,
+				46EB2E0000B7C0 /* SystemConfiguration.framework */,
 				46EB2E0000B520 /* UIKit.framework */,
 			);
 			name = iOS;
@@ -5049,18 +5051,18 @@
 			path = "../Target Support Files/YYKit";
 			sourceTree = "<group>";
 		};
-		46EB2E0000B870 /* Pods-GenericProject */ = {
+		46EB2E0000B880 /* Pods-GenericProject */ = {
 			isa = PBXGroup;
 			children = (
-				46EB2E0000B8B0 /* Pods-GenericProject.modulemap */,
-				46EB2E0000B900 /* Pods-GenericProject-acknowledgements.markdown */,
-				46EB2E0000B8F0 /* Pods-GenericProject-acknowledgements.plist */,
-				46EB2E0000B910 /* Pods-GenericProject-dummy.m */,
-				46EB2E0000B8E0 /* Pods-GenericProject-frameworks.sh */,
-				46EB2E0000B8A0 /* Pods-GenericProject-Info.plist */,
-				46EB2E0000B8C0 /* Pods-GenericProject-umbrella.h */,
-				46EB2E0000B890 /* Pods-GenericProject.debug.xcconfig */,
-				46EB2E0000B880 /* Pods-GenericProject.release.xcconfig */,
+				46EB2E0000B8C0 /* Pods-GenericProject.modulemap */,
+				46EB2E0000B910 /* Pods-GenericProject-acknowledgements.markdown */,
+				46EB2E0000B900 /* Pods-GenericProject-acknowledgements.plist */,
+				46EB2E0000B920 /* Pods-GenericProject-dummy.m */,
+				46EB2E0000B8F0 /* Pods-GenericProject-frameworks.sh */,
+				46EB2E0000B8B0 /* Pods-GenericProject-Info.plist */,
+				46EB2E0000B8D0 /* Pods-GenericProject-umbrella.h */,
+				46EB2E0000B8A0 /* Pods-GenericProject.debug.xcconfig */,
+				46EB2E0000B890 /* Pods-GenericProject.release.xcconfig */,
 			);
 			name = "Pods-GenericProject";
 			path = "Target Support Files/Pods-GenericProject";
@@ -5849,11 +5851,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		46EB2E0000B820 /* Headers */ = {
+		46EB2E0000B830 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46EB2E0000B8D0 /* Pods-GenericProject-umbrella.h in Headers */,
+				46EB2E0000B8E0 /* Pods-GenericProject-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -5903,12 +5905,12 @@
 				46EB2E00006F40 /* Sources */,
 				46EB2E00006F50 /* Frameworks */,
 				46EB2E00006F60 /* Resources */,
-				46EB2E0000B930 /* [CP] Embed Pods Frameworks */,
+				46EB2E0000B940 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				46EB2E0000BBD0 /* PBXTargetDependency */,
+				46EB2E0000BBE0 /* PBXTargetDependency */,
 			);
 			name = "HybridPageKit-Unit-HybridPageKitTests";
 			productName = "HybridPageKit-Unit-HybridPageKitTests";
@@ -5917,36 +5919,36 @@
 		};
 		1C32A31EDC953489DA1B48283FAD9486 /* Pods-GenericProject */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 46EB2E0000B7E0 /* Build configuration list for PBXNativeTarget "Pods-GenericProject" */;
+			buildConfigurationList = 46EB2E0000B7F0 /* Build configuration list for PBXNativeTarget "Pods-GenericProject" */;
 			buildPhases = (
-				46EB2E0000B820 /* Headers */,
-				46EB2E0000B830 /* Sources */,
-				46EB2E0000B840 /* Frameworks */,
-				46EB2E0000B850 /* Resources */,
+				46EB2E0000B830 /* Headers */,
+				46EB2E0000B840 /* Sources */,
+				46EB2E0000B850 /* Frameworks */,
+				46EB2E0000B860 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				46EB2E0000B950 /* PBXTargetDependency */,
-				46EB2E0000B970 /* PBXTargetDependency */,
-				46EB2E0000B990 /* PBXTargetDependency */,
-				46EB2E0000B9B0 /* PBXTargetDependency */,
-				46EB2E0000B9D0 /* PBXTargetDependency */,
-				46EB2E0000B9F0 /* PBXTargetDependency */,
-				46EB2E0000BA10 /* PBXTargetDependency */,
-				46EB2E0000BA30 /* PBXTargetDependency */,
-				46EB2E0000BA50 /* PBXTargetDependency */,
-				46EB2E0000BA70 /* PBXTargetDependency */,
-				46EB2E0000BA90 /* PBXTargetDependency */,
-				46EB2E0000BAB0 /* PBXTargetDependency */,
-				46EB2E0000BAD0 /* PBXTargetDependency */,
-				46EB2E0000BAF0 /* PBXTargetDependency */,
-				46EB2E0000BB10 /* PBXTargetDependency */,
-				46EB2E0000BB30 /* PBXTargetDependency */,
-				46EB2E0000BB50 /* PBXTargetDependency */,
-				46EB2E0000BB70 /* PBXTargetDependency */,
-				46EB2E0000BB90 /* PBXTargetDependency */,
-				46EB2E0000BBB0 /* PBXTargetDependency */,
+				46EB2E0000B960 /* PBXTargetDependency */,
+				46EB2E0000B980 /* PBXTargetDependency */,
+				46EB2E0000B9A0 /* PBXTargetDependency */,
+				46EB2E0000B9C0 /* PBXTargetDependency */,
+				46EB2E0000B9E0 /* PBXTargetDependency */,
+				46EB2E0000BA00 /* PBXTargetDependency */,
+				46EB2E0000BA20 /* PBXTargetDependency */,
+				46EB2E0000BA40 /* PBXTargetDependency */,
+				46EB2E0000BA60 /* PBXTargetDependency */,
+				46EB2E0000BA80 /* PBXTargetDependency */,
+				46EB2E0000BAA0 /* PBXTargetDependency */,
+				46EB2E0000BAC0 /* PBXTargetDependency */,
+				46EB2E0000BAE0 /* PBXTargetDependency */,
+				46EB2E0000BB00 /* PBXTargetDependency */,
+				46EB2E0000BB20 /* PBXTargetDependency */,
+				46EB2E0000BB40 /* PBXTargetDependency */,
+				46EB2E0000BB60 /* PBXTargetDependency */,
+				46EB2E0000BB80 /* PBXTargetDependency */,
+				46EB2E0000BBA0 /* PBXTargetDependency */,
+				46EB2E0000BBC0 /* PBXTargetDependency */,
 			);
 			name = "Pods-GenericProject";
 			productName = "Pods-GenericProject";
@@ -6091,7 +6093,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				46EB2E0000BC50 /* PBXTargetDependency */,
+				46EB2E0000BC60 /* PBXTargetDependency */,
 			);
 			name = XHLaunchAd;
 			productName = XHLaunchAd;
@@ -6200,7 +6202,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				46EB2E0000BC10 /* PBXTargetDependency */,
+				46EB2E0000BC20 /* PBXTargetDependency */,
 			);
 			name = SDCycleScrollView;
 			productName = SDCycleScrollView;
@@ -6458,7 +6460,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		46EB2E0000B850 /* Resources */ = {
+		46EB2E0000B860 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -6468,7 +6470,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		46EB2E0000B930 /* [CP] Embed Pods Frameworks */ = {
+		46EB2E0000B940 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -7233,154 +7235,154 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		46EB2E0000B830 /* Sources */ = {
+		46EB2E0000B840 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46EB2E0000B920 /* Pods-GenericProject-dummy.m in Sources */,
+				46EB2E0000B930 /* Pods-GenericProject-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		46EB2E0000B950 /* PBXTargetDependency */ = {
+		46EB2E0000B960 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = AFNetworking;
 			target = 0130B3724283586C0E9D2A112D4F2AA1 /* AFNetworking */;
-			targetProxy = 46EB2E0000B940 /* PBXContainerItemProxy */;
+			targetProxy = 46EB2E0000B950 /* PBXContainerItemProxy */;
 		};
-		46EB2E0000B970 /* PBXTargetDependency */ = {
+		46EB2E0000B980 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = BabyBluetooth;
 			target = 25A41AE5E52F6C0CE6354B9305FD89EE /* BabyBluetooth */;
-			targetProxy = 46EB2E0000B960 /* PBXContainerItemProxy */;
+			targetProxy = 46EB2E0000B970 /* PBXContainerItemProxy */;
 		};
-		46EB2E0000B990 /* PBXTargetDependency */ = {
+		46EB2E0000B9A0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = DZNEmptyDataSet;
 			target = F1BCD9702276377FB5B3BDB6EAF709D7 /* DZNEmptyDataSet */;
-			targetProxy = 46EB2E0000B980 /* PBXContainerItemProxy */;
+			targetProxy = 46EB2E0000B990 /* PBXContainerItemProxy */;
 		};
-		46EB2E0000B9B0 /* PBXTargetDependency */ = {
+		46EB2E0000B9C0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = FLAnimatedImage;
 			target = 4A8E8992707D01510894596DB9BCCA00 /* FLAnimatedImage */;
-			targetProxy = 46EB2E0000B9A0 /* PBXContainerItemProxy */;
+			targetProxy = 46EB2E0000B9B0 /* PBXContainerItemProxy */;
 		};
-		46EB2E0000B9D0 /* PBXTargetDependency */ = {
+		46EB2E0000B9E0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = GPUImage;
 			target = DB13B1641D72A72D8C9AE53FF81C8950 /* GPUImage */;
-			targetProxy = 46EB2E0000B9C0 /* PBXContainerItemProxy */;
+			targetProxy = 46EB2E0000B9D0 /* PBXContainerItemProxy */;
 		};
-		46EB2E0000B9F0 /* PBXTargetDependency */ = {
+		46EB2E0000BA00 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = HybridPageKit;
 			target = 1C6D5AA9A122BC9B0C9BDD7EDBF41B75 /* HybridPageKit */;
-			targetProxy = 46EB2E0000B9E0 /* PBXContainerItemProxy */;
+			targetProxy = 46EB2E0000B9F0 /* PBXContainerItemProxy */;
 		};
-		46EB2E0000BA10 /* PBXTargetDependency */ = {
+		46EB2E0000BA20 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = IQKeyboardManager;
 			target = FBA456CB50E371584C11231929A0971E /* IQKeyboardManager */;
-			targetProxy = 46EB2E0000BA00 /* PBXContainerItemProxy */;
+			targetProxy = 46EB2E0000BA10 /* PBXContainerItemProxy */;
 		};
-		46EB2E0000BA30 /* PBXTargetDependency */ = {
+		46EB2E0000BA40 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MBProgressHUD;
 			target = 82B0A41D3031FF27D78E17B0A9A46FB0 /* MBProgressHUD */;
-			targetProxy = 46EB2E0000BA20 /* PBXContainerItemProxy */;
+			targetProxy = 46EB2E0000BA30 /* PBXContainerItemProxy */;
 		};
-		46EB2E0000BA50 /* PBXTargetDependency */ = {
+		46EB2E0000BA60 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MJExtension;
 			target = 4D3BA58D0583DF37575CACAB3DDADC85 /* MJExtension */;
-			targetProxy = 46EB2E0000BA40 /* PBXContainerItemProxy */;
+			targetProxy = 46EB2E0000BA50 /* PBXContainerItemProxy */;
 		};
-		46EB2E0000BA70 /* PBXTargetDependency */ = {
+		46EB2E0000BA80 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MJRefresh;
 			target = 6868056D761E163D10FDAF8CF1C4D9B8 /* MJRefresh */;
-			targetProxy = 46EB2E0000BA60 /* PBXContainerItemProxy */;
+			targetProxy = 46EB2E0000BA70 /* PBXContainerItemProxy */;
 		};
-		46EB2E0000BA90 /* PBXTargetDependency */ = {
+		46EB2E0000BAA0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Masonry;
 			target = 55AF53E6C77A10ED4985E04D74A8878E /* Masonry */;
-			targetProxy = 46EB2E0000BA80 /* PBXContainerItemProxy */;
+			targetProxy = 46EB2E0000BA90 /* PBXContainerItemProxy */;
 		};
-		46EB2E0000BAB0 /* PBXTargetDependency */ = {
+		46EB2E0000BAC0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = ReactiveObjC;
 			target = 438B238ACC7DF1178D1BCE1A31983146 /* ReactiveObjC */;
-			targetProxy = 46EB2E0000BAA0 /* PBXContainerItemProxy */;
+			targetProxy = 46EB2E0000BAB0 /* PBXContainerItemProxy */;
 		};
-		46EB2E0000BAD0 /* PBXTargetDependency */ = {
+		46EB2E0000BAE0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SDCycleScrollView;
 			target = CBED833AAD6266F3AEFE9BE31C68E094 /* SDCycleScrollView */;
-			targetProxy = 46EB2E0000BAC0 /* PBXContainerItemProxy */;
+			targetProxy = 46EB2E0000BAD0 /* PBXContainerItemProxy */;
 		};
-		46EB2E0000BAF0 /* PBXTargetDependency */ = {
+		46EB2E0000BB00 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SDWebImage;
 			target = 3847153A6E5EEFB86565BA840768F429 /* SDWebImage */;
-			targetProxy = 46EB2E0000BAE0 /* PBXContainerItemProxy */;
+			targetProxy = 46EB2E0000BAF0 /* PBXContainerItemProxy */;
 		};
-		46EB2E0000BB10 /* PBXTargetDependency */ = {
+		46EB2E0000BB20 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SVProgressHUD;
 			target = 1C8D67D8B72D6BA42CCEDB648537A340 /* SVProgressHUD */;
-			targetProxy = 46EB2E0000BB00 /* PBXContainerItemProxy */;
+			targetProxy = 46EB2E0000BB10 /* PBXContainerItemProxy */;
 		};
-		46EB2E0000BB30 /* PBXTargetDependency */ = {
+		46EB2E0000BB40 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = TABAnimated;
 			target = B226767C94EFDDF6183068991A028098 /* TABAnimated */;
-			targetProxy = 46EB2E0000BB20 /* PBXContainerItemProxy */;
+			targetProxy = 46EB2E0000BB30 /* PBXContainerItemProxy */;
 		};
-		46EB2E0000BB50 /* PBXTargetDependency */ = {
+		46EB2E0000BB60 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = TZImagePickerController;
 			target = A96BBB982D62BB807B5BD10774BE2D07 /* TZImagePickerController */;
-			targetProxy = 46EB2E0000BB40 /* PBXContainerItemProxy */;
+			targetProxy = 46EB2E0000BB50 /* PBXContainerItemProxy */;
 		};
-		46EB2E0000BB70 /* PBXTargetDependency */ = {
+		46EB2E0000BB80 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = WechatOpenSDK;
 			target = 8554F6236D2AA202CF58503D2DF29730 /* WechatOpenSDK */;
-			targetProxy = 46EB2E0000BB60 /* PBXContainerItemProxy */;
+			targetProxy = 46EB2E0000BB70 /* PBXContainerItemProxy */;
 		};
-		46EB2E0000BB90 /* PBXTargetDependency */ = {
+		46EB2E0000BBA0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = XHLaunchAd;
 			target = 4EE958CD28D774381C5FB4F1281C4A49 /* XHLaunchAd */;
-			targetProxy = 46EB2E0000BB80 /* PBXContainerItemProxy */;
+			targetProxy = 46EB2E0000BB90 /* PBXContainerItemProxy */;
 		};
-		46EB2E0000BBB0 /* PBXTargetDependency */ = {
+		46EB2E0000BBC0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = YYKit;
 			target = 0015D99E4D861A08F3CD42DA521AEF40 /* YYKit */;
-			targetProxy = 46EB2E0000BBA0 /* PBXContainerItemProxy */;
+			targetProxy = 46EB2E0000BBB0 /* PBXContainerItemProxy */;
 		};
-		46EB2E0000BBD0 /* PBXTargetDependency */ = {
+		46EB2E0000BBE0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = HybridPageKit;
 			target = 1C6D5AA9A122BC9B0C9BDD7EDBF41B75 /* HybridPageKit */;
-			targetProxy = 46EB2E0000BBC0 /* PBXContainerItemProxy */;
+			targetProxy = 46EB2E0000BBD0 /* PBXContainerItemProxy */;
 		};
-		46EB2E0000BC10 /* PBXTargetDependency */ = {
+		46EB2E0000BC20 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SDWebImage;
 			target = 3847153A6E5EEFB86565BA840768F429 /* SDWebImage */;
-			targetProxy = 46EB2E0000BC00 /* PBXContainerItemProxy */;
+			targetProxy = 46EB2E0000BC10 /* PBXContainerItemProxy */;
 		};
-		46EB2E0000BC50 /* PBXTargetDependency */ = {
+		46EB2E0000BC60 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = FLAnimatedImage;
 			target = 4A8E8992707D01510894596DB9BCCA00 /* FLAnimatedImage */;
-			targetProxy = 46EB2E0000BC40 /* PBXContainerItemProxy */;
+			targetProxy = 46EB2E0000BC50 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -7729,7 +7731,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/FLAnimatedImage/FLAnimatedImage-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/FLAnimatedImage/FLAnimatedImage-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -7763,7 +7765,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/FLAnimatedImage/FLAnimatedImage-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/FLAnimatedImage/FLAnimatedImage-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -8858,9 +8860,9 @@
 			};
 			name = Debug;
 		};
-		46EB2E0000B7F0 /* Release */ = {
+		46EB2E0000B800 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 46EB2E0000B880 /* Pods-GenericProject.release.xcconfig */;
+			baseConfigurationReference = 46EB2E0000B890 /* Pods-GenericProject.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -8896,9 +8898,9 @@
 			};
 			name = Release;
 		};
-		46EB2E0000B800 /* Debug */ = {
+		46EB2E0000B810 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 46EB2E0000B890 /* Pods-GenericProject.debug.xcconfig */;
+			baseConfigurationReference = 46EB2E0000B8A0 /* Pods-GenericProject.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -9134,11 +9136,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		46EB2E0000B7E0 /* Build configuration list for PBXNativeTarget "Pods-GenericProject" */ = {
+		46EB2E0000B7F0 /* Build configuration list for PBXNativeTarget "Pods-GenericProject" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				46EB2E0000B800 /* Debug */,
-				46EB2E0000B7F0 /* Release */,
+				46EB2E0000B810 /* Debug */,
+				46EB2E0000B800 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

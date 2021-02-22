@@ -3,14 +3,14 @@
 //  Flipboard
 //
 //  Created by Raphael Schaad on 7/8/13.
-//  Copyright (c) Flipboard. All rights reserved.
+//  Copyright (c) 2013-2015 Flipboard. All rights reserved.
 //
 
 
 #import <UIKit/UIKit.h>
 
 // Allow user classes conveniently just importing one header.
-#import <FLAnimatedImage/FLAnimatedImageView.h>
+#import "FLAnimatedImageView.h"
 
 
 #ifndef NS_DESIGNATED_INITIALIZER
