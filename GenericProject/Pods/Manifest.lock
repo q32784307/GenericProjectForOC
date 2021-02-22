@@ -16,7 +16,7 @@ PODS:
     - AFNetworking/NSURLSession
   - BabyBluetooth (0.7.0)
   - DZNEmptyDataSet (1.8.1)
-  - FLAnimatedImage (1.0.12)
+  - FLAnimatedImage (1.0.15)
   - GPUImage (0.1.7)
   - HybridPageKit (1.4)
   - HybridPageKit/HybridPageKitTests (1.4)
@@ -28,9 +28,9 @@ PODS:
   - ReactiveObjC (3.1.1)
   - SDCycleScrollView (1.82):
     - SDWebImage (>= 5.0.0)
-  - SDWebImage (5.10.3):
-    - SDWebImage/Core (= 5.10.3)
-  - SDWebImage/Core (5.10.3)
+  - SDWebImage (5.10.4):
+    - SDWebImage/Core (= 5.10.4)
+  - SDWebImage/Core (5.10.4)
   - SVProgressHUD (2.2.5)
   - TABAnimated (2.5.1)
   - TZImagePickerController (3.5.8)
@@ -91,7 +91,7 @@ SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
   BabyBluetooth: d50758aecf24d4a0ab9271d69f0f116d6bee51c9
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
-  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
+  FLAnimatedImage: dd3db277b17e909ec3c7fd41adfce79b321d960e
   GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
   HybridPageKit: f02b606ebf9afd42b57ac2e829edb9f77f0db942
   IQKeyboardManager: 2a6e97afdafc7becf0cb17a9a8d795e3a980717f
@@ -101,7 +101,7 @@ SPEC CHECKSUMS:
   MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
   SDCycleScrollView: a0d74c3384caa72bdfc81470bdbc8c14b3e1fbcf
-  SDWebImage: e378178472b735e84b007bfb55514c97948a0598
+  SDWebImage: c666b97e1fa9c64b4909816a903322018f0a9c84
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   TABAnimated: f0bfba5c5c7d279b43cda503d9a5328e7e9891c8
   TZImagePickerController: 7fd9702897ef8c0b7c951e5463f4bcf398296f9e
@@ -111,4 +111,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 5aa37f1e9ed31ccab048836bd94719d34272d0a4
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.10.0
