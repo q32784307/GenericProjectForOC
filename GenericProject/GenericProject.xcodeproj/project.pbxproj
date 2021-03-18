@@ -22,6 +22,7 @@
 		7996DD9025079BCE0054E4C9 /* LSBaseTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7996DD8925079BCE0054E4C9 /* LSBaseTagView.m */; };
 		7996DD9125079BCE0054E4C9 /* LSCustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7996DD8B25079BCE0054E4C9 /* LSCustomButton.m */; };
 		7996DD9725079C1A0054E4C9 /* LSTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7996DD9625079C1A0054E4C9 /* LSTagView.m */; };
+		79B0959826032AF000B1A601 /* DownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B0959726032AF000B1A601 /* DownloadViewController.m */; };
 		79C63F1125E23C94000FD7A6 /* NSString+LSFuzzySearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C63F1025E23C94000FD7A6 /* NSString+LSFuzzySearch.m */; };
 		79C63F1E25E26DE1000FD7A6 /* UIColor+LSDartOrLight.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C63F1D25E26DE1000FD7A6 /* UIColor+LSDartOrLight.m */; };
 		79F316B324EE0BFA00266A15 /* LSAttributedMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F316B224EE0BFA00266A15 /* LSAttributedMaker.m */; };
@@ -513,6 +514,8 @@
 		7996DD8D25079BCE0054E4C9 /* LSBaseTagView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSBaseTagView.h; sourceTree = "<group>"; };
 		7996DD9525079C1A0054E4C9 /* LSTagView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSTagView.h; sourceTree = "<group>"; };
 		7996DD9625079C1A0054E4C9 /* LSTagView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSTagView.m; sourceTree = "<group>"; };
+		79B0959626032AF000B1A601 /* DownloadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownloadViewController.h; sourceTree = "<group>"; };
+		79B0959726032AF000B1A601 /* DownloadViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownloadViewController.m; sourceTree = "<group>"; };
 		79C63F0F25E23C94000FD7A6 /* NSString+LSFuzzySearch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+LSFuzzySearch.h"; sourceTree = "<group>"; };
 		79C63F1025E23C94000FD7A6 /* NSString+LSFuzzySearch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+LSFuzzySearch.m"; sourceTree = "<group>"; };
 		79C63F1C25E26DE1000FD7A6 /* UIColor+LSDartOrLight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+LSDartOrLight.h"; sourceTree = "<group>"; };
@@ -1628,6 +1631,8 @@
 				7956EF2D24D97AE2000F64DD /* UserResizableViewController.m */,
 				79595A0124E24E8E008D4528 /* RadioViewController.h */,
 				79595A0224E24E8E008D4528 /* RadioViewController.m */,
+				79B0959626032AF000B1A601 /* DownloadViewController.h */,
+				79B0959726032AF000B1A601 /* DownloadViewController.m */,
 				D083EF7823C3061B008E0297 /* 分段选择控制器 */,
 				D024DC7623A8D36A001723AF /* 图形处理 */,
 				D024DC7223A8C1C3001723AF /* 嵌套WKWebView */,
@@ -3763,6 +3768,7 @@
 				D0D79AB9238BBC6F00B3ECC5 /* PictureLookViewController.m in Sources */,
 				82F2FD1B227319B100E2045B /* CheckVerifyCodeCell.m in Sources */,
 				82F122AA2354147A00BD0575 /* LineDashView.m in Sources */,
+				79B0959826032AF000B1A601 /* DownloadViewController.m in Sources */,
 				D0CD27DE239F3AD20019A357 /* LSImage.m in Sources */,
 				82BA136B2359685F00EA7D01 /* LSCircleAnimatedView.m in Sources */,
 				7996DD8F25079BCE0054E4C9 /* NSString+LSTagViewString.m in Sources */,
