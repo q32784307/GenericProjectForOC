@@ -1415,6 +1415,17 @@
 			path = "搜索框";
 			sourceTree = "<group>";
 		};
+		822A3DBB262FBFDF0017499E /* UIButton渐变背景色 */ = {
+			isa = PBXGroup;
+			children = (
+				D0D5FD9523A23755000ED84D /* UIButton+LSButtonGradient.h */,
+				D0D5FD9623A23755000ED84D /* UIButton+LSButtonGradient.m */,
+				D0D5FD9223A23605000ED84D /* UIImage+LSImageGradient.h */,
+				D0D5FD9323A23605000ED84D /* UIImage+LSImageGradient.m */,
+			);
+			path = "UIButton渐变背景色";
+			sourceTree = "<group>";
+		};
 		8230802C20E60B0E00C30ED0 /* Base(基类) */ = {
 			isa = PBXGroup;
 			children = (
@@ -1783,10 +1794,6 @@
 				8261E3E521240B7600D5DFD4 /* UIViewController+BackToViewController.m */,
 				D0537C162391314E0083071A /* UITextView+LSClassification.h */,
 				D0537C172391314F0083071A /* UITextView+LSClassification.m */,
-				D0D5FD9523A23755000ED84D /* UIButton+LSButtonGradient.h */,
-				D0D5FD9623A23755000ED84D /* UIButton+LSButtonGradient.m */,
-				D0D5FD9223A23605000ED84D /* UIImage+LSImageGradient.h */,
-				D0D5FD9323A23605000ED84D /* UIImage+LSImageGradient.m */,
 				79C63F0F25E23C94000FD7A6 /* NSString+LSFuzzySearch.h */,
 				79C63F1025E23C94000FD7A6 /* NSString+LSFuzzySearch.m */,
 			);
@@ -1796,6 +1803,7 @@
 		8234E17A208A76FE0002DA97 /* Tools(工具类) */ = {
 			isa = PBXGroup;
 			children = (
+				822A3DBB262FBFDF0017499E /* UIButton渐变背景色 */,
 				7960961C25635A2D00F9129B /* 语音播报 */,
 				7931686F2519A67600EF1A69 /* UIButton图片与文字排列 */,
 				79F316B024EE0BBC00266A15 /* 富文本 */,
