@@ -25,4 +25,6 @@ target 'GenericProject' do
     pod 'FLAnimatedImage'
     pod "HybridPageKit", :testspecs => ["HybridPageKitTests"]
     pod 'ZLPhotoBrowser'
+    pod 'JJCollectionViewRoundFlowLayout'
+    pod 'SSZipArchive'
 end

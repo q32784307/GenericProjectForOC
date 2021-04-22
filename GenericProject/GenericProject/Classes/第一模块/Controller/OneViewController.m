@@ -32,6 +32,7 @@
 #import "SignatureViewController.h"
 #import "UserResizableViewController.h"
 #import "RadioViewController.h"
+#import "DownloadViewController.h"
 
 @interface OneViewController ()
 
@@ -105,7 +106,8 @@
                         @"UILable添加点击事件",
                         @"手势签名",
                         @"仿猿题库拖拽",
-                        @"仿Radio"
+                        @"仿Radio",
+                        @"断点续传"
                         ];
 }
 
@@ -251,6 +253,10 @@
     if (indexPath.row == 25) {
         RadioViewController *RadioVC = [[RadioViewController alloc]init];
         [self.navigationController pushViewController:RadioVC animated:YES];
+    }
+    if (indexPath.row == 26) {
+        DownloadViewController *DownloadVC = [[DownloadViewController alloc]init];
+        [self.navigationController pushViewController:DownloadVC animated:YES];
     }
 }
 

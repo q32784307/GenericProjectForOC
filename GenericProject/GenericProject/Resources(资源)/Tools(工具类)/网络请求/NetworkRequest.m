@@ -9,9 +9,10 @@
 #import "NetworkRequest.h"
 #import "Reachability.h"
 
-@interface NetworkRequest ()
+@interface NetworkRequest ()<SSZipArchiveDelegate>
 
 @property(nonatomic)AFHTTPSessionManager *sessionManager;
+@property(nonatomic)NSURLSessionDownloadTask *downloadTask; //（用于上传和下载）
 
 @end
 
@@ -22,7 +23,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         instance = [[self alloc] init];
-        NSLog(@"指针变量p的自身在内存地址=%p", &instance);
+        LSNSLog(@"指针变量p的自身在内存地址=%p", &instance);
     });
     return instance;
 }
@@ -80,7 +81,7 @@
             [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeGradient];
             [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
         }
-        NSLog(@"请求地址---%@%@",RequestUrl,url);
+        LSNSLog(@"请求地址---%@%@",RequestUrl,url);
         [self.sessionManager GET:url parameters:nil headers:@{header:@"Authorization"} progress:^(NSProgress * _Nonnull downloadProgress) {
             
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -92,7 +93,7 @@
                 [SVProgressHUD dismiss];
                 [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
             }
-            NSLog(@"网络请求返回数据---%@",Json);
+            LSNSLog(@"网络请求返回数据---%@",Json);
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             failureBlock(error);
             if (isCloseHUD == YES) {
@@ -131,7 +132,7 @@
             [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeGradient];
             [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
         }
-        NSLog(@"请求地址+传参---%@%@\n%@",RequestUrl,url,parmater);
+        LSNSLog(@"请求地址+传参---%@%@\n%@",RequestUrl,url,parmater);
         [self.sessionManager PUT:url parameters:parmater headers:@{header:@"Authorization"} success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             NSDictionary *responseDict = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableLeaves error:nil];
             NSData *jsonData = [NSJSONSerialization dataWithJSONObject:responseDict options:NSJSONWritingPrettyPrinted error:nil];
@@ -141,7 +142,7 @@
                 [SVProgressHUD dismiss];
                 [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
             }
-            NSLog(@"网络请求返回数据---%@",Json);
+            LSNSLog(@"网络请求返回数据---%@",Json);
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             failureBlock(error);
             if (isCloseHUD == YES) {
@@ -180,7 +181,7 @@
             [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeGradient];
             [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
         }
-        NSLog(@"请求地址+传参---%@%@\n%@",RequestUrl,url,parmater);
+        LSNSLog(@"请求地址+传参---%@%@\n%@",RequestUrl,url,parmater);
         [self.sessionManager POST:url parameters:parmater headers:@{header:@"Authorization"} progress:^(NSProgress * _Nonnull uploadProgress) {
             
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -192,7 +193,7 @@
                 [SVProgressHUD dismiss];
                 [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
             }
-            NSLog(@"网络请求返回数据---%@",Json);
+            LSNSLog(@"网络请求返回数据---%@",Json);
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             failureBlock(error);
             if (isCloseHUD == YES) {
@@ -233,7 +234,7 @@
             [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeGradient];
             [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
         }
-        NSLog(@"请求地址+传参---%@%@\n%@",RequestUrl,url,parmater);
+        LSNSLog(@"请求地址+传参---%@%@\n%@",RequestUrl,url,parmater);
         [self.sessionManager POST:url parameters:parmater headers:@{header:@"Authorization"} constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
             [formData appendPartWithFileData:fileData name:fileName fileName:@"picture.png" mimeType:@"image/png"];
         } progress:^(NSProgress * _Nonnull uploadProgress) {
@@ -247,7 +248,7 @@
                 [SVProgressHUD dismiss];
                 [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
             }
-            NSLog(@"网络请求返回数据---%@",Json);
+            LSNSLog(@"网络请求返回数据---%@",Json);
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             failureBlock(error);
             if (isCloseHUD == YES) {
@@ -286,7 +287,7 @@
             [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeGradient];
             [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
         }
-        NSLog(@"请求地址+传参---%@%@\n%@",RequestUrl,url,parmater);
+        LSNSLog(@"请求地址+传参---%@%@\n%@",RequestUrl,url,parmater);
         [self.sessionManager DELETE:url parameters:parmater headers:@{header:@"Authorization"} success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             NSDictionary *responseDict = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableLeaves error:nil];
             NSData *jsonData = [NSJSONSerialization dataWithJSONObject:responseDict options:NSJSONWritingPrettyPrinted error:nil];
@@ -296,7 +297,7 @@
                 [SVProgressHUD dismiss];
                 [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
             }
-            NSLog(@"网络请求返回数据---%@",Json);
+            LSNSLog(@"网络请求返回数据---%@",Json);
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             failureBlock(error);
             if (isCloseHUD == YES) {
@@ -335,7 +336,7 @@
             [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeGradient];
             [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
         }
-        NSLog(@"请求地址+传参---%@%@\n%@",RequestUrl,url,parmater);
+        LSNSLog(@"请求地址+传参---%@%@\n%@",RequestUrl,url,parmater);
         NSMutableURLRequest *request = [[AFJSONRequestSerializer serializer] requestWithMethod:@"POST" URLString:url parameters:nil error:nil];
         [request addValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
         NSData *body = [parmater dataUsingEncoding:NSUTF8StringEncoding];
@@ -352,7 +353,7 @@
                     [SVProgressHUD dismiss];
                     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
                 }
-                NSLog(@"网络请求返回数据---%@",responseDict);
+                LSNSLog(@"网络请求返回数据---%@",responseDict);
             }else{
                 failureBlock(error);
                 if (isCloseHUD == YES) {
@@ -366,6 +367,100 @@
             alertMaker.toastStyleDuration = 2;
         } actionsBlock:NULL];
     }
+}
+
+/**
+ *  @brief                      断点续传(开始下载)
+ */
+- (void)downloadStartWithHTTPUrl:(NSString *)url headerRequest:(id)header fileName:(NSString *)fileName progress:(void (^)(CGFloat progressFloat))progress SuccessBlock:(void (^)(id responseDict, NSString *filePathSite))successblock FailureBlock:(void (^)(NSError *error))failureBlock {
+    
+    if (self.isNetWorkConnectionAvailable) {
+        NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
+        self.downloadTask = [self.sessionManager downloadTaskWithRequest:request progress:^(NSProgress * _Nonnull downloadProgress) {
+            if (progress) {
+                progress(1.0 * (downloadProgress.completedUnitCount / downloadProgress.totalUnitCount));
+            }
+        } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
+            return targetPath;
+        } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
+            if (!error) {
+                NSString *filePathSite = [filePath path];
+                successblock(response,filePathSite);
+            }else{
+                failureBlock(error);
+            }
+        }];
+    }else{
+        [[UIViewController ViewController] showAlertWithTitle:LSEmptyTitle message:LSMessageTiele appearanceProcess:^(AlertController * _Nonnull alertMaker) {
+            alertMaker.toastStyleDuration = 2;
+        } actionsBlock:NULL];
+    }
+}
+
+/**
+ *  @brief                      断点续传(继续下载)
+ */
+- (void)downloadStartWithHTTPUrl:(NSString *)url headerRequest:(id)header resumeData:(NSData *)resumeData fileName:(NSString *)fileName progress:(void (^)(CGFloat progressFloat))progress SuccessBlock:(void (^)(id responseDict, NSString *filePathSite))successblock FailureBlock:(void (^)(NSError *error))failureBlock {
+    
+    if (self.isNetWorkConnectionAvailable) {
+        NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
+        self.downloadTask = [self.sessionManager downloadTaskWithResumeData:resumeData progress:^(NSProgress * _Nonnull downloadProgress) {
+            if (progress) {
+                progress(1.0 * (downloadProgress.completedUnitCount / downloadProgress.totalUnitCount));
+            }
+        } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
+            return targetPath;
+        } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
+            if (!error) {
+                NSString *filePathSite = [filePath path];
+                successblock(response,filePathSite);
+            }else{
+                failureBlock(error);
+            }
+        }];
+    }else{
+        [[UIViewController ViewController] showAlertWithTitle:LSEmptyTitle message:LSMessageTiele appearanceProcess:^(AlertController * _Nonnull alertMaker) {
+            alertMaker.toastStyleDuration = 2;
+        } actionsBlock:NULL];
+    }
+}
+
+/**
+ *  开始下载
+ */
+- (void)operationResume {
+    [self.downloadTask resume];
+}
+
+/**
+ *  暂停下载
+ */
+- (void)operationPauseSuspendedBlock:(void (^)(NSData *resumeData))suspendedBlock {
+    [self.downloadTask cancelByProducingResumeData:^(NSData * _Nullable resumeData) {
+        suspendedBlock(resumeData);
+    }];
+}
+
+//NSString *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject;
+//[self.networkRequest releaseZipFilesWithUnzipFileAtPath:filePath Destination:path];
+// 解压
+- (void)releaseZipFilesWithUnzipFileAtPath:(NSString *)zipPath Destination:(NSString *)unzipPath {
+    NSError *error;
+    if ([SSZipArchive unzipFileAtPath:zipPath toDestination:unzipPath overwrite:YES password:nil error:&error delegate:self]) {
+        LSNSLog(@"success");
+        LSNSLog(@"unzipPath = %@",unzipPath);
+    }else {
+        LSNSLog(@"%@",error);
+    }
+}
+
+#pragma mark - SSZipArchiveDelegate
+- (void)zipArchiveWillUnzipArchiveAtPath:(NSString *)path zipInfo:(unz_global_info)zipInfo {
+    LSNSLog(@"将要解压。");
+}
+
+- (void)zipArchiveDidUnzipArchiveAtPath:(NSString *)path zipInfo:(unz_global_info)zipInfo unzippedPath:(NSString *)unzippedPath {
+    LSNSLog(@"解压完成！");
 }
 
 @end

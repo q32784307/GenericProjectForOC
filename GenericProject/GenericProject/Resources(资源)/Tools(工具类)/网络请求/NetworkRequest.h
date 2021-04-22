@@ -78,5 +78,26 @@
  */
 - (void)postRequestJsonWithUrl:(NSString *)url parmater:(id)parmater headerRequest:(id)header isOpenHUD:(BOOL)isOpenHUD isCloseHUD:(BOOL)isCloseHUD SuccessBlock:(void (^)(id responseDict))successblock FailureBlock:(void (^)(NSError *error))failureBlock;
 
+/**
+ *  @brief                      断点续传(开始下载)
+ */
+- (void)downloadStartWithHTTPUrl:(NSString *)url headerRequest:(id)header fileName:(NSString *)fileName progress:(void (^)(CGFloat progressFloat))progress SuccessBlock:(void (^)(id responseDict, NSString *filePathSite))successblock FailureBlock:(void (^)(NSError *error))failureBlock;
+
+/**
+ *  @brief                      断点续传(继续下载)
+ */
+- (void)downloadStartWithHTTPUrl:(NSString *)url headerRequest:(id)header resumeData:(NSData *)resumeData fileName:(NSString *)fileName progress:(void (^)(CGFloat progressFloat))progress SuccessBlock:(void (^)(id responseDict, NSString *filePathSite))successblock FailureBlock:(void (^)(NSError *error))failureBlock;
+
+/**
+ *  开始下载
+ */
+- (void)operationResume;
+
+/**
+ *  暂停下载
+ */
+- (void)operationPauseSuspendedBlock:(void (^)(NSData *resumeData))suspendedBlock;
+
+- (void)releaseZipFilesWithUnzipFileAtPath:(NSString *)zipPath Destination:(NSString *)unzipPath;
 
 @end
